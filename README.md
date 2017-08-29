@@ -14,7 +14,7 @@ South Africa has eleven official languages. Building out tools to support small-
 ## Optional features
 - “Whatever you want”
 - Can be Algorithmic or User-based splicing (or a combination)
-  - [ ]ALGO : Record big chunks and process
+  - [ ] ALGO : Record big chunks and process
   - [ ] USER : Capture button presses for words and mistakes WHILST recording audio
 - [ ] Adjust playback speed, scrubbing, skipping
 - [ ] Optional downloading at lower audio quality (bitrate change) 
