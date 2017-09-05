@@ -6,7 +6,33 @@
 	var segPanel = document.getElementsByClassName("segment-holder")[0];
 	var audioSegs = [];
 
-	var playSeg = function (s) {
+	var segSelect = function (s) {
+		// Prime the menu options
+		var labelButton = document.getElementsByClassName("button-label")[s.id];
+		var removeButton = document.getElementsByClassName("button-remove")[s.id];
+
+		labelButton.addEventListener("click", function() {
+			var newLabel = prompt("Enter new label", s.label);
+			if(newLabel != "") {
+				s.label = newLabel;
+			}
+			buttons[s.id].innerText = s.label;
+			console.log("Labelled as '"+s.label+"'")
+		});
+
+		removeButton.addEventListener("click", function() {
+			if (confirm("Remove this segment?") == true) {
+			    console.log("Removed segment");
+			    // Remove the segment
+
+			    // Refresh the page
+
+			} else {
+			    console.log("Segment not removed");
+			}
+		});
+
+		// Play the sound
 		console.log("Playing "+s.id);
 		var audio = document.createElement('audio');
 		audio.src = s.filepath;
@@ -27,7 +53,6 @@
 
 		// Some Test shit
 		if (s.id == 0) {
-			console.log("yes");
 			s.label = "avocado";
 		}
 
@@ -45,8 +70,8 @@
 							+"<audio id='audio' src='"+s.filepath+"'"
 							+"style='visibility: hidden; width: 0px; height: 0px;'"
 							+"controls preload='auto' autobuffer></audio><ul class='dropdown-menu'"
-							+"role='menu'><li><a href='#'>Label</a></li><li><a href='#'>Remove"
-							+"</a></li></ul></div>"
+							+"role='menu'><li><a href='#' class='button-label'>Label</a></li><li><a href='#'"
+							+"class='button-remove'>Remove</a></li></ul></div>"
 
 		audioSegs.push(s);
 
@@ -61,16 +86,16 @@
 	var buttons = document.getElementsByClassName("dropdown-toggle");
 
 	// TODO Figure out why this won't work in a loop of some kind
-	buttons[0].addEventListener("click", function() {playSeg(audioSegs[0])});
-	buttons[1].addEventListener("click", function() {playSeg(audioSegs[1])});
-	buttons[2].addEventListener("click", function() {playSeg(audioSegs[2])});
-	buttons[3].addEventListener("click", function() {playSeg(audioSegs[3])});
-	buttons[4].addEventListener("click", function() {playSeg(audioSegs[4])});
-	buttons[5].addEventListener("click", function() {playSeg(audioSegs[5])});
-	buttons[6].addEventListener("click", function() {playSeg(audioSegs[6])});
-	buttons[7].addEventListener("click", function() {playSeg(audioSegs[7])});
-	buttons[8].addEventListener("click", function() {playSeg(audioSegs[8])});
-	buttons[9].addEventListener("click", function() {playSeg(audioSegs[9])});
+	buttons[0].addEventListener("click", function() {segSelect(audioSegs[0])});
+	buttons[1].addEventListener("click", function() {segSelect(audioSegs[1])});
+	buttons[2].addEventListener("click", function() {segSelect(audioSegs[2])});
+	buttons[3].addEventListener("click", function() {segSelect(audioSegs[3])});
+	buttons[4].addEventListener("click", function() {segSelect(audioSegs[4])});
+	buttons[5].addEventListener("click", function() {segSelect(audioSegs[5])});
+	buttons[6].addEventListener("click", function() {segSelect(audioSegs[6])});
+	buttons[7].addEventListener("click", function() {segSelect(audioSegs[7])});
+	buttons[8].addEventListener("click", function() {segSelect(audioSegs[8])});
+	buttons[9].addEventListener("click", function() {segSelect(audioSegs[9])});
 
 
 
