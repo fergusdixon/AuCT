@@ -1,0 +1,12 @@
+{"samples":[
+    { "id":"00000", "filename":"segments/sample_fruit_00000.wav", "language":"English", "label":"avocado" },
+    { "id":"00001", "filename":"segments/sample_fruit_00001.wav", "language":"English", "label":"" },
+    { "id":"00002", "filename":"segments/sample_fruit_00002.wav", "language":"English", "label":"" },
+    { "id":"00003", "filename":"segments/sample_fruit_00003.wav", "language":"English", "label":"" },
+    { "id":"00004", "filename":"segments/sample_fruit_00004.wav", "language":"English", "label":"" },
+    { "id":"00005", "filename":"segments/sample_fruit_00005.wav", "language":"English", "label":"" },
+    { "id":"00006", "filename":"segments/sample_fruit_00006.wav", "language":"English", "label":"" },
+    { "id":"00007", "filename":"segments/sample_fruit_00007.wav", "language":"English", "label":"" },
+    { "id":"00008", "filename":"segments/sample_fruit_00008.wav", "language":"English", "label":"" },
+    { "id":"00009", "filename":"segments/sample_fruit_00009.wav", "language":"English", "label":"" }
+]}
