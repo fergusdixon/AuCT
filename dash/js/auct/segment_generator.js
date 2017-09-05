@@ -14,8 +14,12 @@
 				language: s.language,
 				label: newLabel
 			});
-			console.log("Updat sent to DB");
+			console.log("Update sent to DB");
 		}
+	}
+
+	var removeSeg = function (s) {
+		firebase.database().ref('samples/'+s.id).remove();
 	}
 
 	var segSelect = function (s) {
@@ -39,11 +43,12 @@
 
 		removeButton.addEventListener("click", function() {
 			if (confirm("Remove this segment?") == true) {
-			    console.log("Removed segment");
 
 			    // TODO Remove the segment from database
-
+			    removeSeg(s);
+			    console.log("Removed segment");
 			    // TODO Refresh the page
+			    location.reload();
 
 			} else {
 			    console.log("Segment not removed");
@@ -119,7 +124,7 @@
 
 	}).catch(function(db_error) {
 		console.log("Error loading from DB");
-		location.reload();
+		// location.reload();
 	});
 
 
