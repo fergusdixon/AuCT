@@ -41,9 +41,9 @@
 			if (confirm("Remove this segment?") == true) {
 			    console.log("Removed segment");
 
-			    // Remove the segment from database
+			    // TODO Remove the segment from database
 
-			    // Refresh the page
+			    // TODO Refresh the page
 
 			} else {
 			    console.log("Segment not removed");
