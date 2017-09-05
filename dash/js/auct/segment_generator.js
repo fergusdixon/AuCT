@@ -6,6 +6,18 @@
 	var segPanel = document.getElementsByClassName("segment-holder")[0];
 	var audioSegs = [];
 
+	var writeLabel = function (s, newLabel) {
+		if(newLabel != "") {
+			firebase.database().ref('samples/'+s.id).set({
+				id: s.id,
+				filepath: s.filepath,
+				language: s.language,
+				label: newLabel
+			});
+			console.log("Updat sent to DB");
+		}
+	}
+
 	var segSelect = function (s) {
 		// Prime the menu options
 		var labelButton = document.getElementsByClassName("button-label")[s.id];
@@ -18,13 +30,18 @@
 			}
 			var buttons = document.getElementsByClassName("dropdown-toggle");
 			buttons[s.id].innerText = s.label;
+
+			// Update the database
+			writeLabel(s, newLabel);
+
 			console.log("Labelled as '"+s.label+"'")
 		});
 
 		removeButton.addEventListener("click", function() {
 			if (confirm("Remove this segment?") == true) {
 			    console.log("Removed segment");
-			    // Remove the segment
+
+			    // Remove the segment from database
 
 			    // Refresh the page
 
@@ -54,11 +71,6 @@
 	  		label : dbSegs[i].label,
 	  		markup : ""
 	  	};
-
-	  	// Some Test shit
-	  	if (s.id == 0) {
-	  		s.label = "avocado";
-	  	}
 
 	  	var type = "primary";
 	  	var text = "Segment "+s.id;
