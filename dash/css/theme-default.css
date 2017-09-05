@@ -1954,6 +1954,10 @@ ul.panel-controls > li > .dropdown-menu:before {
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
 }
+
+.btn-group {
+	padding: 2px;
+}
 .btn.btn-lg,
 .btn-group-lg > .btn {
   font-size: 14px;
@@ -3353,13 +3357,13 @@ td.dataTables_empty {
 }
 .widget.widget-default {
   background: #ffffff;
-   
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+
 }
 .widget.widget-primary {
   background: #1b1e24;
@@ -3382,7 +3386,7 @@ td.dataTables_empty {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#95b75d, endColorstr=#89ad4d, GradientType=0);
 }
 .widget.widget-info {
-background: #1caf9a !important;  
+background: #1caf9a !important;
 }
 .widget.widget-warning {
   background: #1caf9a;

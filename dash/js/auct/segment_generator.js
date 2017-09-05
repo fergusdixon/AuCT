@@ -20,21 +20,41 @@
 		var s = {
 			id : i,
 			filepath : "segments/sample_fruit_0000"+i+".wav",
-			markup : " <div class='btn-group audio-seg'>"
-								+"<a href='#' data-toggle='dropdown' class='btn btn-primary btn-lg dropdown-toggle'>"
-								+"SEGMENT "+i+" <span class='caret'></span></a>"
-								+"<audio id='audio' src='"+"segments/sample_fruit_0000"+i+".wav"+"'"
-								+"style='visibility: hidden; width: 0px; height: 0px;'"
-								+"controls preload='auto' autobuffer></audio><ul class='dropdown-menu'"
-								+"role='menu'><li><a href='#'>Label</a></li><li><a href='#'>Remove"
-								+"</a></li></ul></div>"
+			language : "English",
+			label : "",
+			markup : ""
 		};
 
-		segPanel.innerHTML += s.markup;
+		// Some Test shit
+		if (s.id == 0) {
+			console.log("yes");
+			s.label = "avocado";
+		}
+
+		var type = "primary";
+		var text = "Segment "+s.id.toString();
+		if(s.label != "") {
+			text = s.label;
+			type = "success";
+		}
+
+
+		s.markup = " <div class='btn-group audio-seg'>"
+							+"<a href='#' data-toggle='dropdown' class='btn btn-"+type+" btn-lg dropdown-toggle'>"
+							+text+" <span class='caret'></span></a>"
+							+"<audio id='audio' src='"+s.filepath+"'"
+							+"style='visibility: hidden; width: 0px; height: 0px;'"
+							+"controls preload='auto' autobuffer></audio><ul class='dropdown-menu'"
+							+"role='menu'><li><a href='#'>Label</a></li><li><a href='#'>Remove"
+							+"</a></li></ul></div>"
 
 		audioSegs.push(s);
 
 	};
+
+	for (var i = 0; i < audioSegs.length; i++) {
+		segPanel.innerHTML += audioSegs[i].markup;
+	}
 
 	console.log("Linking audio playback...");
 
