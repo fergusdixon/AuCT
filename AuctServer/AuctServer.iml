@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/jython-standalone-2.7.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jython-standalone-2.7.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
