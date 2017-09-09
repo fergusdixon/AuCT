@@ -5,12 +5,16 @@ LIST=$(ffmpeg -i "sample_fruit_quiet.wav" -af silencedetect=noise=-30dB:d=0.5 -f
 word="false"
 start=-1
 end=-1
+declare -i number=0
 
 split(){
     if [ $(echo " $start > 0" | bc) -eq 1 ]
     then
-        echo "split ${start} ${end}"
+        #echo "Split ${start} ${end} ${number}"
+
+        $(ffmpeg -i sample_fruit_quiet.wav -ss ${start} -to ${end} -c copy -y ../output/${number}sample.wav -loglevel quiet)
     fi
+    number=$(echo ${number} + 1)
 }
 
 for LINE in ${LIST}
