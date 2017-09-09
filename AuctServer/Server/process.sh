@@ -33,8 +33,3 @@ else
     split
 fi
 done
-
-
-
-#if silence ends, next line is beginning of word
-#if silence starts, next line is end of word, split
