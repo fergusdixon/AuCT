@@ -5,10 +5,16 @@
 import os
 import subprocess
 import sys
-
-def segment(inputFile, outputDirectory):
-
-    subprocess.call("./process.sh")
+from pathlib import Path
 
 
-segment("sample_fruit_quiet.wav", "test.wav")
+def segment(inputfile):
+    try:
+        my_file = Path("../input/" + inputfile)
+        if my_file.is_file():
+            subprocess.call(["./process.sh", inputfile])
+            print("File " + inputfile + " was split, results stored in AuctServer/output")
+        else:
+            print("There was an error, please ensure the file name was defined correctly and is in AuctServer/input.")
+    except:
+        print("There was an error, please ensure the file name was defined correctly and is in AuctServer/input.")
