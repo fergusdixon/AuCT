@@ -4,6 +4,6 @@ AuctServer/input
 AuctServer/output
 AuctJavaServer/.idea
 AuctJavaServer/out
-AuctJavaServer/input
-AuctJavaServer/output
+AuctJavaServer/src/input/
+AuctJavaServer/src/output
 .idea
