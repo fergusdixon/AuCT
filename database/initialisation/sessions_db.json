@@ -1,0 +1,30 @@
+[ {
+	"name" : "list01_20170928123800",
+	"date" : "2017-09-28_12:38:00",
+  "language" : "English",
+  "wordlist-ref" : 0,
+  "filename" : "auct_list01_20170928123800.wav",
+  "spliced" : 0,
+  "verified" : 0,
+  "scrapped" : 0
+},
+{
+	"name" : "list02_20170928123423",
+	"date" : "2017-09-28_12:34:23",
+  "language" : "English",
+  "wordlist-ref" : 1,
+  "filename" : "auct_list02_20170928123423.wav",
+  "spliced" : 0,
+  "verified" : 0,
+  "scrapped" : 0
+},
+{
+	"name" : "list03_20170928123855",
+	"date" : "2017-09-28_12:38:55",
+  "language" : "English",
+  "wordlist-ref" : 2,
+  "filename" : "auct_list03_20170928123855.wav",
+  "spliced" : 0,
+  "verified" : 0,
+  "scrapped" : 0
+} ]
