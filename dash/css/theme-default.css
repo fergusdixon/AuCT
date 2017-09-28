@@ -2094,6 +2094,11 @@ ul.panel-controls > li > .dropdown-menu:before {
   padding: 2px 10px;
   font-weight: 600;
 }
+
+.btn-segment {
+	margin: 5px;
+  min-width: 200px;
+}
 .btn.btn-rounded.btn-default:hover,
 .btn.btn-rounded.btn-default:focus,
 .btn.btn-rounded.btn-default:active,

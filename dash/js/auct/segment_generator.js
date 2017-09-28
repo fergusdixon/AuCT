@@ -1,131 +1,83 @@
-(function (){
+function loadSeg(sid, wlref) {
+	console.log("loading session "+sid+"...");
 
 	// Get a reference to the Firebase database service
 	var database = firebase.database();
 
-	var segPanel = document.getElementsByClassName("segment-holder")[0];
+	var segPanel = document.getElementsByClassName("segment-holder")[sid];
 	var audioSegs = [];
-
-	var writeLabel = function (s, newLabel) {
-		if(newLabel != "") {
-			firebase.database().ref('samples/'+s.id).set({
-				id: s.id,
-				filepath: s.filepath,
-				language: s.language,
-				label: newLabel
-			});
-			console.log("Update sent to DB");
-		}
-	}
-
-	var removeSeg = function (s) {
-		firebase.database().ref('samples/'+s.id).remove();
-	}
-
-	var segSelect = function (s) {
-		// Prime the menu options
-		var labelButton = document.getElementsByClassName("button-label")[s.id];
-		var removeButton = document.getElementsByClassName("button-remove")[s.id];
-
-		labelButton.addEventListener("click", function() {
-			var newLabel = prompt("Enter new label", s.label);
-			if(newLabel != "") {
-				s.label = newLabel;
-			}
-			var buttons = document.getElementsByClassName("dropdown-toggle");
-			buttons[s.id].innerText = s.label;
-
-			// Update the database
-			writeLabel(s, newLabel);
-
-			console.log("Labelled as '"+s.label+"'")
-		});
-
-		removeButton.addEventListener("click", function() {
-			if (confirm("Remove this segment?") == true) {
-
-			    // TODO Remove the segment from database
-			    removeSeg(s);
-			    console.log("Removed segment");
-			    // TODO Refresh the page
-			    location.reload();
-
-			} else {
-			    console.log("Segment not removed");
-			}
-		});
-
-		// Play the sound
-		console.log("Playing "+s.id);
-		var audio = document.createElement('audio');
-		audio.src = s.filepath;
-		audio.play();
-	}
 
 	console.log("Generating segments...");
 
+	segPanel.innerHTML = "<h3>loading...</h3>";
+
 	// Firebase once-off DB query
-	firebase.database().ref('/samples/').once('value').then(function(snapshot) {
-		var dbSegs = snapshot.val();
+	firebase.database().ref('/wordlists/').once('value').then(function(snapshot) {
+		var wordlist = snapshot.val()[wlref];
+		console.log("Wordlist "+wordlist.name+" loaded");
 
-	  for (var i = 0; i < dbSegs.length; i++) {
-	  	var s = {
-	  		id : dbSegs[i].id,
-	  		filepath : dbSegs[i].filepath,
-	  		language : dbSegs[i].language,
-	  		label : dbSegs[i].label,
-	  		markup : ""
-	  	};
+		// Firebase once-off DB query
+		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
+			var dbSegs = snapshot.val();
 
-	  	var type = "primary";
-	  	var text = "Segment "+s.id;
-	  	if(s.label != "") {
-	  		text = s.label;
-	  		type = "success";
-	  	}
+			for (var i = 0; i < dbSegs.length; i++) {
+
+				if(dbSegs[i].session == sid) {
+					var s = {
+						id : dbSegs[i].id,
+						filepath : dbSegs[i].filepath,
+						label : dbSegs[i].label,
+						scrapped : dbSegs[i].scrapped,
+						session : dbSegs[i].session,
+						verified : dbSegs[i].verified,
+						markup : ""
+					};
+
+					var type = "primary";
+					var suggestions = "";
+					var len = wordlist.words.length;
+					if(s.verified == 1) {
+						type = "success";
+					}
+					if(len > 0) {
+						if(i>0) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i-1]+"</button>";}
+						if(i<len-1) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i+1]+"</button>";}
+						if(i>1) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i-2]+"</button>";}
+						if(i<len-2) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i+2]+"</button>";}
+					}
+
+					s.markup = "<button class='btn btn-"+type+" btn-rounded btn-segment'>"+s.label+"</button>"
+										+"<audio id='audio' src='"+"'" //TODO add source as cloud folder on Firebase
+										+"style='visibility: hidden; width: 0px; height: 0px;'"
+										+"controls preload='auto' autobuffer></audio>"
+										+suggestions+"<br>";
+
+					audioSegs.push(s);
+				}
+
+			};
+
+			segPanel.innerHTML = "";
+			for (var i = 0; i < audioSegs.length; i++) {
+				segPanel.innerHTML += audioSegs[i].markup;
+			}
+
+			// console.log("Linking audio playback...");
+
+			// TODO make audio play on mouseover
+
+			console.log("Loaded session "+sid);
 
 
-	  	s.markup = " <div class='btn-group audio-seg'>"
-	  						+"<a href='#' data-toggle='dropdown' class='btn btn-"+type+" btn-lg dropdown-toggle'>"
-	  						+text+" <span class='caret'></span></a>"
-	  						+"<audio id='audio' src='"+s.filepath+"'"
-	  						+"style='visibility: hidden; width: 0px; height: 0px;'"
-	  						+"controls preload='auto' autobuffer></audio><ul class='dropdown-menu'"
-	  						+"role='menu'><li><a href='#' class='button-label'>Label</a></li><li><a href='#'"
-	  						+"class='button-remove'>Remove</a></li></ul></div>"
-
-	  	audioSegs.push(s);
-	  	// console.log("Added "+s.label);
-
-	  };
-
-	  for (var i = 0; i < audioSegs.length; i++) {
-	  	segPanel.innerHTML += audioSegs[i].markup;
-	  }
-
-	  console.log("Linking audio playback...");
-
-	  var buttons = document.getElementsByClassName("dropdown-toggle");
-
-	  // TODO Figure out why this won't work in a loop of some kind
-	  buttons[0].addEventListener("click", function() {segSelect(audioSegs[0])});
-	  buttons[1].addEventListener("click", function() {segSelect(audioSegs[1])});
-	  buttons[2].addEventListener("click", function() {segSelect(audioSegs[2])});
-	  buttons[3].addEventListener("click", function() {segSelect(audioSegs[3])});
-	  buttons[4].addEventListener("click", function() {segSelect(audioSegs[4])});
-	  buttons[5].addEventListener("click", function() {segSelect(audioSegs[5])});
-	  buttons[6].addEventListener("click", function() {segSelect(audioSegs[6])});
-	  buttons[7].addEventListener("click", function() {segSelect(audioSegs[7])});
-	  buttons[8].addEventListener("click", function() {segSelect(audioSegs[8])});
-	  buttons[9].addEventListener("click", function() {segSelect(audioSegs[9])});
-
-	  console.log("Ready.");
+		}).catch(function(db_error) {
+			console.log("Error loading segments from DB");
+			// location.reload();
+		});
 
 
 	}).catch(function(db_error) {
-		console.log("Error loading from DB");
+		console.log("Error loading wordlist from DB");
 		// location.reload();
 	});
 
-
-}());
+}
