@@ -8,6 +8,10 @@ import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.cloud.StorageClient;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class Driver {
 
@@ -19,9 +23,9 @@ public class Driver {
         login();
         System.out.println("Success");
 
-        fileName = "sample_sports_television";
+        fileName = "auct_list01_20170928123800.wav";
         System.out.println("Downloading: " + fileName + "...");
-        //getAudio(fileName);
+        getAudio(fileName);
 
         System.out.println("Success, analysing and segmenting the audio file...");
         if(split()){
@@ -30,6 +34,29 @@ public class Driver {
         else {
             System.out.println("Splitting failed");
         }
+
+        System.out.println("Beginning upload...");
+        int counter = 1;
+        File folder = new File(
+                "/home/fergus/AuCT/AuctJavaServer/src/output/" +
+                        fileName
+        );
+        for (final File fileEntry : folder.listFiles()) {
+            upload(fileEntry);
+            System.out.println("Uploaded segement: " + counter);
+            counter++;
+        }
+        System.out.println("Upload complete.");
+    }
+
+    private static void upload(File file){
+        InputStream blob = null;
+        try {
+            blob = new FileInputStream(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        bucket.create("Output/"+fileName+"/"+file.getName(), blob, "audio/x-wav");
     }
 
     private static boolean split(){
