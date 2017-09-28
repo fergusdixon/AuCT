@@ -14,6 +14,7 @@ public class Segmentor {
             ProcessBuilder pb = new ProcessBuilder(dir + "process.sh", inputPath);
             pb.directory(new File(dir));
             Process process = pb.start();
+            process.waitFor();
             return true;
 
         } catch (Throwable t)

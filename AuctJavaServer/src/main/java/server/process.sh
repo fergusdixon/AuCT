@@ -7,6 +7,7 @@ END=-1
 declare -i NUMBER=0
 FILE=$1
 DIREC=${FILE%.*}
+LABEL = ""
 $(echo cwd)
 # script to split audio
 LIST=$(ffmpeg -i "../../../input/${FILE}" -af silencedetect=noise=-30dB:d=0.5 -f s16le /dev/null -y 2>&1 | grep silencedetect | cut -d ' ' -f4-5)
@@ -16,9 +17,17 @@ if [[ ! -d "../../../output/${DIREC}" ]]; then
 fi
 
 split(){
-    if [ $(echo " ${START} > 0" | bc) -eq 1 ]
+    # adds leading zero if needed
+    if [ $(echo "${NUMBER} < 10" | bc) -eq 1 ]
     then
-        $(ffmpeg -i "../../../input/${FILE}" -ss ${START} -to ${END} -c copy -y ../../../output/"${DIREC}"/${NUMBER}"${FILE}" -loglevel quiet)
+        LABEL="0${NUMBER}"
+    else
+        LABEL="$NUMBER"
+    fi
+
+    if [ $(echo "${START} > 0" | bc) -eq 1 ]
+    then
+        $(ffmpeg -i "../../../input/${FILE}" -ss ${START} -to ${END} -c copy -y ../../../output/"${DIREC}"/"seg_"${LABEL}_"${FILE}" -loglevel quiet)
     fi
     NUMBER=$(echo ${NUMBER} + 1)
 }
