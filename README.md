@@ -6,6 +6,7 @@ South Africa has eleven official languages. Building out tools to support small-
 ## Core features
 - [ ] Input/select the word list that user will read aloud
 - [ ] Record audio while user reads the list
+- [x] Fragment audio per word
 - [ ] Editor to sample audio files and label (at researcher or user side, we decide) which word they correspond to
 - [ ] Some way to save the fragmented audio files (database, zip download, etc)
 - [ ] Audio playback
