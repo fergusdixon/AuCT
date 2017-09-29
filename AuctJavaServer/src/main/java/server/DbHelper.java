@@ -9,6 +9,7 @@ import models.SessionModel;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class DbHelper {
 
@@ -16,29 +17,52 @@ public class DbHelper {
         login();
     }
 
-    protected ArrayList<String> newSessions(String sessionName){
+    protected synchronized ArrayList<String> newSessions(String sessionName){
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("sessions");
-        ref.addValueEventListener(new ValueEventListener() {
+
+        final ArrayList models= new ArrayList<SessionModel>();
+
+        System.out.println("Getting DB reference");
+        DatabaseReference ref = FirebaseDatabase
+                .getInstance()
+                .getReference();
+        System.out.println("Success, adding event listener...");
+        ref.child("sessions").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                SessionModel post = dataSnapshot.getValue(SessionModel.class);
-                System.out.println(post);
+            public void onDataChange(DataSnapshot snapshot) {
+                Iterable<DataSnapshot> children = snapshot.getChildren();
+
+                for (DataSnapshot child : children){
+                    SessionModel model = child.getValue(SessionModel.class);
+                    //Wordlis-ref needs to be changed to allow for data model
+                    models.add(model);
+                }
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-                System.out.println("The read failed: " + databaseError.getCode());
+            public void onCancelled(DatabaseError error) {
+
             }
         });
-        String str = ref.toString();
-        return null;
+        System.out.println("Success");
+
+        while (true){
+            System.out.println(models.size());
+            try {
+                wait(200);
+            } catch (InterruptedException e) {
+                System.out.println("Interrupted");
+            }
+        }
+
+        //return null;
 
     }
 
 
     private void login() {
         try {
+            System.out.println("Logging in...");
             FileInputStream serviceAccount = new FileInputStream("/home/fergus/AuCT/AuctJavaServer/auct-capstone-firebase-adminsdk-57nym-694062f77b.json");
 
             // Initialize the app with a service account, granting admin privileges
@@ -48,7 +72,7 @@ public class DbHelper {
                     .build();
             FirebaseApp.initializeApp(options);
 
-            // As an admin, the app has access to read and write all data, regardless of Security Rules
+            System.out.println("Success");
 
         }
         catch (Exception e){
