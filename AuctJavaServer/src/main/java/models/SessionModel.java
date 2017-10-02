@@ -4,10 +4,11 @@ public class SessionModel {
 
     String date, filepath, language, name;
     int scrapped, spliced, verified, wordlist;
+    private int id;
 
     public SessionModel(){}
 
-    public SessionModel(String date, String filepath, String language, String name, int scrapped, int spliced, int verified, int wordlist) {
+    public SessionModel(String date, String filepath, String language, String name, int scrapped, int spliced, int verified, int wordlist, int id) {
         this.date = date;
         this.filepath = filepath;
         this.language = language;
@@ -81,6 +82,10 @@ public class SessionModel {
     public void setWordlistRef(int wordlistRef) {
         this.wordlist = wordlistRef;
     }
+
+    public int getId(){return this.id;}
+
+    public void setId(int id){this.id = id;}
 
     @Override
     public String toString() {

@@ -17,8 +17,9 @@ public class Driver {
             System.out.println("<<< Processing: " + sesh.getName() + " >>>");
             splitter.processFile(sesh.getName());
             System.out.println("Split!");
+            db.markSpliced(sesh.getId());
         }
-        System.out.println("Complete!");
+        System.out.println("Complete! Please use Ctrl+C to quit the process.");
         goOffline();
     }
 }

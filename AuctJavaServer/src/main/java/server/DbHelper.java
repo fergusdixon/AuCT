@@ -9,6 +9,8 @@ import models.SessionModel;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class DbHelper {
@@ -26,7 +28,7 @@ public class DbHelper {
                 .getInstance()
                 .getReference();
         System.out.println("Success, adding event listener...");
-        ref.child("sessions").addValueEventListener(new ValueEventListener() {
+        ref.child("sessions").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 Iterable<DataSnapshot> children = snapshot.getChildren();
@@ -34,8 +36,8 @@ public class DbHelper {
 
                 for (DataSnapshot child : children){
                     SessionModel model = child.getValue(SessionModel.class);
-                    //Wordlis-ref needs to be changed to allow for data model
                     if(model.getSpliced()==0) {
+                        model.setId(Integer.parseInt(child.getKey()));
                         models.add(model);
                     }
                     childrenCount = snapshot.getChildrenCount();
@@ -48,7 +50,7 @@ public class DbHelper {
             }
         });
         System.out.println("Success");
-        System.out.println("Waiting for response");
+        System.out.println("Waiting for response, if this takes too long it may mean there are no new sessions to segment.");
 
         do{
             System.out.println(".....");
@@ -64,7 +66,17 @@ public class DbHelper {
 
     }
 
-    public void markSpliced(String fileName){
+    public void markSpliced(int id){
+        DatabaseReference ref = FirebaseDatabase
+                .getInstance()
+                .getReference();
+        Map<String, Object> splice = new HashMap<String, Object>();
+        splice.put("spliced", 1);
+
+        ref.child("sessions/"+id).updateChildren(splice);
+    }
+
+    public void recordSegments(int id){
 
     }
 
