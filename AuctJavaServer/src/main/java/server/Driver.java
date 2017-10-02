@@ -1,14 +1,16 @@
 package server;
 
+import com.google.firebase.cloud.StorageClient;
 import models.SessionModel;
 
 import java.util.ArrayList;
 
+import static com.google.firebase.database.DatabaseReference.goOffline;
+
 public class Driver {
     public static void main(String[] args) {
         FileProcessor splitter = new FileProcessor();
-//        splitter.processFile("auct_list02_20170928123423.wav");
-        ArrayList<SessionModel> sessions = new ArrayList<>();
+        ArrayList<SessionModel> sessions;
         DbHelper db = new DbHelper();
         sessions = db.newSessions();
         for (SessionModel sesh : sessions){
@@ -17,5 +19,6 @@ public class Driver {
             System.out.println("Split!");
         }
         System.out.println("Complete!");
+        goOffline();
     }
 }

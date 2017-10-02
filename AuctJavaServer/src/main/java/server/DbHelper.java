@@ -30,12 +30,14 @@ public class DbHelper {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 Iterable<DataSnapshot> children = snapshot.getChildren();
-
+                models.clear();
 
                 for (DataSnapshot child : children){
                     SessionModel model = child.getValue(SessionModel.class);
                     //Wordlis-ref needs to be changed to allow for data model
-                    models.add(model);
+                    if(model.getSpliced()==0) {
+                        models.add(model);
+                    }
                     childrenCount = snapshot.getChildrenCount();
                 }
             }
@@ -55,10 +57,14 @@ public class DbHelper {
             } catch (InterruptedException e) {
                 System.out.println("Interrupted");
             }
-        } while (childrenCount==0);
-        System.out.println(childrenCount + " unprocessed sessions found");
+        } while (models.size()==0);
+        System.out.println(models.size() + " unprocessed sessions found");
         childrenCount = 0;
         return models;
+
+    }
+
+    public void markSpliced(String fileName){
 
     }
 
