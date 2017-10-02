@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AuCT Record Audio</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- <div class="container">
+	<div class="jumbotron">
+	<h1>AuCT</h1>
+</div> -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<a href="#" class="navbar-brand">AuCT</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<ul class="nav navbar-nav">
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">Sign up</a></li>
+			<li><a href="#">Login</a></li>
+		</ul>
+	</div>
+	
+	</div>
+	
+</nav>
+<div class="container">
+<div class="jumbotron">
+	<ul>
+		<li>Word 1</li>
+		<li>Word 2</li>
+		<li>Word 3</li>
+	</ul>
+</div>	
+</div>
+
+<div class="container">
+<div class="jumbotron">
+<section class="main-controls">
+	<div class="row">
+		<canvas class="visualizer" height="60px"></canvas>
+	</div>
+	<div class="row">
+	<div class="col-lg-4 col-xs-6">
+		<button id="recordbtn" class="btn btn-default btn-lg">Start Recording</button>
+	</div>
+	<div class="col-lg-4 col-xs-6">
+		<button id="stopbtn" class="btn btn-default btn-lg">Stop Recording</button>
+</section>
+<section class="sound-clips">
+	
+</section>
+	
+	<!-- <div class = row>
+		
+	</div>
+	<div class="row">
+		<div class="col-lg-3 col-xs-4">
+			<button class="btn btn-default">Replay</button>
+		</div>
+		<div class="col-lg-3 col-xs-4">
+			<button class="btn btn-default">Retake</button>
+		</div>
+		<div class="col-lg-3 col-xs-4">
+			<button class="btn btn-default">Submit</button>
+		</div>
+	</div> -->
+</div>
+	
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD6S977TAzMc809mhI-rO_J_EK_vAmTYhA",
+    authDomain: "auct-capstone.firebaseapp.com",
+    databaseURL: "https://auct-capstone.firebaseio.com",
+    projectId: "auct-capstone",
+    storageBucket: "auct-capstone.appspot.com",
+    messagingSenderId: "166934669737"
+  };
+  firebase.initializeApp(config);
+  
+</script>
+
+<script type="text/javascript" src="recordAudio.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
