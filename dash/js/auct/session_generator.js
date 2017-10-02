@@ -1,4 +1,6 @@
 (function (){
+	"use strict";
+
 
 	// Get a reference to the Firebase database service
 	var database = firebase.database();
@@ -21,7 +23,7 @@
 	  		scrapped : dbSessions[i].scrapped,
 	  		spliced : dbSessions[i].spliced,
 	  		verified : dbSessions[i].verified,
-	  		wordlistref : dbSessions[i]['wordlist-ref'],
+	  		wordlistref : dbSessions[i]['wordlist-ref'], //TODO update this for the new DB
 	  		markup : ""
 	  	};
 

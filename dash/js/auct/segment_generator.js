@@ -1,4 +1,18 @@
+function embedAudio(seg) {
+	console.log("Embedding audio into "+seg.label);
+	var but = document.getElementsByClassName('btn-segment')[seg.position];
+	console.log(but);
+	but.addEventListener("mouseover", function() {
+		var audio = document.createElement('audio');
+		audio.src = seg.url;
+		audio.play();
+		console.log("Play: "+seg.label);
+	});
+}
+
 function loadSeg(sid, wlref) {
+	"use strict";
+
 	console.log("loading session "+sid+"...");
 
 	// Get a reference to the Firebase database service
@@ -28,6 +42,7 @@ function loadSeg(sid, wlref) {
 				if(dbSegs[i].session == sid) {
 
 					var s = {
+						position : i,
 						id : dbSegs[i].id,
 						filepath : dbSegs[i].filepath,
 						url : "",
@@ -67,30 +82,19 @@ function loadSeg(sid, wlref) {
 				segPanel.innerHTML += audioSegs[i].markup;
 			}
 
-			console.log("Linking audio playback...");
-
-			for (var i = audioSegs.length - 1; i >= 0; i--) {
-				var s = audioSegs[i];
-				// Create a reference to the file we want to download
-				var audioRef = storageRef.child(s.filepath);
-				// Get the download URL
-				audioRef.getDownloadURL().then(function(url) {
-					s.url = url;
-					// console.log("loaded url: "+url);
-
-				}).catch(function(error) {
-					console.log("couldn't load url");
-				});
-			}
-
 			// TODO make audio play on mouseover
+			console.log("Linking audio playback...");
 			var roundButtons = document.getElementsByClassName('btn-segment');
 
-			for (var i = roundButtons.length - 1; i >= 0; i--) {
-				roundButtons[i].addEventListener("mouseover", function() {
-					var audio = document.createElement('audio');
-					audio.src = audioSegs[0].url;
-					audio.play();
+			for (var i = 0; i < audioSegs.length; i++) {
+				var s = audioSegs[i];
+				var audioRef = storageRef.child(s.filepath);
+				audioRef.getDownloadURL().then(function(url) {
+					s.url = url;
+					console.log("loaded url: "+s.url);
+					embedAudio(s);
+				}).catch(function(error) {
+					console.log("couldn't load url");
 				});
 
 			}

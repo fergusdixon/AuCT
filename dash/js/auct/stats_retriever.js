@@ -1,4 +1,5 @@
-(function(){
+(function (){
+	"use strict";
 
 	// Declare the graphic elements
 	var barLab = document.getElementsByClassName("progress-bar-primary")[0];
