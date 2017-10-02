@@ -1,0 +1,16 @@
+[ {
+  "listnum" : "01",
+  "name" : "english-fruits",
+  "language" : "English",
+  "words" : ["Apple", "Banana", "Blackberry", "Cherry", "Cranberry", "Gooseberry", "Grape", "Grapefruit", "Lime", "Mango", "Nectarine", "Orange", "Papaya", "Peach", "Pear", "Pineapple", "Prune", "Strawberry", "Tangerine", "Watermelon"]
+}, {
+  "listnum" : "02",
+  "name" : "english-animals",
+  "language" : "English",
+  "words" : ["Bat", "Bear", "Bird", "Cat", "Crocodile", "Dog", "Frog", "Giraffe", "Goat", "Horse", "Leopard", "Lion", "Lizard", "Pig", "Rhinoceros", "Snake", "Squirrel", "Tiger", "Turtle", "Wolf"]
+}, {
+  "listnum" : "03",
+  "name" : "english-kitchen",
+  "language" : "English",
+  "words" : ["Blender", "Board", "Bowl", "Colander", "Fork", "Glass", "Knife", "Mug", "Oven", "Pan", "Peeler", "Plate", "Pot", "Scale", "Spatula", "Spoon", "Thermometer", "Timer", "Tongs", "Whisk"]
+} ]
