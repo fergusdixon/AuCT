@@ -8,6 +8,8 @@ import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.cloud.StorageClient;
 
 import java.io.*;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileProcessor {
 
@@ -38,11 +40,28 @@ public class FileProcessor {
                 "/home/fergus/AuCT/AuctJavaServer/src/output/" +
                         fileName
         );
-        System.out.println(folder.listFiles());
         for (final File fileEntry : folder.listFiles()) {
             upload(fileEntry);
             System.out.println("Uploaded segement: " + counter);
             counter++;
+        }
+        Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+fileName);
+        try {
+            Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    Files.delete(file);
+                    return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                    Files.delete(dir);
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         System.out.println("Upload complete.");
     }
@@ -88,7 +107,7 @@ public class FileProcessor {
             FileOutputStream out = new FileOutputStream(f);
             out.write( array );
             out.close();
-            //f.deleteOnExit();
+            f.deleteOnExit();
             System.out.println("File written");
         } catch (IOException e) {
             e.printStackTrace();
