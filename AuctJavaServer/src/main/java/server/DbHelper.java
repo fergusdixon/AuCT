@@ -12,14 +12,13 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class DbHelper {
+    private long childrenCount = 0;
 
     public DbHelper(){
         login();
     }
 
-    protected synchronized ArrayList<String> newSessions(String sessionName){
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-
+    protected synchronized ArrayList<SessionModel> newSessions(){
         final ArrayList models= new ArrayList<SessionModel>();
 
         System.out.println("Getting DB reference");
@@ -32,10 +31,12 @@ public class DbHelper {
             public void onDataChange(DataSnapshot snapshot) {
                 Iterable<DataSnapshot> children = snapshot.getChildren();
 
+
                 for (DataSnapshot child : children){
                     SessionModel model = child.getValue(SessionModel.class);
                     //Wordlis-ref needs to be changed to allow for data model
                     models.add(model);
+                    childrenCount = snapshot.getChildrenCount();
                 }
             }
 
@@ -45,17 +46,19 @@ public class DbHelper {
             }
         });
         System.out.println("Success");
+        System.out.println("Waiting for response");
 
-        while (true){
-            System.out.println(models.size());
+        do{
+            System.out.println(".....");
             try {
-                wait(200);
+                wait(2000);
             } catch (InterruptedException e) {
                 System.out.println("Interrupted");
             }
-        }
-
-        //return null;
+        } while (childrenCount==0);
+        System.out.println(childrenCount + " unprocessed sessions found");
+        childrenCount = 0;
+        return models;
 
     }
 
@@ -69,6 +72,7 @@ public class DbHelper {
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
                     .setDatabaseUrl("https://auct-capstone.firebaseio.com/")
+                    .setStorageBucket("auct-capstone.appspot.com")
                     .build();
             FirebaseApp.initializeApp(options);
 

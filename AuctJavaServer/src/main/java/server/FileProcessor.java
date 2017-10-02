@@ -16,7 +16,8 @@ public class FileProcessor {
 
     public void processFile(String fileName) {
         System.out.println("Retrieving cloud storage...");
-        login();
+//        login();
+        bucket = StorageClient.getInstance().bucket();
         System.out.println("Success");
 
         this.fileName = fileName;
@@ -35,7 +36,7 @@ public class FileProcessor {
         int counter = 1;
         File folder = new File(
                 "/home/fergus/AuCT/AuctJavaServer/src/output/" +
-                        fileName.substring(0, fileName.length()-4)
+                        fileName
         );
         System.out.println(folder.listFiles());
         for (final File fileEntry : folder.listFiles()) {
@@ -59,12 +60,15 @@ public class FileProcessor {
     private boolean split(){
         Segmentor seg = new Segmentor("/home/fergus/AuCT/AuctJavaServer/src/main/java/server/");
 
-        return seg.segment(fileName+".wav");
+        return seg.segment(fileName.substring(fileName.indexOf('/')+1));
     }
 
     private void getAudio(String name){
         //getting file
-        Blob blob = bucket.get("Input/" + name);
+        if(bucket == null){
+
+        }
+        Blob blob = bucket.get("Input/" + name + ".wav");
         byte[] array = blob.getContent();
 
         String uncutName = blob.getName();
@@ -84,7 +88,7 @@ public class FileProcessor {
             FileOutputStream out = new FileOutputStream(f);
             out.write( array );
             out.close();
-            f.deleteOnExit();
+            //f.deleteOnExit();
             System.out.println("File written");
         } catch (IOException e) {
             e.printStackTrace();

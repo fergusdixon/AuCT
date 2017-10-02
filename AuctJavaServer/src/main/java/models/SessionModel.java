@@ -2,10 +2,12 @@ package models;
 
 public class SessionModel {
 
-    public String date, filepath, language, name;
-    public int scrapped, spliced, verified, wordlistRef;
+    String date, filepath, language, name;
+    int scrapped, spliced, verified, wordlist;
 
-    public SessionModel(String date, String filepath, String language, String name, int scrapped, int spliced, int verified, int wordlistRef) {
+    public SessionModel(){}
+
+    public SessionModel(String date, String filepath, String language, String name, int scrapped, int spliced, int verified, int wordlist) {
         this.date = date;
         this.filepath = filepath;
         this.language = language;
@@ -13,7 +15,7 @@ public class SessionModel {
         this.scrapped = scrapped;
         this.spliced = spliced;
         this.verified = verified;
-        this.wordlistRef = wordlistRef;
+        this.wordlist = wordlist;
     }
 
     public String getDate() {
@@ -73,11 +75,11 @@ public class SessionModel {
     }
 
     public int getWordlistRef() {
-        return wordlistRef;
+        return wordlist;
     }
 
     public void setWordlistRef(int wordlistRef) {
-        this.wordlistRef = wordlistRef;
+        this.wordlist = wordlistRef;
     }
 
     @Override

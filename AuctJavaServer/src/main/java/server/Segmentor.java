@@ -11,7 +11,7 @@ public class Segmentor {
     public boolean segment(String inputPath){
         try
         {
-            ProcessBuilder pb = new ProcessBuilder(dir + "process.sh", inputPath);
+            ProcessBuilder pb = new ProcessBuilder(dir + "process.sh", inputPath+".wav");
             pb.directory(new File(dir));
             Process process = pb.start();
             process.waitFor();
