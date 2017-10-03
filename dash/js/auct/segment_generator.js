@@ -1,15 +1,3 @@
-function embedAudio(seg) {
-	console.log("Embedding audio into "+seg.label);
-	var but = document.getElementsByClassName('btn-segment')[seg.position];
-	console.log(but);
-	but.addEventListener("mouseover", function() {
-		var audio = document.createElement('audio');
-		audio.src = seg.url;
-		audio.play();
-		console.log("Play: "+seg.label);
-	});
-}
-
 function loadSeg(sid, wlref) {
 	"use strict";
 
@@ -59,14 +47,17 @@ function loadSeg(sid, wlref) {
 					if(s.verified == 1) {
 						type = "success";
 					}
+					var classString = "class = 'btn btn-default active' type='button'";
+					var clickString = "onClick='updateLabel("+s.position+",";
 					if(len > 0) {
-						if(i>0) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i-1]+"</button>";}
-						if(i<len-1) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i+1]+"</button>";}
-						if(i>1) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i-2]+"</button>";}
-						if(i<len-2) {suggestions += "<button class='btn btn-default active'>"+wordlist.words[i+2]+"</button>";}
+						if(i>0) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-1]+"</button>";}
+						if(i<len-1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+1]+"</button>";}
+						if(i>1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-2]+"</button>";}
+						if(i<len-2) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+2]+"</button>";}
 					}
 
-					s.markup = "<button class='btn btn-"+type+" btn-rounded btn-segment'>"+s.label+"</button>"
+					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='seg-"+s.position
+										+"'"+clickString+"this)'>"+s.label+"</button>"
 										+suggestions+"<br>";
 
 					audioSegs.push(s);
@@ -91,8 +82,7 @@ function loadSeg(sid, wlref) {
 				var audioRef = storageRef.child(s.filepath);
 				audioRef.getDownloadURL().then(function(url) {
 					s.url = url;
-					console.log("loaded url: "+s.url);
-					embedAudio(s);
+					// console.log("loaded url: "+s.url);
 				}).catch(function(error) {
 					console.log("couldn't load url");
 				});
