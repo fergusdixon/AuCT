@@ -9,15 +9,13 @@ function embedAudio(sid) {
 	var storage = firebase.storage();
 	var storageRef = storage.ref('/');
 
-	// var clips = [];
-
 	console.log("embedding audio...");
 
 	// Firebase once-off DB query
 	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 		var dbSegs = snapshot.val();
 
-		for (var i = 0; i < 3; i++) { //for (var i = 0; i < dbSegs.length; i++) {
+		for (var i = 0; i < dbSegs.length; i++) {
 
 			if(dbSegs[i].session == sid) {
 

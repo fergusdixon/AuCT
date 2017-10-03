@@ -12,6 +12,7 @@ function loadSeg(sid, wlref) {
 	console.log("Generating segments...");
 
 	segPanel.innerHTML = "<h3>loading...</h3>";
+	embedAudio(sid);
 
 	// Firebase once-off DB query
 	firebase.database().ref('/wordlists/').once('value').then(function(snapshot) {
@@ -65,7 +66,6 @@ function loadSeg(sid, wlref) {
 
 			};
 
-			embedAudio(sid);
 
 			segPanel.innerHTML = "";
 			for (var i = 0; i < audioSegs.length; i++) {

@@ -24,8 +24,8 @@
 	  		  		scrapped : dbSessions[i].scrapped,
 	  		  		spliced : dbSessions[i].spliced,
 	  		  		verified : dbSessions[i].verified,
-	  		  		wordlistref : dbSessions[i]['wordlist-ref'], //TODO update this for the new DB
-	  		  		// wordlistref : dbSessions[i].wordlist, //TODO update this for the new DB
+	  		  		// wordlistref : dbSessions[i]['wordlist-ref'], //TODO update this for the new DB
+	  		  		wordlistref : dbSessions[i].wordlist, //TODO update this for the new DB
 	  		  		markup : ""
 	  		  	};
 
