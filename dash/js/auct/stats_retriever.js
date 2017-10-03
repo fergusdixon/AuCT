@@ -20,11 +20,14 @@
 		var scrapped = 0;
 
 		for (var i = segments.length - 1; i >= 0; i--) {
-			if(segments[i].verified == 1) {
-				labelled++;
-			}
-			if(segments[i].scrapped == 1) {
-				scrapped++;
+
+			if(segments[i] != null) {
+				if(segments[i].verified == 1) {
+					labelled++;
+				}
+				if(segments[i].scrapped == 1) {
+					scrapped++;
+				}
 			}
 
 		}

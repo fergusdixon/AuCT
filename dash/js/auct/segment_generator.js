@@ -25,7 +25,7 @@ function loadSeg(sid, wlref) {
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 			var dbSegs = snapshot.val();
 
-			for (var i = 0; i < 3; i++) { //for (var i = 0; i < dbSegs.length; i++) {
+			for (var i = 0; i < dbSegs.length; i++) {
 
 				if(dbSegs[i].session == sid) {
 
@@ -45,6 +45,9 @@ function loadSeg(sid, wlref) {
 					var len = wordlist.words.length;
 					if(s.verified == 1) {
 						type = "success";
+					}
+					if(s.scrapped == 1) {
+						type = "danger";
 					}
 					var classString = "class = 'btn btn-default active' type='button'";
 					var clickString = "onClick='updateLabel("+s.position+","+s.session+",";
@@ -73,20 +76,20 @@ function loadSeg(sid, wlref) {
 			}
 
 			// TODO make audio play on mouseover
-			console.log("Linking audio playback...");
 			var roundButtons = document.getElementsByClassName('btn-segment');
 
-			for (var i = 0; i < audioSegs.length; i++) {
-				var s = audioSegs[i];
-				var audioRef = storageRef.child(s.filepath);
-				audioRef.getDownloadURL().then(function(url) {
-					s.url = url;
-					// console.log("loaded url: "+s.url);
-				}).catch(function(error) {
-					console.log("couldn't load url");
-				});
+			// console.log("Linking audio playback...");
+			// for (var i = 0; i < audioSegs.length; i++) {
+			// 	var s = audioSegs[i];
+			// 	var audioRef = storageRef.child(s.filepath);
+			// 	audioRef.getDownloadURL().then(function(url) {
+			// 		s.url = url;
+			// 		// console.log("loaded url: "+s.url);
+			// 	}).catch(function(error) {
+			// 		console.log("couldn't load url");
+			// 	});
 
-			}
+			// }
 
 			console.log("Loaded session "+sid);
 

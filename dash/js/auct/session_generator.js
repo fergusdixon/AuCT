@@ -14,28 +14,33 @@
 		var dbSessions = snapshot.val();
 
 	  for (var i = 0; i < dbSessions.length; i++) {
-	  	var s = {
-	  		id : i,
-	  		date : dbSessions[i].date,
-	  		filepath : dbSessions[i].filepath,
-	  		language : dbSessions[i].language,
-	  		name : dbSessions[i].name,
-	  		scrapped : dbSessions[i].scrapped,
-	  		spliced : dbSessions[i].spliced,
-	  		verified : dbSessions[i].verified,
-	  		wordlistref : dbSessions[i]['wordlist-ref'], //TODO update this for the new DB
-	  		markup : ""
-	  	};
+	  	if(dbSessions[i] != null) {
+	  		  	var s = {
+	  		  		id : i,
+	  		  		date : dbSessions[i].date,
+	  		  		filepath : dbSessions[i].filepath,
+	  		  		language : dbSessions[i].language,
+	  		  		name : dbSessions[i].name,
+	  		  		scrapped : dbSessions[i].scrapped,
+	  		  		spliced : dbSessions[i].spliced,
+	  		  		verified : dbSessions[i].verified,
+	  		  		wordlistref : dbSessions[i]['wordlist-ref'], //TODO update this for the new DB
+	  		  		// wordlistref : dbSessions[i].wordlist, //TODO update this for the new DB
+	  		  		markup : ""
+	  		  	};
 
-	  	s.markup = "<div class='panel panel-default'><div class='panel-heading'>"
-								+"<div class='panel-title-box'><h3>"+s.date+" "+s.language+" list"+s.wordlistref+"</h3></div></div>"
-								+"<div class='panel-body'><form class='form-horizontal' role='form'>"
-								+"<div class='form-group'><div class='col-md-12 segment-holder'>"
-								+"<button class='btn btn-info btn-block seg-load-button'"
-								+"onclick='loadSeg("+s.id+","+s.wordlistref+")'>Load Segments</button>"
-								+"</div></div></form></div></div>";
+	  		  	// console.log(i+": "+s);
 
-			sessions.push(s);
+	  		  	s.markup = "<div class='panel panel-default'><div class='panel-heading'>"
+	  									+"<div class='panel-title-box'><h3>"+s.date+" "+s.language+" list"+s.wordlistref+"</h3></div></div>"
+	  									+"<div class='panel-body'><form class='form-horizontal' role='form'>"
+	  									+"<div class='form-group'><div class='col-md-12 segment-holder'>"
+	  									+"<button class='btn btn-info btn-block seg-load-button'"
+	  									+"onclick='loadSeg("+s.id+","+s.wordlistref+")'>Load Segments</button>"
+	  									+"</div></div></form></div></div>";
+
+	  				sessions.push(s);
+	  	}
 
 	  };
 
