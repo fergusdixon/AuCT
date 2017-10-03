@@ -41,23 +41,39 @@
 	<div class="jumbotron">
 		<h3>Choose a word list</h3>
 
-		<div class="row">
+		<div id="wordlistRow" class="row">
+			<!-- <div class="col-md-3 col-sm-6"><button class="btn btn-default btn-lg"><a href="recordAudio.html">Text</a></button></div>
+			<div class="col-md-3 col-sm-6"><button class="btn btn-default btn-lg"><a href="recordAudio.html">Text</a></button></div>
 			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
 			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
 			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
 			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
 			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
 			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
-			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
-			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div>
+			<div class="col-md-3 col-sm-6"><div class="thumbnail"><a href="recordAudio.html"><img src="butterfly.jpg"></a></div></div> -->
 		</div>
 	</div>
 </div>
-	
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD6S977TAzMc809mhI-rO_J_EK_vAmTYhA",
+    authDomain: "auct-capstone.firebaseapp.com",
+    databaseURL: "https://auct-capstone.firebaseio.com",
+    projectId: "auct-capstone",
+    storageBucket: "auct-capstone.appspot.com",
+    messagingSenderId: "166934669737"
+  };
+  firebase.initializeApp(config);
+  
+</script>	
+<script type="text/javascript" src="db_connector.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>
