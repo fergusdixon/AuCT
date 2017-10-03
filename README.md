@@ -23,3 +23,19 @@ South Africa has eleven official languages. Building out tools to support small-
 - [ ] Choose language when first visiting site (on landing page)
 - [ ] Support different unit sizes (words, phrases, sentences)
 - [x] Trim silent ends of words to remove all silence from a clip
+
+## Usage
+
+### Backend
+Gradle handles the build, so make sure you have Gradle installed
+`sudo apt-get install gradle`
+
+The wrapper is preconfigured, so to build & run from the AuctJavaServer root dir:
+`./gradlew build`
+`./gradlew run`
+
+This will:
+- Check the Firebase DB for any files not yet marked as spliced
+- Download each file, split it per word, and upload back to the Cloud Storage bucket under "Output"
+- After each file has been uploaded, it adds a record of each segment in the DB/segments directory under the original file's name
+- The backend keeps no local files after termination
