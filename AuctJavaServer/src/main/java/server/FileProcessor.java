@@ -26,6 +26,9 @@ public class FileProcessor {
         this.fileName = fileName;
         System.out.println("Downloading: " + fileName + "...");
         getAudio(fileName);
+        if(fileName.equals("null")){
+            return;
+        }
 
         //Split file
         System.out.println("Success, analysing and segmenting the audio file...");
@@ -110,6 +113,11 @@ public class FileProcessor {
 
         }
         Blob blob = bucket.get("Input/" + name + ".wav");
+        if(blob == null){
+            System.out.println("File not found!");
+            fileName = "null";
+            return;
+        }
         byte[] array = blob.getContent();
 
         String uncutName = blob.getName();
@@ -130,7 +138,6 @@ public class FileProcessor {
             out.write( array );
             out.close();
             f.deleteOnExit();
-            System.out.println("File written");
         } catch (IOException e) {
             e.printStackTrace();
         }

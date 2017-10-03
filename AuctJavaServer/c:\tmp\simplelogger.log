@@ -1,0 +1,425 @@
+2017-10-03 13:47:02:697 +0200 [main] DEBUG com.google.firebase.internal.RevivingScheduledExecutor - Creating new thread for: FirebaseDatabaseWorker
+2017-10-03 13:47:02:700 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Scheduling connection attempt
+2017-10-03 13:47:02:703 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.util.RetryHelper - Scheduling retry in 0ms
+2017-10-03 13:47:02:728 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Listening on sessions (params: {})
+2017-10-03 13:47:02:728 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Adding listen query: sessions (params: {})
+2017-10-03 13:47:02:729 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Trying to fetch auth token
+2017-10-03 13:47:03:683 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Auth token changed, triggering auth token refresh
+2017-10-03 13:47:03:683 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Auth token refreshed.
+2017-10-03 13:47:03:683 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Successfully fetched token, opening connection
+2017-10-03 13:47:03:696 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Opening a connection
+2017-10-03 13:47:04:959 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - websocket opened
+2017-10-03 13:47:04:959 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive
+2017-10-03 13:47:04:960 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"c","d":{"t":"h","d":{"ts":1507031224818,"v":"5","h":"s-usc1c-nss-229.firebaseio.com","s":"BXvrLxL950CrH7WiWoV0l2OvySH97hDE"}}}
+2017-10-03 13:47:04:961 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44998
+2017-10-03 13:47:04:961 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:04:962 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=c, d={t=h, d={h=s-usc1c-nss-229.firebaseio.com, s=BXvrLxL950CrH7WiWoV0l2OvySH97hDE, v=5, ts=1507031224818}}}
+2017-10-03 13:47:04:962 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Got control message: {t=h, d={h=s-usc1c-nss-229.firebaseio.com, s=BXvrLxL950CrH7WiWoV0l2OvySH97hDE, v=5, ts=1507031224818}}
+2017-10-03 13:47:04:962 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - realtime connection established
+2017-10-03 13:47:04:962 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - onReady
+2017-10-03 13:47:04:962 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - handling timestamp
+2017-10-03 13:47:04:963 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Sending first connection stats
+2017-10-03 13:47:04:963 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=s, r=0, b={c={sdk.admin_java.5-3-1=1}}}}
+2017-10-03 13:47:04:963 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44997
+2017-10-03 13:47:04:964 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - calling restore state
+2017-10-03 13:47:04:964 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Restoring auth.
+2017-10-03 13:47:04:964 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data (contents hidden)
+2017-10-03 13:47:04:964 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:05:264 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":0,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:05:264 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44700
+2017-10-03 13:47:05:264 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:05:265 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=0, b={d=, s=ok}}}
+2017-10-03 13:47:05:265 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=0, b={d=, s=ok}}
+2017-10-03 13:47:05:356 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":1,"b":{"s":"ok","d":{"auth":null,"expires":1507034825}}}}
+2017-10-03 13:47:05:356 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44907
+2017-10-03 13:47:05:357 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:05:357 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=1, b={d={auth=null, expires=1507034825}, s=ok}}}
+2017-10-03 13:47:05:357 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=1, b={d={auth=null, expires=1507034825}, s=ok}}
+2017-10-03 13:47:05:357 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Restoring outstanding listens
+2017-10-03 13:47:05:357 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Restoring listen sessions (params: {})
+2017-10-03 13:47:05:358 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=q, r=2, b={p=sessions, h=}}}
+2017-10-03 13:47:05:358 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44998
+2017-10-03 13:47:05:358 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - Restoring writes.
+2017-10-03 13:47:05:695 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"b":{"p":"sessions","d":{"0":{"date":"2017-09-28_12:38:00","filepath":"Input/auct_list01_20170928123800.wav","language":"English","name":"auct_list01_20170928123800","scrapped":0,"spliced":1,"verified":0,"wordlist":0},"1":{"date":"2017-09-28_12:34:23","filepath":"Input/auct_list02_20170928123423.wav","language":"English","name":"auct_list02_20170928123423","scrapped":0,"spliced":1,"verified":0,"wordlist":1},"2":{"date":"2017-09-28_12:38:55","filepath":"Input/auct_list03_20170928123855.wav","language":"English","name":"auct_list03_20170928123855","scrapped":0,"spliced":0,"verified":0,"wordlist":2},"4":{"date":"2017-10-03_10:23:30","filepath":"Input/auct_list03_20171003102330.wav","language":"English","name":"auct_list03_20171003102330","scrapped":0,"spliced":1,"verified":0,"wordlist":2},"5":{"date":"2017-10-03_12:47:30","filepath":"Input/auct_list01_20171003124730.wav","language":"English","name":"auct_list01_20171003124730","scrapped":0,"spliced":1,"verified":0,"wordlist":0},"6":{"date":"2017-10-03_12:49:00","filepath":"Input/auct_list02_20171003124900.wav","language":"English","name":"auct_list02_20171003124900","scrapped":0,"spliced":1,"verified":0,"wordlist":1},"7":{"date":"2017-10-03_12:49:30","filepath":"Input/auct_list03_20171003124930.wav","language":"English","name":"auct_list03_20171003124930","scrapped":0,"spliced":1,"verified":0,"wordlist":2}}},"a":"d"}}
+2017-10-03 13:47:05:695 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":2,"b":{"s":"ok","d":{}}}}
+2017-10-03 13:47:05:695 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44663
+2017-10-03 13:47:05:695 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:05:696 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={a=d, b={p=sessions, d={0={date=2017-09-28_12:38:00, wordlist=0, filepath=Input/auct_list01_20170928123800.wav, spliced=1, name=auct_list01_20170928123800, verified=0, language=English, scrapped=0}, 1={date=2017-09-28_12:34:23, wordlist=1, filepath=Input/auct_list02_20170928123423.wav, spliced=1, name=auct_list02_20170928123423, verified=0, language=English, scrapped=0}, 2={date=2017-09-28_12:38:55, wordlist=2, filepath=Input/auct_list03_20170928123855.wav, spliced=0, name=auct_list03_20170928123855, verified=0, language=English, scrapped=0}, 4={date=2017-10-03_10:23:30, wordlist=2, filepath=Input/auct_list03_20171003102330.wav, spliced=1, name=auct_list03_20171003102330, verified=0, language=English, scrapped=0}, 5={date=2017-10-03_12:47:30, wordlist=0, filepath=Input/auct_list01_20171003124730.wav, spliced=1, name=auct_list01_20171003124730, verified=0, language=English, scrapped=0}, 6={date=2017-10-03_12:49:00, wordlist=1, filepath=Input/auct_list02_20171003124900.wav, spliced=1, name=auct_list02_20171003124900, verified=0, language=English, scrapped=0}, 7={date=2017-10-03_12:49:30, wordlist=2, filepath=Input/auct_list03_20171003124930.wav, spliced=1, name=auct_list03_20171003124930, verified=0, language=English, scrapped=0}}}}}
+2017-10-03 13:47:05:696 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {a=d, b={p=sessions, d={0={date=2017-09-28_12:38:00, wordlist=0, filepath=Input/auct_list01_20170928123800.wav, spliced=1, name=auct_list01_20170928123800, verified=0, language=English, scrapped=0}, 1={date=2017-09-28_12:34:23, wordlist=1, filepath=Input/auct_list02_20170928123423.wav, spliced=1, name=auct_list02_20170928123423, verified=0, language=English, scrapped=0}, 2={date=2017-09-28_12:38:55, wordlist=2, filepath=Input/auct_list03_20170928123855.wav, spliced=0, name=auct_list03_20170928123855, verified=0, language=English, scrapped=0}, 4={date=2017-10-03_10:23:30, wordlist=2, filepath=Input/auct_list03_20171003102330.wav, spliced=1, name=auct_list03_20171003102330, verified=0, language=English, scrapped=0}, 5={date=2017-10-03_12:47:30, wordlist=0, filepath=Input/auct_list01_20171003124730.wav, spliced=1, name=auct_list01_20171003124730, verified=0, language=English, scrapped=0}, 6={date=2017-10-03_12:49:00, wordlist=1, filepath=Input/auct_list02_20171003124900.wav, spliced=1, name=auct_list02_20171003124900, verified=0, language=English, scrapped=0}, 7={date=2017-10-03_12:49:30, wordlist=2, filepath=Input/auct_list03_20171003124930.wav, spliced=1, name=auct_list03_20171003124930, verified=0, language=English, scrapped=0}}}}
+2017-10-03 13:47:05:696 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - handleServerMessage: d {p=sessions, d={0={date=2017-09-28_12:38:00, wordlist=0, filepath=Input/auct_list01_20170928123800.wav, spliced=1, name=auct_list01_20170928123800, verified=0, language=English, scrapped=0}, 1={date=2017-09-28_12:34:23, wordlist=1, filepath=Input/auct_list02_20170928123423.wav, spliced=1, name=auct_list02_20170928123423, verified=0, language=English, scrapped=0}, 2={date=2017-09-28_12:38:55, wordlist=2, filepath=Input/auct_list03_20170928123855.wav, spliced=0, name=auct_list03_20170928123855, verified=0, language=English, scrapped=0}, 4={date=2017-10-03_10:23:30, wordlist=2, filepath=Input/auct_list03_20171003102330.wav, spliced=1, name=auct_list03_20171003102330, verified=0, language=English, scrapped=0}, 5={date=2017-10-03_12:47:30, wordlist=0, filepath=Input/auct_list01_20171003124730.wav, spliced=1, name=auct_list01_20171003124730, verified=0, language=English, scrapped=0}, 6={date=2017-10-03_12:49:00, wordlist=1, filepath=Input/auct_list02_20171003124900.wav, spliced=1, name=auct_list02_20171003124900, verified=0, language=English, scrapped=0}, 7={date=2017-10-03_12:49:30, wordlist=2, filepath=Input/auct_list03_20171003124930.wav, spliced=1, name=auct_list03_20171003124930, verified=0, language=English, scrapped=0}}}
+2017-10-03 13:47:05:696 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - onDataUpdate: /sessions
+2017-10-03 13:47:05:696 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - onDataUpdate: /sessions {0={date=2017-09-28_12:38:00, wordlist=0, filepath=Input/auct_list01_20170928123800.wav, spliced=1, name=auct_list01_20170928123800, verified=0, language=English, scrapped=0}, 1={date=2017-09-28_12:34:23, wordlist=1, filepath=Input/auct_list02_20170928123423.wav, spliced=1, name=auct_list02_20170928123423, verified=0, language=English, scrapped=0}, 2={date=2017-09-28_12:38:55, wordlist=2, filepath=Input/auct_list03_20170928123855.wav, spliced=0, name=auct_list03_20170928123855, verified=0, language=English, scrapped=0}, 4={date=2017-10-03_10:23:30, wordlist=2, filepath=Input/auct_list03_20171003102330.wav, spliced=1, name=auct_list03_20171003102330, verified=0, language=English, scrapped=0}, 5={date=2017-10-03_12:47:30, wordlist=0, filepath=Input/auct_list01_20171003124730.wav, spliced=1, name=auct_list01_20171003124730, verified=0, language=English, scrapped=0}, 6={date=2017-10-03_12:49:00, wordlist=1, filepath=Input/auct_list02_20171003124900.wav, spliced=1, name=auct_list02_20171003124900, verified=0, language=English, scrapped=0}, 7={date=2017-10-03_12:49:30, wordlist=2, filepath=Input/auct_list03_20171003124930.wav, spliced=1, name=auct_list03_20171003124930, verified=0, language=English, scrapped=0}}
+2017-10-03 13:47:05:700 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.view.EventRaiser - Raising 1 event(s)
+2017-10-03 13:47:05:701 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44994
+2017-10-03 13:47:05:701 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:05:701 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=2, b={d={}, s=ok}}}
+2017-10-03 13:47:05:701 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=2, b={d={}, s=ok}}
+2017-10-03 13:47:05:701 +0200 [FirebaseDatabaseEventTarget] DEBUG com.google.firebase.database.core.view.EventRaiser - Raising /sessions: VALUE: {0={date=2017-09-28_12:38:00, wordlist=0, filepath=Input/auct_list01_20170928123800.wav, spliced=1, name=auct_list01_20170928123800, verified=0, language=English, scrapped=0}, 1={date=2017-09-28_12:34:23, wordlist=1, filepath=Input/auct_list02_20170928123423.wav, spliced=1, name=auct_list02_20170928123423, verified=0, language=English, scrapped=0}, 2={date=2017-09-28_12:38:55, wordlist=2, filepath=Input/auct_list03_20170928123855.wav, spliced=0, name=auct_list03_20170928123855, verified=0, language=English, scrapped=0}, 4={date=2017-10-03_10:23:30, wordlist=2, filepath=Input/auct_list03_20171003102330.wav, spliced=1, name=auct_list03_20171003102330, verified=0, language=English, scrapped=0}, 5={date=2017-10-03_12:47:30, wordlist=0, filepath=Input/auct_list01_20171003124730.wav, spliced=1, name=auct_list01_20171003124730, verified=0, language=English, scrapped=0}, 6={date=2017-10-03_12:49:00, wordlist=1, filepath=Input/auct_list02_20171003124900.wav, spliced=1, name=auct_list02_20171003124900, verified=0, language=English, scrapped=0}, 7={date=2017-10-03_12:49:30, wordlist=2, filepath=Input/auct_list03_20171003124930.wav, spliced=1, name=auct_list03_20171003124930, verified=0, language=English, scrapped=0}}
+2017-10-03 13:47:05:703 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - unlistening on sessions (params: {})
+2017-10-03 13:47:05:703 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - removing query sessions (params: {})
+2017-10-03 13:47:05:703 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=n, r=3, b={p=sessions}}}
+2017-10-03 13:47:05:703 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44997
+2017-10-03 13:47:05:705 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:05:705 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:05:705 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:05:705 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:05:706 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:05:706 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:05:706 +0200 [FirebaseDatabaseEventTarget] WARN com.google.firebase.database.utilities.encoding.CustomClassMapper - No setter/field for wordlist found on class models.SessionModel
+2017-10-03 13:47:06:002 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":3,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:06:002 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44701
+2017-10-03 13:47:06:002 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:06:002 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=3, b={d=, s=ok}}}
+2017-10-03 13:47:06:002 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=3, b={d=, s=ok}}
+2017-10-03 13:47:51:002 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 0
+2017-10-03 13:47:52:180 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - update: /sessions/2
+2017-10-03 13:47:52:180 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - update: /sessions/2 {spliced=1}
+2017-10-03 13:47:52:184 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=m, r=4, b={p=sessions/2, d={spliced=1}}}}
+2017-10-03 13:47:52:184 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 43818
+2017-10-03 13:47:52:185 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /sessions/2/spliced. Affected: /sessions/2/spliced
+2017-10-03 13:47:52:191 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dhlXF1Q9Pp-oF7
+2017-10-03 13:47:52:191 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dhlXF1Q9Pp-oF7 {
+  filepath=Output/auct_list03_20170928123855/seg_10_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:192 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=5, b={p=segments/-KvX33dhlXF1Q9Pp-oF7, d={filepath=Output/auct_list03_20170928123855/seg_10_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:192 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44992
+2017-10-03 13:47:52:193 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dhlXF1Q9Pp-oF7. Affected: /segments/-KvX33dhlXF1Q9Pp-oF7
+2017-10-03 13:47:52:193 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33djKK19IRsCcyvY
+2017-10-03 13:47:52:193 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33djKK19IRsCcyvY {
+  filepath=Output/auct_list03_20170928123855/seg_13_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:193 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=6, b={p=segments/-KvX33djKK19IRsCcyvY, d={filepath=Output/auct_list03_20170928123855/seg_13_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:193 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44998
+2017-10-03 13:47:52:194 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33djKK19IRsCcyvY. Affected: /segments/-KvX33djKK19IRsCcyvY
+2017-10-03 13:47:52:194 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33djKK19IRsCcyvZ
+2017-10-03 13:47:52:194 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33djKK19IRsCcyvZ {
+  filepath=Output/auct_list03_20170928123855/seg_19_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:194 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=7, b={p=segments/-KvX33djKK19IRsCcyvZ, d={filepath=Output/auct_list03_20170928123855/seg_19_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:194 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:195 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33djKK19IRsCcyvZ. Affected: /segments/-KvX33djKK19IRsCcyvZ
+2017-10-03 13:47:52:195 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33djKK19IRsCcyv_
+2017-10-03 13:47:52:195 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33djKK19IRsCcyv_ {
+  filepath=Output/auct_list03_20170928123855/seg_14_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:195 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=8, b={p=segments/-KvX33djKK19IRsCcyv_, d={filepath=Output/auct_list03_20170928123855/seg_14_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:195 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33djKK19IRsCcyv_. Affected: /segments/-KvX33djKK19IRsCcyv_
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33djKK19IRsCcyva
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33djKK19IRsCcyva {
+  filepath=Output/auct_list03_20170928123855/seg_01_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=9, b={p=segments/-KvX33djKK19IRsCcyva, d={filepath=Output/auct_list03_20170928123855/seg_01_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33djKK19IRsCcyva. Affected: /segments/-KvX33djKK19IRsCcyva
+2017-10-03 13:47:52:196 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33djKK19IRsCcyvb
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33djKK19IRsCcyvb {
+  filepath=Output/auct_list03_20170928123855/seg_12_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=10, b={p=segments/-KvX33djKK19IRsCcyvb, d={filepath=Output/auct_list03_20170928123855/seg_12_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33djKK19IRsCcyvb. Affected: /segments/-KvX33djKK19IRsCcyvb
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33djKK19IRsCcyvc
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33djKK19IRsCcyvc {
+  filepath=Output/auct_list03_20170928123855/seg_16_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=11, b={p=segments/-KvX33djKK19IRsCcyvc, d={filepath=Output/auct_list03_20170928123855/seg_16_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:197 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33djKK19IRsCcyvc. Affected: /segments/-KvX33djKK19IRsCcyvc
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dkU016n3oUJlL_
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dkU016n3oUJlL_ {
+  filepath=Output/auct_list03_20170928123855/seg_03_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=12, b={p=segments/-KvX33dkU016n3oUJlL_, d={filepath=Output/auct_list03_20170928123855/seg_03_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dkU016n3oUJlL_. Affected: /segments/-KvX33dkU016n3oUJlL_
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dkU016n3oUJlLa
+2017-10-03 13:47:52:198 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dkU016n3oUJlLa {
+  filepath=Output/auct_list03_20170928123855/seg_04_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=13, b={p=segments/-KvX33dkU016n3oUJlLa, d={filepath=Output/auct_list03_20170928123855/seg_04_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dkU016n3oUJlLa. Affected: /segments/-KvX33dkU016n3oUJlLa
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dkU016n3oUJlLb
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dkU016n3oUJlLb {
+  filepath=Output/auct_list03_20170928123855/seg_11_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=14, b={p=segments/-KvX33dkU016n3oUJlLb, d={filepath=Output/auct_list03_20170928123855/seg_11_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dkU016n3oUJlLb. Affected: /segments/-KvX33dkU016n3oUJlLb
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dkU016n3oUJlLc
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dkU016n3oUJlLc {
+  filepath=Output/auct_list03_20170928123855/seg_15_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=15, b={p=segments/-KvX33dkU016n3oUJlLc, d={filepath=Output/auct_list03_20170928123855/seg_15_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:199 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dkU016n3oUJlLc. Affected: /segments/-KvX33dkU016n3oUJlLc
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dkU016n3oUJlLd
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dkU016n3oUJlLd {
+  filepath=Output/auct_list03_20170928123855/seg_02_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=16, b={p=segments/-KvX33dkU016n3oUJlLd, d={filepath=Output/auct_list03_20170928123855/seg_02_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dkU016n3oUJlLd. Affected: /segments/-KvX33dkU016n3oUJlLd
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dkU016n3oUJlLe
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dkU016n3oUJlLe {
+  filepath=Output/auct_list03_20170928123855/seg_07_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=17, b={p=segments/-KvX33dkU016n3oUJlLe, d={filepath=Output/auct_list03_20170928123855/seg_07_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dkU016n3oUJlLe. Affected: /segments/-KvX33dkU016n3oUJlLe
+2017-10-03 13:47:52:200 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dlHdk0jXwoqWhX
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dlHdk0jXwoqWhX {
+  filepath=Output/auct_list03_20170928123855/seg_20_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=18, b={p=segments/-KvX33dlHdk0jXwoqWhX, d={filepath=Output/auct_list03_20170928123855/seg_20_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dlHdk0jXwoqWhX. Affected: /segments/-KvX33dlHdk0jXwoqWhX
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dlHdk0jXwoqWhY
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dlHdk0jXwoqWhY {
+  filepath=Output/auct_list03_20170928123855/seg_17_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=19, b={p=segments/-KvX33dlHdk0jXwoqWhY, d={filepath=Output/auct_list03_20170928123855/seg_17_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dlHdk0jXwoqWhY. Affected: /segments/-KvX33dlHdk0jXwoqWhY
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dlHdk0jXwoqWhZ
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dlHdk0jXwoqWhZ {
+  filepath=Output/auct_list03_20170928123855/seg_06_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=20, b={p=segments/-KvX33dlHdk0jXwoqWhZ, d={filepath=Output/auct_list03_20170928123855/seg_06_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:201 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dlHdk0jXwoqWhZ. Affected: /segments/-KvX33dlHdk0jXwoqWhZ
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dmdfurVaFju4Yy
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dmdfurVaFju4Yy {
+  filepath=Output/auct_list03_20170928123855/seg_09_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=21, b={p=segments/-KvX33dmdfurVaFju4Yy, d={filepath=Output/auct_list03_20170928123855/seg_09_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dmdfurVaFju4Yy. Affected: /segments/-KvX33dmdfurVaFju4Yy
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dmdfurVaFju4Yz
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dmdfurVaFju4Yz {
+  filepath=Output/auct_list03_20170928123855/seg_08_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=22, b={p=segments/-KvX33dmdfurVaFju4Yz, d={filepath=Output/auct_list03_20170928123855/seg_08_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:202 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dmdfurVaFju4Yz. Affected: /segments/-KvX33dmdfurVaFju4Yz
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dmdfurVaFju4Z-
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dmdfurVaFju4Z- {
+  filepath=Output/auct_list03_20170928123855/seg_05_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=23, b={p=segments/-KvX33dmdfurVaFju4Z-, d={filepath=Output/auct_list03_20170928123855/seg_05_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dmdfurVaFju4Z-. Affected: /segments/-KvX33dmdfurVaFju4Z-
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - set: /segments/-KvX33dnyXAIBHH_1ZFf
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo.DataOperation - set: /segments/-KvX33dnyXAIBHH_1ZFf {
+  filepath=Output/auct_list03_20170928123855/seg_18_auct_list03_20170928123855.wav
+  label=
+  scrapped=0
+  session=2
+  verified=0
+}
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - Sending data: {t=d, d={a=p, r=24, b={p=segments/-KvX33dnyXAIBHH_1ZFf, d={filepath=Output/auct_list03_20170928123855/seg_18_auct_list03_20170928123855.wav, session=2, verified=0, scrapped=0, label=}}}}
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:203 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.core.Repo - Aborting transactions for path: /segments/-KvX33dnyXAIBHH_1ZFf. Affected: /segments/-KvX33dnyXAIBHH_1ZFf
+2017-10-03 13:47:52:492 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":4,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:493 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44710
+2017-10-03 13:47:52:493 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:493 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=4, b={d=, s=ok}}}
+2017-10-03 13:47:52:493 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=4, b={d=, s=ok}}
+2017-10-03 13:47:52:493 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - m response: {d=, s=ok}
+2017-10-03 13:47:52:510 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":5,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:510 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44982
+2017-10-03 13:47:52:510 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:510 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=5, b={d=, s=ok}}}
+2017-10-03 13:47:52:510 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=5, b={d=, s=ok}}
+2017-10-03 13:47:52:510 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:511 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":6,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44998
+2017-10-03 13:47:52:512 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":7,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=6, b={d=, s=ok}}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=6, b={d=, s=ok}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=7, b={d=, s=ok}}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=7, b={d=, s=ok}}
+2017-10-03 13:47:52:512 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":8,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:512 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":9,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:512 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=8, b={d=, s=ok}}}
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=8, b={d=, s=ok}}
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=9, b={d=, s=ok}}}
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=9, b={d=, s=ok}}
+2017-10-03 13:47:52:513 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:529 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":10,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:529 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44983
+2017-10-03 13:47:52:529 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:529 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=10, b={d=, s=ok}}}
+2017-10-03 13:47:52:530 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=10, b={d=, s=ok}}
+2017-10-03 13:47:52:530 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:533 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":11,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:533 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":12,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44996
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=11, b={d=, s=ok}}}
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=11, b={d=, s=ok}}
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:533 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:534 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=12, b={d=, s=ok}}}
+2017-10-03 13:47:52:534 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=12, b={d=, s=ok}}
+2017-10-03 13:47:52:534 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:534 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":13,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:535 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44998
+2017-10-03 13:47:52:535 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:535 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=13, b={d=, s=ok}}}
+2017-10-03 13:47:52:535 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=13, b={d=, s=ok}}
+2017-10-03 13:47:52:535 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:594 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":14,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:594 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44940
+2017-10-03 13:47:52:594 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":15,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:594 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:594 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":16,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:594 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=14, b={d=, s=ok}}}
+2017-10-03 13:47:52:594 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":17,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:594 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=14, b={d=, s=ok}}
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":18,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":19,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":20,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":21,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=15, b={d=, s=ok}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=15, b={d=, s=ok}}
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":22,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":23,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:595 +0200 [TubeSockReader-1] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - ws message: {"t":"d","d":{"r":24,"b":{"s":"ok","d":""}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=16, b={d=, s=ok}}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=16, b={d=, s=ok}}
+2017-10-03 13:47:52:595 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=17, b={d=, s=ok}}}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=17, b={d=, s=ok}}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=18, b={d=, s=ok}}}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=18, b={d=, s=ok}}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=19, b={d=, s=ok}}}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=19, b={d=, s=ok}}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:596 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=20, b={d=, s=ok}}}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=20, b={d=, s=ok}}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=21, b={d=, s=ok}}}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=21, b={d=, s=ok}}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=22, b={d=, s=ok}}}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=22, b={d=, s=ok}}
+2017-10-03 13:47:52:597 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=23, b={d=, s=ok}}}
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=23, b={d=, s=ok}}
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - Reset keepAlive. Remaining: 44999
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - HandleNewFrameCount: 1
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.WebsocketConnection - ws_0 - handleIncomingFrame complete frame: {t=d, d={r=24, b={d=, s=ok}}}
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.Connection - conn_0 - received data message: {r=24, b={d=, s=ok}}
+2017-10-03 13:47:52:598 +0200 [FirebaseDatabaseWorker] DEBUG com.google.firebase.database.connection.PersistentConnection - pc_0 - p response: {d=, s=ok}

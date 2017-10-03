@@ -1,6 +1,8 @@
 package server;
 
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.cloud.StorageClient;
+import com.google.firebase.database.tubesock.WebSocket;
 import models.SessionModel;
 
 import java.util.ArrayList;
@@ -16,13 +18,11 @@ public class Driver {
         for (SessionModel sesh : sessions){
             System.out.println("<<< Processing: " + sesh.getName() + " >>>");
             splitter.processFile(sesh.getName());
-            System.out.println("Split!");
             db.markSpliced(sesh.getId());
             db.recordSegments(sesh);
             splitter.deleteSegments();
 
         }
         System.out.println("Complete! Please use Ctrl+C to quit the process.");
-        goOffline();
     }
 }

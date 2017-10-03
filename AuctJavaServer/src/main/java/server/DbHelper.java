@@ -97,7 +97,7 @@ public class DbHelper {
                             0,
                             session.getId(),
                             0);
-                    ref.child("segments/" +session.getName()).push().setValue(segment);
+                    ref.child("segments").push().setValue(segment);
 
                     return FileVisitResult.CONTINUE;
                 }
