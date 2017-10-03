@@ -5,9 +5,6 @@ function loadSeg(sid, wlref) {
 
 	// Get a reference to the Firebase database service
 	var database = firebase.database();
-	// Get a reference to the storage service, which is used to create references in your storage bucket
-	var storage = firebase.storage();
-	var storageRef = storage.ref('/');
 
 	var segPanel = document.getElementsByClassName("segment-holder")[sid];
 	var audioSegs = [];
@@ -59,7 +56,7 @@ function loadSeg(sid, wlref) {
 					}
 
 					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='seg-"+s.position
-										+"'"+clickString+"this)'>"+s.label+"</button>"
+										+"'"+clickString+"this)' onmouseover='clips["+s.position+"].play()'>"+s.label+"</button>"
 										+suggestions+"<br>";
 
 					audioSegs.push(s);
@@ -68,28 +65,13 @@ function loadSeg(sid, wlref) {
 
 			};
 
+			embedAudio(sid);
+
 			segPanel.innerHTML = "";
-
 			for (var i = 0; i < audioSegs.length; i++) {
-
 				segPanel.innerHTML += audioSegs[i].markup;
 			}
 
-			// TODO make audio play on mouseover
-			var roundButtons = document.getElementsByClassName('btn-segment');
-
-			// console.log("Linking audio playback...");
-			// for (var i = 0; i < audioSegs.length; i++) {
-			// 	var s = audioSegs[i];
-			// 	var audioRef = storageRef.child(s.filepath);
-			// 	audioRef.getDownloadURL().then(function(url) {
-			// 		s.url = url;
-			// 		// console.log("loaded url: "+s.url);
-			// 	}).catch(function(error) {
-			// 		console.log("couldn't load url");
-			// 	});
-
-			// }
 
 			console.log("Loaded session "+sid);
 
