@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body onload=>
 <!-- <div class="container">
 	<div class="jumbotron">
 	<h1>AuCT</h1>
@@ -39,11 +39,18 @@
 </nav>
 <div class="container">
 <div class="jumbotron">
-	<ul>
-		<li>Word 1</li>
-		<li>Word 2</li>
-		<li>Word 3</li>
-	</ul>
+	<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">WordList: <span id="listheading">name</span></div>
+
+<!--   <div id="list" style="max-height: 0px;" class="overflow-y-scroll">> -->
+
+  <!-- List group -->
+  <ul id="wordlistgroup" class="list-group">
+    <!-- ... -->
+  </ul>
+<!-- </div> -->
+</div>
 </div>	
 </div>
 
@@ -97,6 +104,7 @@
 </script>
 
 <script type="text/javascript" src="recordAudio.js"></script>
+<script type="text/javascript" src="db_connector.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

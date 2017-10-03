@@ -50,3 +50,11 @@ h3 {
   flex: 1;
   overflow: auto;
 }
+.list-group-item {
+	color: black;
+}
+.list-group {
+	max-height: 30vh;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
