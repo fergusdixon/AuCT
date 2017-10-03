@@ -17,17 +17,27 @@ function updateLabel(id, sesh, button) {
 	var database = firebase.database();
 
 
+	// Firebase once-off DB query
+	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
+		var dbSegs = snapshot.val();
 
+		for (var i = 0; i < dbSegs.length; i++) {
+			var s = dbSegs[i];
+			if(s.session == sesh && s.label == oldLabel) {
+				firebase.database().ref('segments/'+i).set({
+				  filepath: s.filepath,
+				  label: newLabel,
+				  scrapped : 0,
+				  session: sesh,
+				  verified: 1
+				});
+				segButton.className = successClass;
+				break;
+			}
+		};
 
-	// firebase.database().ref('segments/'+s.id).set({
-	//   filepath: s.filepath,
-	//   label: newLabel,
-	//   scrapped : 0,
-	//   session: x,
-	//   verified: 1
-	// });
-
- segButton.className = successClass;
-
+	}).catch(function(db_error) {
+		console.log("Error loading segments from DB");
+	});
 
 }
