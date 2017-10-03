@@ -22,10 +22,12 @@ public class FileProcessor {
         bucket = StorageClient.getInstance().bucket();
         System.out.println("Success");
 
+        //Download file
         this.fileName = fileName;
         System.out.println("Downloading: " + fileName + "...");
         getAudio(fileName);
 
+        //Split file
         System.out.println("Success, analysing and segmenting the audio file...");
         if(split()){
             System.out.println("Splitting of \"" + fileName + "\" successful.");
@@ -34,6 +36,7 @@ public class FileProcessor {
             System.out.println("Splitting failed");
         }
 
+        //Upload segments
         System.out.println("Beginning upload...");
         int counter = 1;
         File folder = new File(
@@ -45,6 +48,14 @@ public class FileProcessor {
             System.out.println("Uploaded segement: " + counter);
             counter++;
         }
+
+
+
+        System.out.println("Upload complete.");
+    }
+
+    public void deleteSegments(){
+        //Delete local segments
         Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+fileName);
         try {
             Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
@@ -63,9 +74,12 @@ public class FileProcessor {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Upload complete.");
     }
 
+    /**
+     * This takes a given file and uploads it to the appropriate place in Firebase.
+     * @param file
+     */
     private void upload(File file){
         InputStream blob = null;
         try {
@@ -76,12 +90,20 @@ public class FileProcessor {
         bucket.create("Output/"+fileName+"/"+file.getName(), blob, "audio/x-wav");
     }
 
+    /**
+     * This splits the current file
+     * @return boolean
+     */
     private boolean split(){
         Segmentor seg = new Segmentor("/home/fergus/AuCT/AuctJavaServer/src/main/java/server/");
 
         return seg.segment(fileName.substring(fileName.indexOf('/')+1));
     }
 
+    /**
+     * Download the requested audio file from Firebase
+     * @param name
+     */
     private void getAudio(String name){
         //getting file
         if(bucket == null){
@@ -114,6 +136,9 @@ public class FileProcessor {
         }
     }
 
+    /**
+     * Login to the cloud storage server, currently not in use because DbHelper logs in first
+     */
     private void login() {
         //getting the storage folder from firebase
 

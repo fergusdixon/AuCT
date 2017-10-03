@@ -15,11 +15,11 @@ South Africa has eleven official languages. Building out tools to support small-
 ## Optional features
 - “Whatever you want”
 - Can be Algorithmic or User-based splicing (or a combination)
-  - [ ] ALGO : Record big chunks and process
+  - [x] ALGO : Record big chunks and process
   - [ ] USER : Capture button presses for words and mistakes WHILST recording audio
 - [ ] Adjust playback speed, scrubbing, skipping
 - [ ] Optional downloading at lower audio quality (bitrate change) 
 - [ ] Customise UI for other languages
 - [ ] Choose language when first visiting site (on landing page)
 - [ ] Support different unit sizes (words, phrases, sentences)
-- [ ] Trim silent ends of words to remove all silence from a clip
+- [x] Trim silent ends of words to remove all silence from a clip

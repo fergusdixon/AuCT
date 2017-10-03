@@ -5,9 +5,13 @@ import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.cloud.StorageClient;
 import com.google.firebase.database.*;
+import models.SegmentModel;
 import models.SessionModel;
 
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -76,8 +80,37 @@ public class DbHelper {
         ref.child("sessions/"+id).updateChildren(splice);
     }
 
-    public void recordSegments(int id){
+    public void recordSegments(SessionModel session){
+        Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+session.getName());
+        try {
+            DatabaseReference ref = FirebaseDatabase
+                    .getInstance()
+                    .getReference();
 
+            Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    SegmentModel segment = new SegmentModel(
+                            "Output/" + session.getName() + "/" +
+                            file.toString().substring(file.toString().indexOf("seg")),
+                            "",
+                            0,
+                            session.getId(),
+                            0);
+                    ref.child("segments/" +session.getName()).push().setValue(segment);
+
+                    return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+//                    Files.delete(dir);
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
