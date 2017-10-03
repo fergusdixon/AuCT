@@ -31,8 +31,8 @@ Gradle handles the build, so make sure you have Gradle installed
 `sudo apt-get install gradle`
 
 The wrapper is preconfigured, so to build & run from the AuctJavaServer root dir:
-`./gradlew build`
-`./gradlew run`
+- `./gradlew build`
+- `./gradlew run`
 
 This will:
 - Check the Firebase DB for any files not yet marked as spliced
