@@ -31,7 +31,6 @@ function loadSeg(sid, wlref) {
 
 					var s = {
 						position : i,
-						id : dbSegs[i].id,
 						filepath : dbSegs[i].filepath,
 						url : "",
 						label : dbSegs[i].label,
@@ -48,7 +47,7 @@ function loadSeg(sid, wlref) {
 						type = "success";
 					}
 					var classString = "class = 'btn btn-default active' type='button'";
-					var clickString = "onClick='updateLabel("+s.position+",";
+					var clickString = "onClick='updateLabel("+s.position+","+s.session+",";
 					if(len > 0) {
 						if(i>0) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-1]+"</button>";}
 						if(i<len-1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+1]+"</button>";}
