@@ -33,10 +33,11 @@
 		}
 
 		// Update dashboard
-		numLab.innerText = ((labelled*100)/total).toString()+"%";
-		barLab.style.width = numLab.innerText;
-		numFail.innerText = (scrapped*100/total).toString()+"%";
-		barFail.style.width = numFail.innerText;
+		barLab.style.width = ((labelled*100)/total).toString()+"%";
+		numLab.innerText = labelled+"/"+total+" | "+((labelled*100)/total).toString()+"%";
+
+		barFail.style.width = (scrapped*100/total).toString()+"%";
+		numFail.innerText = scrapped+"/"+total+" | "+(scrapped*100/total).toString()+"%";
 
 		console.log("Stats loaded");
 
