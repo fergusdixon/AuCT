@@ -2,7 +2,13 @@
         var audio_context;
         var recorder;
         var audio_stream;
-        var storage;
+        var canvas;
+        var canvasCtx;
+        var audioCtx;
+        var mainSection;
+        var _language;
+        var _name;
+        var _key;
 
         /**
          * Patch the APIs for every browser that supports them and check
@@ -21,8 +27,6 @@
                 console.log('Audio context is ready !');
                 console.log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not present!'));
 
-                // Get reference to firebase storage bucket
-                storage = firebase.storage();
             } catch (e) {
                 alert('No web audio support in this browser!');
             }
@@ -98,29 +102,27 @@
                 }, (AudioFormat || "audio/wav"));
             }
         }
-        function getNameFormat(){
-            var listNo = window.location.hash.substring(1);
-            var now = new Date();
-            var yyyy = now.getFullYear();
-            var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
-            var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
-            var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
-            var min = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
-            var ss = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
-            return "auct_list".concat(listNo).concat("_").concat(yyyy).concat(mm).concat(dd).concat(hh).concat(min).concat(ss);
-        }
-        function upload(){
 
-        }
 
         // Initialize everything once the window loads
         window.onload = function(){
             // Prepare and check if requirements are filled
             Initialize();
 
+            // Set up canvas for waveform
+            canvas = document.querySelector('.visualizer');
+            mainSection = document.querySelector('.main-controls');
+
+            // visualiser setup - create web audio api context and canvas
+
+            var canvasCtx = canvas.getContext("2d");
+            console.log("visualiser set up")
+
             // Handle on start recording button
             document.getElementById("recordbtn").addEventListener("click", function(){
                 startRecording();
+                console.log("Audio_stream: " + typeof audio_stream);
+                visualize(audio_stream);
             }, false);
 
             // Handle on stop recording button
@@ -153,7 +155,10 @@
                     au.controls = true;
                     au.src = url;
                     hf.href = url;
-                    var filename = getNameFormat() + '.wav';
+                    var now = new Date();
+                    var datestring = now.toISOString();
+                    var filedate = getDateFormat(now);
+                    var filename = getNameFormat(filedate) + '.wav';
                     hf.download = filename;
                     hf.innerHTML = hf.download;
                     li.appendChild(au);
@@ -165,11 +170,8 @@
 
                     // Submit that specific file to the firebase storage
                     submitbtn.onclick = function(){
-                        // Create a storage reference from our storage service
-                        var storageRef = storage.ref();
-                        var inputRef = storageRef.child('Input/');
-                        var uploadTask = storageRef.child('Input/' + filename).put(AudioBLOB);
-                        console.log("File uploaded");
+                       upload(AudioBLOB, filedate, filename);
+                       createSession(datestring, filename);
                     }
 
                     // Delete that specific audio file and surrounding buttons
@@ -180,4 +182,67 @@
                 }, _AudioFormat);
             }, false);
         };
+
+        // Creates the waveform
+function visualize(stream) {
+    console.log(typeof stream);
+  var source = audio_context.createMediaStreamSource(stream);
+
+  var analyser = audio_context.createAnalyser();
+  analyser.fftSize = 2048;
+  var bufferLength = analyser.frequencyBinCount;
+  var dataArray = new Uint8Array(bufferLength);
+
+  source.connect(analyser);
+  //analyser.connect(audioCtx.destination);
+
+  draw()
+
+  // Draws the waveform
+  function draw() {
+    WIDTH = canvas.width
+    HEIGHT = canvas.height;
+
+    requestAnimationFrame(draw);
+
+    analyser.getByteTimeDomainData(dataArray);
+
+    canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+    canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+
+    canvasCtx.lineWidth = 2;
+    canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+
+    canvasCtx.beginPath();
+
+    var sliceWidth = WIDTH * 1.0 / bufferLength;
+    var x = 0;
+
+
+    for(var i = 0; i < bufferLength; i++) {
+ 
+      var v = dataArray[i] / 128.0;
+      var y = v * HEIGHT/2;
+
+      if(i === 0) {
+        canvasCtx.moveTo(x, y);
+      } else {
+        canvasCtx.lineTo(x, y);
+      }
+
+      x += sliceWidth;
+    }
+
+    canvasCtx.lineTo(canvas.width, canvas.height/2);
+    canvasCtx.stroke();
+
+  }
+}
+
+// // Changes size, specifically waveform box
+// window.onresize = function() {
+//   canvas.width = mainSection.offsetWidth;
+// }
+
+// window.onresize();
     
