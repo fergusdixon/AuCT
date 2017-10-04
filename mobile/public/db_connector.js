@@ -111,30 +111,32 @@ function upload(AudioBLOB){
     var inputRef = storageRef.child('Input/');
     var uploadTask = storageRef.child('Input/' + tempFilepath).put(AudioBLOB);
     console.log("File uploaded");
-
+    alert("File submitted");
 
 }
 function createSession(date, filepath){
     // Create a session node in database
-    var sessionData = {
-    	date : date,
-    	filepath : "Input/".concat(filepath),
-    	language : getHashValueLanguage(),
-    	name : filepath,
-    	scrapped : 0,
-    	spliced : 0,
-    	verified : 0,
-    	wordlist : getHashValueKey()
-    };
+    console.log(filepath);
 
-    var newSessionKey = database.ref().child('sessions').push().key;
-
-    var updates = {};
-    updates['/sessions/' + newSessionKey] = sessionData;
-
-    database.ref().update(updates);
-    console.log("Session node pushed to database");
+    var noSessions = null;
+    database.ref('sessions').once('value', function(snapshot) {
+    // noSessions = snapshot.numChildren(); 
+    //database.ref('sessions').once('value', function(snapshot) { console.log('Count: ' + snapshot.numChildren()); });
+  	console.log("No Sessions: " + noSessions);
+  	database.ref('sessions/' + (snapshot.numChildren() + 1)).set({
+    date : date,
+    filepath : "Input/".concat(filepath),
+    language : getHashValueLanguage(),
+    name : filepath,
+    scrapped : 0,
+    spliced : 0,
+    verified : 0,
+    wordlist : getHashValueKey()
+  });
+  console.log("Session node pushed to database");
+  });
 }
+
 
 function getDateFormat(date){        
     now = date;
@@ -149,7 +151,7 @@ function getDateFormat(date){
 }
 function getNameFormat(date){
 	var listNo = getHashValueListNo();
-	tempFilepath = "auct_list".concat(getHashValueListNo()).concat("_").concat(date);
+	tempFilepath = "auct_list".concat(getHashValueListNo()).concat("_").concat(date).concat(".wav");
 	return tempFilepath;
 }
 function getHashValueListNo(){

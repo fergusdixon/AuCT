@@ -122,7 +122,7 @@
             document.getElementById("recordbtn").addEventListener("click", function(){
                 startRecording();
                 console.log("Audio_stream: " + typeof audio_stream);
-                visualize(audio_stream);
+                //visualize(audio_stream);
             }, false);
 
             // Handle on stop recording button
@@ -158,7 +158,7 @@
                     var now = new Date();
                     var datestring = now.toISOString();
                     var filedate = getDateFormat(now);
-                    var filename = getNameFormat(filedate) + '.wav';
+                    var filename = getNameFormat(filedate);
                     hf.download = filename;
                     hf.innerHTML = hf.download;
                     li.appendChild(au);
@@ -172,6 +172,7 @@
                     submitbtn.onclick = function(){
                        upload(AudioBLOB, filedate, filename);
                        createSession(datestring, filename);
+
                     }
 
                     // Delete that specific audio file and surrounding buttons
