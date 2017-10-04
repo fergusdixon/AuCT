@@ -16,7 +16,7 @@ public class FileProcessor {
     private Bucket bucket = null;
     private String fileName;
 
-    public void processFile(String fileName) {
+    public boolean processFile(String fileName) {
         System.out.println("Retrieving cloud storage...");
 //        login();
         bucket = StorageClient.getInstance().bucket();
@@ -27,7 +27,7 @@ public class FileProcessor {
         System.out.println("Downloading: " + fileName + "...");
         getAudio(fileName);
         if(fileName.equals("null")){
-            return;
+            return false;
         }
 
         //Split file
@@ -51,10 +51,8 @@ public class FileProcessor {
             System.out.println("Uploaded segement: " + counter);
             counter++;
         }
-
-
-
         System.out.println("Upload complete.");
+        return true;
     }
 
     public void deleteSegments(){

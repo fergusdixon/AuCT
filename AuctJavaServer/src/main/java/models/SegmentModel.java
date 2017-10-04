@@ -1,25 +1,25 @@
 package models;
 
 public class SegmentModel {
-    String filepath, label;
+    String filename, label;
     int scrapped, session, verified;
 
     public SegmentModel(){}
 
-    public SegmentModel(String filepath, String label, int scrapped, int session, int verified) {
-        this.filepath = filepath;
+    public SegmentModel(String filename, String label, int scrapped, int session, int verified) {
+        this.filename = filename;
         this.label = label;
         this.scrapped = scrapped;
         this.session = session;
         this.verified = verified;
     }
 
-    public String getFilepath() {
-        return filepath;
+    public String getFilename() {
+        return filename;
     }
 
-    public void setFilepath(String filepath) {
-        this.filepath = filepath;
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 
     public String getLabel() {

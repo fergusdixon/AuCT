@@ -7,4 +7,5 @@ AuctJavaServer/out
 AuctJavaServer/src/input/
 AuctJavaServer/src/output
 AuctJavaServer/build
+AuctJavaServer/simplelogger.log
 .idea
