@@ -42,6 +42,7 @@
 
 	}).catch(function(db_error) {
 		console.log("Error loading stats");
+		document.getElementsByClassName("stats-body")[0].innerHTML = "<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
 
 	});
 

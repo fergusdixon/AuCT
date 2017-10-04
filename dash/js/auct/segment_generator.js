@@ -81,6 +81,7 @@ function loadSeg(sid, wlref, but) {
 
 		}).catch(function(db_error) {
 			console.log("Error loading segments from DB");
+			segPanel.innerHTML = "<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
 			// location.reload();
 		});
 

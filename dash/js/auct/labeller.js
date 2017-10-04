@@ -56,7 +56,7 @@ function updateLabel(id, sesh, button) {
 		};
 
 	}).catch(function(db_error) {
-		console.log("Error loading segments from DB");
+		console.log("Error labelling");
 	});
 
 }

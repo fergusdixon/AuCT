@@ -54,8 +54,8 @@
 
 
 	}).catch(function(db_error) {
-		console.log("Error loading from DB");
-		// location.reload();
+		console.log("Error sessions loading from DB");
+		seshPanel.innerHTML = "<center><a href='#'><h3>Retry</h3></a></center>";
 	});
 
 
