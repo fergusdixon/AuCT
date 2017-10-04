@@ -132,8 +132,8 @@ window.onload = function(){
             var url = URL.createObjectURL(AudioBLOB);
             var container = document.createElement('div');
             var audio = document.createElement('audio');
-            var href = document.createElement('a');
-            var hrefrow = document.createElement('div');
+            var title = document.createElement('a');
+            var titlerow = document.createElement('div');
             var audiorow = document.createElement('div');
             var buttonrow = document.createElement('div');
 
@@ -147,7 +147,7 @@ window.onload = function(){
 
             // Set layout and look for each item
             container.className = "container-fluid"
-            hrefrow.className = 'row';
+            titlerow.className = 'row';
             audiorow.className = 'row';
             buttonrow.className = 'row';
 
@@ -155,28 +155,30 @@ window.onload = function(){
             // Set controls for audio player
             audio.controls = true;
             audio.src = url;
-            href.href = url;
-
-            // Add components to UI
-            href.download = filename;
-            href.innerHTML = href.download;
-            audiorow.appendChild(audio);
-            hrefrow.appendChild(href);
-            buttonrow.appendChild(submitbtn);
-            buttonrow.appendChild(deletebtn);
-            container.appendChild(hrefrow);
-            container.appendChild(audiorow);
-            container.appendChild(buttonrow);
-            var recordingslist = document.getElementById("recordingslist");
-            recordingslist.appendChild(container);
-
-            // Get information for naming of file
+            title.href = url;
+            
+            // Get information for naming of file and for link name in UI
             // Format: auct_list00_YYYYmmDDhhMMss.wav
             var now = new Date(); 
             var datestring = getDateFormatForLabel(now);
             var filedate = getDateFormatForFile(now);
             var filename = getNameFormat(filedate);
-            
+
+            // Add components to UI
+            console.log("Filename here is: " + filename);
+            title.download = filename;
+            title.innerHTML = title.download;
+            audiorow.appendChild(audio);
+            titlerow.appendChild(title);
+            buttonrow.appendChild(submitbtn);
+            buttonrow.appendChild(deletebtn);
+            container.appendChild(titlerow);
+            container.appendChild(audiorow);
+            container.appendChild(buttonrow);
+            var recordingslist = document.getElementById("recordingslist");
+            recordingslist.appendChild(container);
+
+
             // Submit that specific audio file to the firebase storage
             submitbtn.onclick = function(){
                 upload(AudioBLOB, filedate, filename);
@@ -188,6 +190,9 @@ window.onload = function(){
             deletebtn.onclick = function(e){
                 evtTgt = e.target;
                 evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+                console.log("parent.parent " + evtTgt.parentNode.parentNode);
+                console.log("parent " + evtTgt.parentNode);
+                console.log("evtTgt " + evtTgt);
             }
         }, _AudioFormat);
     }, false);

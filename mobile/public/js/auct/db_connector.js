@@ -152,7 +152,7 @@ function createSession(date, filepath){
     database.ref('sessions').once('value', function(snapshot) {
 	    //database.ref('sessions').once('value', function(snapshot) { console.log('Count: ' + snapshot.numChildren()); });
 	   	// Gets the numder of nodes in the subtree and adds 1 to it to use as an identifyer
-	  	database.ref('sessions/' + (snapshot.numChildren() + 1)).set({
+	  	database.ref('sessions/' + (snapshot.numChildren())).set({
 	    date : date,
 	    filepath : "Input/".concat(filepath).concat(".wav"),
 	    language : getHashValueLanguage(),
