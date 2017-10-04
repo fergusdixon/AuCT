@@ -37,9 +37,9 @@ h1 {
 h3 {
 	color:white;
 }
-.btn-default{
+/*.btn-default{
 	margin: 10px;
-}
+}*/
 #recordbtn{
 
 }
@@ -57,4 +57,8 @@ h3 {
 	max-height: 30vh;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+}
+#recordbtn, #stopbtn {
+	max-width: 100%;
+	font-size: 2.5vw;
 }

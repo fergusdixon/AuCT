@@ -8,66 +8,79 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<!-- <div class="container">
-	<div class="jumbotron">
-	<h1>AuCT</h1>
-</div> -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-		<a href="#" class="navbar-brand">AuCT</a>
-	</div>
-	<div class="collapse navbar-collapse" id="navbar-collapse">
-		<ul class="nav navbar-nav">
-		<li><a href="#">About</a></li>
-		<li><a href="#">Contact</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Sign up</a></li>
-			<li><a href="#">Login</a></li>
-		</ul>
-	</div>
-	
-	</div>
-	
-</nav>
-<div class = "container">
-<div class="jumbotron">
-	<h4>Please choose a language</h4>
-<!-- Drop down list here -->
-	<form class="form-inline">
-		<div class="form-group">
-			<select class="form-control" name="language">
-			<option value="english">English</option>
-			<option>Southern Sotho</option>
-			<option>Tsonga</option>
-			<option>Afrikaans</option>
-			<option>Tswana</option>
-			<option>Swati</option>
-			<option>Zulu</option>
-			<option>Northen Sotho</option>
-			<option>Ndebele</option>
-			<option>Xhosa</option>
-			<option>Venda</option>
-		</select>
-		<a href="wordListSelection.html" class="btn btn-default">Continue</a>
+	<!-- START NAVBAR -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<!-- START NAVBAR HEADER -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button>
+				<a href="#" class="navbar-brand">AuCT</a>
+			</div>
+			<!-- END NAVBAR HEADER -->
+			<!-- START COLLAPSABLE NAVBAR -->
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sign up</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+			<!-- END COLLAPSABLE NAVBAR -->
 		</div>
-		
-	</form>
-</div>
-	
-</div>
+	</nav>
+	<!-- END NAVBAR -->
 
-<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- START LANGUAGE SELECTION CONTAINER -->
+	<div class = "container">
+		<div class="jumbotron">
+			<h4>Please choose a language</h4>
+			<!-- START DROP DOWN LIST -->
+			<form class="form-inline">
+				<div class="form-group">
+					<select id="selected" class="form-control" name="language">
+						<option id="0" value="english">English</option>
+						<option id="1" value="southern-sotho">Southern Sotho</option>
+						<option id="2" value="tsonga">Tsonga</option>
+						<option id="3" value="afrikaans">Afrikaans</option>
+						<option id="4" value="tswana">Tswana</option>
+						<option id="5" value="swati">Swati</option>
+						<option id="6" value="zulu">Zulu</option>
+						<option id="7" value="northern-sotho">Northen Sotho</option>
+						<option id="8" value="ndebele">Ndebele</option>
+						<option id="9" value="xhosa">Xhosa</option>
+						<option id="10" value="venda">Venda</option>
+					</select>
+					<a href="wordListSelection.html" class="btn btn-default" id="continueBtn">Continue</a>
+				</div>
+				
+			</form>
+			<!-- END DROP DOWN LIST -->
+		</div>
+			
+	</div>
+	<!-- END LANGUAGE SELECTION CONTAINER -->
+	<script type="text/javascript">
+		var continueBtn = document.getElementByID("continueBtn");
+		var selected = document.getElementByID("selected");
+
+		for (int i=0, i<selected.size; i++){
+			if ()
+		}
+	</script>
+	<!-- START PULGINS -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- END PLUGINS -->
 </body>
 </html>
