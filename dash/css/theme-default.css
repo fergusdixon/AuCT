@@ -2099,6 +2099,12 @@ ul.panel-controls > li > .dropdown-menu:before {
 	margin: 5px;
   min-width: 200px;
 }
+
+.btn-download {
+	margin: 5px;
+  min-width: 200px;
+}
+
 .btn.btn-rounded.btn-default:hover,
 .btn.btn-rounded.btn-default:focus,
 .btn.btn-rounded.btn-default:active,
