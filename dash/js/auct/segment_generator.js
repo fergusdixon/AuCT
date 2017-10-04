@@ -1,4 +1,4 @@
-function loadSeg(sid, wlref) {
+function loadSeg(sid, wlref, but) {
 	"use strict";
 
 	console.log("loading session "+sid+"...");
@@ -6,7 +6,8 @@ function loadSeg(sid, wlref) {
 	// Get a reference to the Firebase database service
 	var database = firebase.database();
 
-	var segPanel = document.getElementsByClassName("segment-holder")[sid];
+
+	var segPanel = but.parentElement;
 	var audioSegs = [];
 
 	console.log("Generating segments...");
@@ -24,7 +25,7 @@ function loadSeg(sid, wlref) {
 			var dbSegs = snapshot.val();
 
 			for (var i = 0; i < dbSegs.length; i++) {
-
+				console.log(dbSegs[i].session+" vs "+sid);
 				if(dbSegs[i].session == sid) {
 
 					var s = {
@@ -56,6 +57,7 @@ function loadSeg(sid, wlref) {
 						if(i>1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-2]+"</button>";}
 						if(i<len-2) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+2]+"</button>";}
 					}
+
 
 					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='seg-"+s.position
 										+"'"+clickString+"this)' onmouseover='clips["+s.position+"].play()'>"+s.label+"</button>"

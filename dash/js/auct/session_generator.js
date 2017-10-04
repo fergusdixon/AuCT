@@ -26,7 +26,7 @@
 	  		  		scrapped : dbSessions[i].scrapped,
 	  		  		spliced : dbSessions[i].spliced,
 	  		  		verified : dbSessions[i].verified,
-	  		  		wordlistref : dbSessions[i].wordlist, //TODO update this for the new DB
+	  		  		wordlistref : dbSessions[i].wordlist,
 	  		  		markup : ""
 	  		  	};
 
@@ -37,7 +37,7 @@
 	  									+"<div class='panel-body'><form class='form-horizontal' role='form'>"
 	  									+"<div class='form-group'><div class='col-md-12 segment-holder'>"
 	  									+"<button class='btn btn-info btn-block seg-load-button' type='button'"
-	  									+"onclick='loadSeg("+s.id+","+s.wordlistref+")'>Load Segments</button>"
+	  									+"onclick='loadSeg("+s.id+","+s.wordlistref+",this)'>Load Segments</button>"
 	  									+"</div></div></form></div></div>";
 
 	  				sessions.push(s);
