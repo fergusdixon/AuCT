@@ -27,14 +27,14 @@ function updateLabel(id, sesh, button) {
 
 	// Firebase once-off DB query
 	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
-		var dbSegs = snapshot.val();
+		var dbSegs = Object.values(snapshot.val());
 
 		for (var i = 0; i < dbSegs.length; i++) {
 			var s = dbSegs[i];
 			if(s.session == sesh && s.label == oldLabel) {
 				if(mode == 1) { // If in update mode
-					firebase.database().ref('segments/'+i).set({
-					  filepath: s.filepath,
+					firebase.database().ref('/segments/'+i).set({
+					  filename: s.filename,
 					  label: newLabel,
 					  scrapped : 0,
 					  session: sesh,
@@ -42,8 +42,8 @@ function updateLabel(id, sesh, button) {
 					});
 					segButton.className = successClass;
 				} else { // If in scrap mode
-					firebase.database().ref('segments/'+i).set({
-					  filepath: s.filepath,
+					firebase.database().ref('/segments/'+i).set({
+					  filename: s.filename,
 					  label: oldLabel,
 					  scrapped : 1,
 					  session: sesh,

@@ -22,7 +22,7 @@ function loadSeg(sid, wlref, but) {
 
 		// Firebase once-off DB query
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
-			var dbSegs = snapshot.val();
+			var dbSegs = Object.values(snapshot.val());
 
 			for (var i = 0; i < dbSegs.length; i++) {
 				// console.log(dbSegs[i].session+" vs "+sid);
@@ -30,7 +30,7 @@ function loadSeg(sid, wlref, but) {
 
 					var s = {
 						position : i,
-						filepath : dbSegs[i].filepath,
+						filename : dbSegs[i].filename,
 						url : "",
 						label : dbSegs[i].label,
 						scrapped : dbSegs[i].scrapped,

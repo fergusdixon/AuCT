@@ -17,7 +17,7 @@
 	  		  	var s = {
 	  		  		id : i,
 	  		  		date : dbSessions[i].date,
-	  		  		filepath : dbSessions[i].filepath,
+	  		  		filename : dbSessions[i].filename,
 	  		  		language : dbSessions[i].language,
 	  		  		name : dbSessions[i].name,
 	  		  		scrapped : dbSessions[i].scrapped,

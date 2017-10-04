@@ -13,7 +13,7 @@ function embedAudio(sid) {
 
 	// Firebase once-off DB query
 	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
-		var dbSegs = snapshot.val();
+		var dbSegs = Object.values(snapshot.val());
 
 		for (var i = 0; i < dbSegs.length; i++) {
 
@@ -21,7 +21,7 @@ function embedAudio(sid) {
 
 				var s = dbSegs[i];
 
-				var audioRef = storageRef.child(s.filepath);
+				var audioRef = storageRef.child(s.filename);
 				audioRef.getDownloadURL().then(function(link) {
 					var audio = document.createElement('audio');
 					audio.src = link;

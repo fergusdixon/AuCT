@@ -18,7 +18,7 @@ function download(name, but) {
 
 	// Firebase once-off DB query
 	firebase.database().ref('/sessions/').once('value').then(function(snapshot) {
-		var dbSessions = snapshot.val();
+		var dbSessions = Object.values(snapshot.val());
 
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 			var dbSegs = snapshot.val();
@@ -26,7 +26,7 @@ function download(name, but) {
 				if(dbSessions[dbSegs[i].session].name == name & dbSegs[i].verified == 1) {
 					console.log("Downloading : "+dbSegs[i].label);
 
-					var audioRef = storageRef.child(dbSegs[i].filepath);
+					var audioRef = storageRef.child(dbSegs[i].filename);
 					audioRef.getDownloadURL().then(function(link) {
 						downloadURLs.push(link);
 						but.className = successClass;

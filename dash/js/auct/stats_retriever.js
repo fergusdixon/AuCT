@@ -13,7 +13,7 @@
 	console.log("Retrieving Stats...");
 
 	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
-		segments = snapshot.val();
+		segments = Object.values(snapshot.val());
 
 		var labelled = 0;
 		var total = segments.length;

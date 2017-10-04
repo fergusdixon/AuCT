@@ -14,13 +14,12 @@
 	// Firebase once-off DB query
 	firebase.database().ref('/sessions/').once('value').then(function(snapshot) {
 		var dbSessions = snapshot.val();
-
 	  for (var i = 0; i < dbSessions.length; i++) {
 	  	if(dbSessions[i] != null) {
 	  		  	var s = {
 	  		  		id : i,
 	  		  		date : dbSessions[i].date,
-	  		  		filepath : dbSessions[i].filepath,
+	  		  		filename : dbSessions[i].filename,
 	  		  		language : dbSessions[i].language,
 	  		  		name : dbSessions[i].name,
 	  		  		scrapped : dbSessions[i].scrapped,
@@ -30,9 +29,10 @@
 	  		  		markup : ""
 	  		  	};
 
-	  		  	// console.log(i+": "+s);
-
-	  		  	s.markup = "<div class='panel panel-default'><div class='panel-heading'>"
+	  		  	var type = "default";
+	  		  	if(s.verified == 1){type = "success"};
+	  		  	if(s.scrapped == 1){type = "danger"};
+	  		  	s.markup = "<div class='panel panel-"+type+"'><div class='panel-heading'>"
 	  									+"<div class='panel-title-box'><h3>"+s.language+" | "+s.date+" | list"+s.wordlistref+"</h3></div></div>"
 	  									+"<div class='panel-body'><form class='form-horizontal' role='form'>"
 	  									+"<div class='form-group'><div class='col-md-12 segment-holder'>"
