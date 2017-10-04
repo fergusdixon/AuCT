@@ -49,6 +49,7 @@ function loadSeg(sid, wlref) {
 					}
 					var classString = "class = 'btn btn-default active' type='button'";
 					var clickString = "onClick='updateLabel("+s.position+","+s.session+",";
+					var scrapButton = "<button type='button' class='btn btn-scrap' onClick='updateLabel("+s.position+","+s.session+",null)'>X</button>";
 					if(len > 0) {
 						if(i>0) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-1]+"</button>";}
 						if(i<len-1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+1]+"</button>";}
@@ -58,7 +59,7 @@ function loadSeg(sid, wlref) {
 
 					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='seg-"+s.position
 										+"'"+clickString+"this)' onmouseover='clips["+s.position+"].play()'>"+s.label+"</button>"
-										+suggestions+"<br>";
+										+suggestions+scrapButton+"<br>";
 
 					audioSegs.push(s);
 

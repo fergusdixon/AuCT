@@ -1959,6 +1959,14 @@ ul.panel-controls > li > .dropdown-menu:before {
   transition: all 200ms ease;
 }
 
+.btn-scrap {
+	border: none;
+	background: none;
+	margin: 2px;
+	color: #E04B4A;
+	font-weight: 600;
+}
+
 .btn-group {
 	padding: 2px;
 }
