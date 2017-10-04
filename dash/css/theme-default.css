@@ -103,7 +103,7 @@ body {
   width: 50px;
 }
 .page-container .page-content {
-  min-height: 100%;
+  min-height: 5000px;
   margin-left: 220px;
   background: #f5f5f5 url('../img/bg.png') left top repeat;
   position: relative;
