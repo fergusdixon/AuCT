@@ -8,6 +8,11 @@ public class Segmentor {
         this.dir = scriptDir;
     }
 
+    /**
+     * This segments a given file using ffmpeg, filter: silencedetect=noise=-30dB:d=0.5
+     * @param inputPath: file to segment
+     * @return success or failure
+     */
     public boolean segment(String inputPath){
         try
         {
