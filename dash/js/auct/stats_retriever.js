@@ -34,10 +34,10 @@
 
 		// Update dashboard
 		barLab.style.width = ((labelled*100)/total).toString()+"%";
-		numLab.innerText = labelled+"/"+total+" | "+((labelled*100)/total).toString()+"%";
+		numLab.innerText = labelled+"/"+total+" | "+Math.round((labelled*100)/total).toString()+"%";
 
 		barFail.style.width = (scrapped*100/total).toString()+"%";
-		numFail.innerText = scrapped+"/"+total+" | "+(scrapped*100/total).toString()+"%";
+		numFail.innerText = scrapped+"/"+total+" | "+Math.round((scrapped*100)/total).toString()+"%";
 
 		console.log("Stats loaded");
 
