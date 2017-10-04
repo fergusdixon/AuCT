@@ -60,5 +60,9 @@ h3 {
 }
 #recordbtn, #stopbtn {
 	max-width: 100%;
-	font-size: 2.5vw;
+	/*font-size: 2.5vw;*/
+}
+audio{
+	/*width: 100;*/
+	max-width: 100%;
 }
