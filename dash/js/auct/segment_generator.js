@@ -25,7 +25,7 @@ function loadSeg(sid, wlref, but) {
 			var dbSegs = snapshot.val();
 
 			for (var i = 0; i < dbSegs.length; i++) {
-				console.log(dbSegs[i].session+" vs "+sid);
+				// console.log(dbSegs[i].session+" vs "+sid);
 				if(dbSegs[i].session == sid) {
 
 					var s = {
@@ -59,7 +59,7 @@ function loadSeg(sid, wlref, but) {
 					}
 
 
-					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='seg-"+s.position
+					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='sesh-"+sid+"-seg-"+s.position
 										+"'"+clickString+"this)' onmouseover='clips["+s.position+"].play()'>"+s.label+"</button>"
 										+suggestions+scrapButton+"<br>";
 

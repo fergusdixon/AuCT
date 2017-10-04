@@ -8,7 +8,7 @@ function updateLabel(id, sesh, button) {
 
 	if(button == null){mode = 0;}
 
-	var segButton = document.getElementById("seg-"+id);
+	var segButton = document.getElementById("sesh-"+sesh+"-seg-"+id); //This is a problem
 	var oldLabel = segButton.innerText;
 
 	if(mode == 1){
