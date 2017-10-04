@@ -6,7 +6,7 @@
 	var languages = [];
 	var sessions = [];
 	var seshPanel = document.getElementsByClassName("downloads-holder")[0];
-	seshPanel.innerHTML = "<h3>loading...</h3>";
+	seshPanel.innerHTML = "<center><img width='30px' height='auto' src='img/loaders/default.gif'></center>";
 
 	// Firebase once-off DB query
 	firebase.database().ref('/sessions/').once('value').then(function(snapshot) {

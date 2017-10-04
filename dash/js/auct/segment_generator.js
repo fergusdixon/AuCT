@@ -11,7 +11,7 @@ function loadSeg(sid, wlref) {
 
 	console.log("Generating segments...");
 
-	segPanel.innerHTML = "<h3>loading...</h3>";
+	segPanel.innerHTML = "<center><img width='30px' height='auto' src='img/loaders/default.gif'></center>";
 	embedAudio(sid);
 
 	// Firebase once-off DB query

@@ -7,6 +7,8 @@
 	var sessions = [];
 	var seshPanel = document.getElementsByClassName("session-holder")[0];
 
+	seshPanel.innerHTML = "<center><img width='30px' height='auto' src='img/loaders/default.gif'></center>";
+
 	console.log("Generating sessions...");
 
 	// Firebase once-off DB query
@@ -24,7 +26,6 @@
 	  		  		scrapped : dbSessions[i].scrapped,
 	  		  		spliced : dbSessions[i].spliced,
 	  		  		verified : dbSessions[i].verified,
-	  		  		// wordlistref : dbSessions[i]['wordlist-ref'], //TODO update this for the new DB
 	  		  		wordlistref : dbSessions[i].wordlist, //TODO update this for the new DB
 	  		  		markup : ""
 	  		  	};
@@ -32,10 +33,10 @@
 	  		  	// console.log(i+": "+s);
 
 	  		  	s.markup = "<div class='panel panel-default'><div class='panel-heading'>"
-	  									+"<div class='panel-title-box'><h3>"+s.date+" "+s.language+" list"+s.wordlistref+"</h3></div></div>"
+	  									+"<div class='panel-title-box'><h3>"+s.language+" | "+s.date+" | list"+s.wordlistref+"</h3></div></div>"
 	  									+"<div class='panel-body'><form class='form-horizontal' role='form'>"
 	  									+"<div class='form-group'><div class='col-md-12 segment-holder'>"
-	  									+"<button class='btn btn-info btn-block seg-load-button'"
+	  									+"<button class='btn btn-info btn-block seg-load-button' type='button'"
 	  									+"onclick='loadSeg("+s.id+","+s.wordlistref+")'>Load Segments</button>"
 	  									+"</div></div></form></div></div>";
 
@@ -44,6 +45,7 @@
 
 	  };
 
+	  seshPanel.innerHTML = "";
 	  for (var i = 0; i < sessions.length; i++) {
 	  	seshPanel.innerHTML += sessions[i].markup;
 	  }

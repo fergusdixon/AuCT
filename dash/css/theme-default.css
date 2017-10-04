@@ -1430,6 +1430,10 @@ a.list-group-item:focus {
   border-top-color: #F5F5F5;
   border-top-width: 1px;
 }
+.panel.panel-stats {
+	margin-left: 50%;
+	margin-right: 50%;
+}
 .panel.panel-primary {
   border-top-color: #1b1e24;
 }
