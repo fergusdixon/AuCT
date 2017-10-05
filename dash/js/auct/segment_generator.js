@@ -23,13 +23,13 @@ function loadSeg(sid, wlref, but) {
 		// Firebase once-off DB query
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 			var dbSegs = Object.values(snapshot.val());
-
+			var pos = -1;
 			for (var i = 0; i < dbSegs.length; i++) {
 				// console.log(dbSegs[i].session+" vs "+sid);
 				if(dbSegs[i].session == sid) {
-
+					pos++;
 					var s = {
-						position : i,
+						position : pos,
 						filename : dbSegs[i].filename,
 						url : "",
 						label : dbSegs[i].label,
@@ -52,10 +52,10 @@ function loadSeg(sid, wlref, but) {
 					var clickString = "onClick='updateLabel("+s.position+","+s.session+",";
 					var scrapButton = "<button type='button' class='btn btn-scrap' onClick='updateLabel("+s.position+","+s.session+",null)'>X</button>";
 					if(len > 0) {
-						if(i>0) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-1]+"</button>";}
-						if(i<len-1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+1]+"</button>";}
-						if(i>1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i-2]+"</button>";}
-						if(i<len-2) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[i+2]+"</button>";}
+						if(s.position>0) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position-1]+"</button>";}
+						if(s.position<len-1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position+1]+"</button>";}
+						if(s.position>1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position-2]+"</button>";}
+						if(s.position<len-2) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position+2]+"</button>";}
 					}
 
 
