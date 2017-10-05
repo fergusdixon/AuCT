@@ -38,15 +38,19 @@ the data bars on the UI via the DOM.
 
 		// Calculate stats and update dashboard UI elements
 		barLab.style.width = ((labelled*100)/total).toString()+"%";
-		numLab.innerText = labelled+"/"+total+" | "+Math.round((labelled*100)/total).toString()+"%";
+		numLab.innerText = labelled+"/"+total+" | "
+		+Math.round((labelled*100)/total).toString()+"%";
+
 		barFail.style.width = (scrapped*100/total).toString()+"%";
-		numFail.innerText = scrapped+"/"+total+" | "+Math.round((scrapped*100)/total).toString()+"%";
+		numFail.innerText = scrapped+"/"+total+" | "
+		+Math.round((scrapped*100)/total).toString()+"%";
 
 		console.log("Stats loaded");
 
-	}).catch(function(db_error) { // Handles errors from database read and generates a retry button on UI
+	}).catch(function(db_error) { // Catches DB errors and shows retry button
 		console.log("Error loading stats");
-		document.getElementsByClassName("stats-body")[0].innerHTML = "<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
+		document.getElementsByClassName("stats-body")[0].innerHTML =
+		"<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
 
 	});
 

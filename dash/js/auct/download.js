@@ -35,7 +35,7 @@ function download(name, but) {
 		// Insert Firebase 'segments' table results into an array
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 			var dbSegs = Object.values(snapshot.val());
-			// Loop through the segments and find ones that match the session and are verified
+			// Loop through segments and find verified ones matching this session
 			for (var i = 0; i < dbSegs.length; i++) {
 				if(dbSessions[dbSegs[i].session].name == name & dbSegs[i].verified == 1) {
 					console.log("Downloading : "+dbSegs[i].label);

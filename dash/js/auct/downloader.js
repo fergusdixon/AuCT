@@ -16,7 +16,8 @@ which allow the user to download the clips from that session.
 	// Retrieving the UI element into which markup will be inserted
 	var seshPanel = document.getElementsByClassName("downloads-holder")[0];
 	// Show loader gif
-	seshPanel.innerHTML = "<center><img width='30px' height='auto' src='img/loaders/default.gif'></center>";
+	seshPanel.innerHTML = "<center><img width='30px' height='auto' "
+											 +"src='img/loaders/default.gif'></center>";
 
 	// Firebase once-off DB query of sessions table
 	firebase.database().ref('/sessions/').once('value').then(function(snapshot) {
@@ -43,12 +44,18 @@ which allow the user to download the clips from that session.
 	  // UI updated with dynamically generated UI buttons for downloading sessions
 		seshPanel.innerHTML = "";
 	  for (var i = 0; i < sessions.length; i++) {
-	  	seshPanel.innerHTML += "<button class='btn btn-rounded btn-primary btn-download' onClick='download(\""+sessions[i].name+"\", this)'><i class='fa fa-arrow-down'> "+sessions[i].language+" | "+sessions[i].date+"</i></button><br>";
+	  	seshPanel.innerHTML += (
+	  		"<button class='btn btn-rounded btn-primary btn-download' "
+	  		+"onClick='download(\""+sessions[i].name+"\", this)'>"
+	  		+"<i class='fa fa-arrow-down'> "+sessions[i].language
+	  		+" | "+sessions[i].date+"</i></button><br>"
+	  	);
 	  }
 
 	}).catch(function(db_error) { // Catch DB read errors and show retry button
 		console.log("Error loading from DB");
-		seshPanel.innerHTML = "<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
+		seshPanel.innerHTML =
+		"<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
 	});
 
 

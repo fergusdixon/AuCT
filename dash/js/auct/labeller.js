@@ -33,14 +33,15 @@ function updateLabel(id, sesh, button) {
 	// Button changes to orange to show that it is processing
 	segButton.className = warningClass;
 
-	// Retrieving all the data from segments and, finding the correct segment and updating fields
+	/* Retrieving all the data from segments and,
+	finding the correct segment and updating fields */
 	var database = firebase.database();
 	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 		var dbSegs = Object.values(snapshot.val());
 
 		for (var i = 0; i < dbSegs.length; i++) {
 			var s = dbSegs[i];
-			if(s.session == sesh && s.label == oldLabel) { // If it's the segment we want
+			if(s.session == sesh && s.label == oldLabel) { // If it's segment we want
 				if(mode == 1) { // If in update mode
 					firebase.database().ref('/segments/'+i).set({
 					  filename: s.filename,

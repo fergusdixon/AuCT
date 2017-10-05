@@ -1,7 +1,8 @@
 /*
-Javascript function to dynamically generate UI elements (like buttons and labels)
-based on the segments stored in the Firebase cloud database, for the
-corresponding session that triggered it via an event listener.
+Javascript function to dynamically generate UI elements
+(like buttons and labels) based on the segments stored in the Firebase
+cloud database, for the corresponding session that triggered
+it via an event listener.
 */
 function loadSeg(sid, wlref, but) {
 	"use strict";
@@ -28,7 +29,8 @@ function loadSeg(sid, wlref, but) {
 	console.log("Generating segments...");
 
 	// Show loader gif
-	segPanel.innerHTML = "<center><img width='30px' height='auto' src='img/loaders/default.gif'></center>";
+	segPanel.innerHTML = "<center><img width='30px' height='auto' "
+											+"src='img/loaders/default.gif'></center>";
 	embedAudio(sid); // Calls function to embed audio files into UI for preview
 
 	// Firebase once-off DB query of wordlist table
@@ -65,19 +67,28 @@ function loadSeg(sid, wlref, but) {
 					// Markup variables
 					var classString = "class = 'btn btn-default active' type='button'";
 					var clickString = "onClick='updateLabel("+s.position+","+s.session+",";
-					var scrapButton = "<button type='button' class='btn btn-scrap' onClick='updateLabel("+s.position+","+s.session+",null)'>X</button>";
+					var scrapButton = "<button type='button' class='btn btn-scrap' "
+					+"onClick='updateLabel("+s.position+","+s.session+",null)'>X</button>";
 
-					// Markup dynamically generated for suggestion words according to place in wordlist
+					/* Markup dynamically generated for suggestion words
+					according to place in wordlist */
 					if(len > 0) {
-						if(s.position>0) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position-1]+"</button>";}
-						if(s.position<len-1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position+1]+"</button>";}
-						if(s.position>1) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position-2]+"</button>";}
-						if(s.position<len-2) {suggestions += "<button "+classString+clickString+"this)'>"+wordlist.words[s.position+2]+"</button>";}
+						if(s.position>0) {suggestions += "<button "+classString+clickString
+							+"this)'>"+wordlist.words[s.position-1]+"</button>";}
+						if(s.position<len-1) {suggestions += "<button "+classString
+							+clickString+"this)'>"+wordlist.words[s.position+1]+"</button>";}
+						if(s.position>1) {suggestions += "<button "+classString
+							+clickString+"this)'>"+wordlist.words[s.position-2]+"</button>";}
+						if(s.position<len-2) {suggestions += "<button "+classString
+							+clickString+"this)'>"+wordlist.words[s.position+2]+"</button>";}
 					}
 
-					// Dynamic markup configuration for segment and suggestion buttons on the UI
-					s.markup = "<button type='button' class='btn btn-"+type+" btn-rounded btn-segment' id='sesh-"+sid+"-seg-"+s.position
-										+"'"+clickString+"this)' onmouseover='clips["+s.position+"].play()'>"+s.label+"</button>"
+					/* Dynamic markup configuration for segment and
+					suggestion buttons on the UI */
+					s.markup = "<button type='button' class='btn btn-"+type
+										+" btn-rounded btn-segment' id='sesh-"+sid+"-seg-"
+										+s.position+"'"+clickString+"this)' onmouseover='clips["
+										+s.position+"].play()'>"+s.label+"</button>"
 										+suggestions+scrapButton+"<br>";
 
 					audioSegs.push(s); // Segment objects pushed to array
@@ -94,7 +105,8 @@ function loadSeg(sid, wlref, but) {
 
 		}).catch(function(db_error) { // catches DB error and shows retry button
 			console.log("Error loading segments from DB");
-			segPanel.innerHTML = "<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
+			segPanel.innerHTML =
+			"<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
 		});
 
 	}).catch(function(db_error) { // catches DB error and triggers reload

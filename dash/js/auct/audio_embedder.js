@@ -24,7 +24,7 @@ function embedAudio(sid) {
 	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 		var dbSegs = Object.values(snapshot.val());
 
-		// Loop through array and check that if the segment corresponds to the session
+		// Loop through array and check that the segment corresponds to the session
 		for (var i = 0; i < dbSegs.length; i++) {
 			if(dbSegs[i].session == sid) {
 				var s = dbSegs[i];
