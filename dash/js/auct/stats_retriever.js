@@ -1,49 +1,56 @@
-(function(){
+/*
+Javascript controller script that connects to Firebase cloud server
+and retrieves statistics about the segments stored, then updates
+the data bars on the UI via the DOM.
+*/
 
-	// Declare and Zero the graphic elements
+(function (){
+	"use strict";
+
+	// Declare the graphic elements with DOM
 	var barLab = document.getElementsByClassName("progress-bar-primary")[0];
-	var barMap = document.getElementsByClassName("progress-bar-primary")[1];
 	var barFail = document.getElementsByClassName("progress-bar-danger")[0];
 	var numLab = document.getElementsByClassName("labelled-perc")[0];
-	var numMap = document.getElementsByClassName("words-num")[0];
 	var numFail = document.getElementsByClassName("failed-num")[0];
-	numLab.innerText = "0%";
-	barLab.style.width = "0%";
-	numMap.innerText = "0/0";
-	barMap.style.width = "0%";
-	numFail.innerText = "0%";
-	barFail.style.width = "0%";
 
+	// Firebase cloud server integration
 	var database = firebase.database();
-	var samples = []
+	// Prepare an array to hold segment objects from server
+	var segments = []
 
 	console.log("Retrieving Stats...");
 
-	firebase.database().ref('/samples/').once('value').then(function(snapshot) {
-		samples = snapshot.val();
+	// Read the contents of the 'segments' table in cloud server to an array
+	firebase.database().ref('/segments/').once('value').then(function(snapshot) {
+		segments = Object.values(snapshot.val());
 
+		// Prime variables to track statistics
 		var labelled = 0;
-		var total = samples.length;
-		var failures = 1;
+		var total = segments.length;
+		var scrapped = 0;
 
-		for (var i = samples.length - 1; i >= 0; i--) {
-			if(samples[i].label != "") {
-				labelled++;
+		for (var i = segments.length - 1; i >= 0; i--) {
+			if(segments[i] != null) {
+				if(segments[i].verified == 1) {labelled++;} // Counts verified segments
+				if(segments[i].scrapped == 1) {scrapped++;} // Counts scrapped segments
 			}
 		}
 
-		// Update dashboard
-		numLab.innerText = ((labelled*100)/total).toString()+"%";
-		barLab.style.width = numLab.innerText;
-		numMap.innerText = labelled+"/10";
-		barMap.style.width = ((labelled*100)/10).toString()+"%";;
-		numFail.innerText = (failures*100/10).toString()+"%";
-		barFail.style.width = numFail.innerText;
+		// Calculate stats and update dashboard UI elements
+		barLab.style.width = ((labelled*100)/total).toString()+"%";
+		numLab.innerText = labelled+"/"+total+" | "
+		+Math.round((labelled*100)/total).toString()+"%";
+
+		barFail.style.width = (scrapped*100/total).toString()+"%";
+		numFail.innerText = scrapped+"/"+total+" | "
+		+Math.round((scrapped*100)/total).toString()+"%";
 
 		console.log("Stats loaded");
 
-	}).catch(function(db_error) {
+	}).catch(function(db_error) { // Catches DB errors and shows retry button
 		console.log("Error loading stats");
+		document.getElementsByClassName("stats-body")[0].innerHTML =
+		"<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
 
 	});
 
