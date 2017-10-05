@@ -90,6 +90,12 @@ body {
   /* RTL CONTENT MODE */
   /* END RTL CONTENT MODE */
 }
+
+.wl-input {
+	width: 90%;
+	margin-top: 3px;
+}
+
 .page-container .page-sidebar {
   width: 220px;
   float: left;
@@ -103,7 +109,7 @@ body {
   width: 50px;
 }
 .page-container .page-content {
-  min-height: 100%;
+  min-height: 5000px;
   margin-left: 220px;
   background: #f5f5f5 url('../img/bg.png') left top repeat;
   position: relative;
@@ -1430,6 +1436,10 @@ a.list-group-item:focus {
   border-top-color: #F5F5F5;
   border-top-width: 1px;
 }
+.panel.panel-stats {
+	margin-left: 50%;
+	margin-right: 50%;
+}
 .panel.panel-primary {
   border-top-color: #1b1e24;
 }
@@ -1955,6 +1965,18 @@ ul.panel-controls > li > .dropdown-menu:before {
   transition: all 200ms ease;
 }
 
+.btn-scrap {
+	border: none;
+	background: none;
+	margin: 2px;
+	color: #E04B4A;
+	font-weight: 600;
+}
+
+.btn-submit-wordlist {
+	margin-top: 5px;
+}
+
 .btn-group {
 	padding: 2px;
 }
@@ -2094,6 +2116,17 @@ ul.panel-controls > li > .dropdown-menu:before {
   padding: 2px 10px;
   font-weight: 600;
 }
+
+.btn-segment {
+	margin: 5px;
+  min-width: 200px;
+}
+
+.btn-download {
+	margin: 5px;
+  min-width: 200px;
+}
+
 .btn.btn-rounded.btn-default:hover,
 .btn.btn-rounded.btn-default:focus,
 .btn.btn-rounded.btn-default:active,

@@ -1,131 +1,117 @@
-(function (){
+/*
+Javascript function to dynamically generate UI elements
+(like buttons and labels) based on the segments stored in the Firebase
+cloud database, for the corresponding session that triggered
+it via an event listener.
+*/
+function loadSeg(sid, wlref, but) {
+	"use strict";
+
+	console.log("loading session "+sid+"...");
+
+	// Uncomment below code to restrict concurrent session editing
+	/*
+	var otherSessions = document.getElementsByClassName("segment-holder");
+	for (var i = 0; i < otherSessions.length; i++) {
+		if(otherSessions[i] != but.parentElement){
+			otherSessions[i].innerHTML = "";
+		}
+	}
+	*/
 
 	// Get a reference to the Firebase database service
 	var database = firebase.database();
 
-	var segPanel = document.getElementsByClassName("segment-holder")[0];
+	// Generate local variables based on parameters
+	var segPanel = but.parentElement;
 	var audioSegs = [];
-
-	var writeLabel = function (s, newLabel) {
-		if(newLabel != "") {
-			firebase.database().ref('samples/'+s.id).set({
-				id: s.id,
-				filepath: s.filepath,
-				language: s.language,
-				label: newLabel
-			});
-			console.log("Update sent to DB");
-		}
-	}
-
-	var removeSeg = function (s) {
-		firebase.database().ref('samples/'+s.id).remove();
-	}
-
-	var segSelect = function (s) {
-		// Prime the menu options
-		var labelButton = document.getElementsByClassName("button-label")[s.id];
-		var removeButton = document.getElementsByClassName("button-remove")[s.id];
-
-		labelButton.addEventListener("click", function() {
-			var newLabel = prompt("Enter new label", s.label);
-			if(newLabel != "") {
-				s.label = newLabel;
-			}
-			var buttons = document.getElementsByClassName("dropdown-toggle");
-			buttons[s.id].innerText = s.label;
-
-			// Update the database
-			writeLabel(s, newLabel);
-
-			console.log("Labelled as '"+s.label+"'")
-		});
-
-		removeButton.addEventListener("click", function() {
-			if (confirm("Remove this segment?") == true) {
-
-			    // TODO Remove the segment from database
-			    removeSeg(s);
-			    console.log("Removed segment");
-			    // TODO Refresh the page
-			    location.reload();
-
-			} else {
-			    console.log("Segment not removed");
-			}
-		});
-
-		// Play the sound
-		console.log("Playing "+s.id);
-		var audio = document.createElement('audio');
-		audio.src = s.filepath;
-		audio.play();
-	}
 
 	console.log("Generating segments...");
 
-	// Firebase once-off DB query
-	firebase.database().ref('/samples/').once('value').then(function(snapshot) {
-		var dbSegs = snapshot.val();
+	// Show loader gif
+	segPanel.innerHTML = "<center><img width='30px' height='auto' "
+											+"src='img/loaders/default.gif'></center>";
+	embedAudio(sid); // Calls function to embed audio files into UI for preview
 
-	  for (var i = 0; i < dbSegs.length; i++) {
-	  	var s = {
-	  		id : dbSegs[i].id,
-	  		filepath : dbSegs[i].filepath,
-	  		language : dbSegs[i].language,
-	  		label : dbSegs[i].label,
-	  		markup : ""
-	  	};
+	// Firebase once-off DB query of wordlist table
+	firebase.database().ref('/wordlists/').once('value').then(function(snapshot) {
+		var wordlist = snapshot.val()[wlref];
+		console.log("Wordlist "+wordlist.name+" loaded");
 
-	  	var type = "primary";
-	  	var text = "Segment "+s.id;
-	  	if(s.label != "") {
-	  		text = s.label;
-	  		type = "success";
-	  	}
+		// Firebase once-off DB query of segments table
+		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
+			var dbSegs = Object.values(snapshot.val());
+			var pos = -1; // position of segment in current session
+			for (var i = 0; i < dbSegs.length; i++) {
+				if(dbSegs[i].session == sid) {
+					pos++;
+					// Segments class defined and instantiated below
+					var s = {
+						position : pos,
+						filename : dbSegs[i].filename,
+						url : "",
+						label : dbSegs[i].label,
+						scrapped : dbSegs[i].scrapped,
+						session : dbSegs[i].session,
+						verified : dbSegs[i].verified,
+						markup : ""
+					};
 
+					// Segment type determined based on tags
+					var type = "primary";
+					var suggestions = "";
+					var len = wordlist.words.length;
+					if(s.verified == 1) {type = "success";}
+					if(s.scrapped == 1) {type = "danger";}
 
-	  	s.markup = " <div class='btn-group audio-seg'>"
-	  						+"<a href='#' data-toggle='dropdown' class='btn btn-"+type+" btn-lg dropdown-toggle'>"
-	  						+text+" <span class='caret'></span></a>"
-	  						+"<audio id='audio' src='"+s.filepath+"'"
-	  						+"style='visibility: hidden; width: 0px; height: 0px;'"
-	  						+"controls preload='auto' autobuffer></audio><ul class='dropdown-menu'"
-	  						+"role='menu'><li><a href='#' class='button-label'>Label</a></li><li><a href='#'"
-	  						+"class='button-remove'>Remove</a></li></ul></div>"
+					// Markup variables
+					var classString = "class = 'btn btn-default active' type='button'";
+					var clickString = "onClick='updateLabel("+s.position+","+s.session+",";
+					var scrapButton = "<button type='button' class='btn btn-scrap' "
+					+"onClick='updateLabel("+s.position+","+s.session+",null)'>X</button>";
 
-	  	audioSegs.push(s);
-	  	// console.log("Added "+s.label);
+					/* Markup dynamically generated for suggestion words
+					according to place in wordlist */
+					if(len > 0) {
+						if(s.position>0) {suggestions += "<button "+classString+clickString
+							+"this)'>"+wordlist.words[s.position-1]+"</button>";}
+						if(s.position<len-1) {suggestions += "<button "+classString
+							+clickString+"this)'>"+wordlist.words[s.position+1]+"</button>";}
+						if(s.position>1) {suggestions += "<button "+classString
+							+clickString+"this)'>"+wordlist.words[s.position-2]+"</button>";}
+						if(s.position<len-2) {suggestions += "<button "+classString
+							+clickString+"this)'>"+wordlist.words[s.position+2]+"</button>";}
+					}
 
-	  };
+					/* Dynamic markup configuration for segment and
+					suggestion buttons on the UI */
+					s.markup = "<button type='button' class='btn btn-"+type
+										+" btn-rounded btn-segment' id='sesh-"+sid+"-seg-"
+										+s.position+"'"+clickString+"this)' onmouseover='clips["
+										+s.position+"].play()'>"+s.label+"</button>"
+										+suggestions+scrapButton+"<br>";
 
-	  for (var i = 0; i < audioSegs.length; i++) {
-	  	segPanel.innerHTML += audioSegs[i].markup;
-	  }
+					audioSegs.push(s); // Segment objects pushed to array
+				}
 
-	  console.log("Linking audio playback...");
+			};
 
-	  var buttons = document.getElementsByClassName("dropdown-toggle");
+			// Markup of UI session container updated with segment markup
+			segPanel.innerHTML = "";
+			for (var i = 0; i < audioSegs.length; i++) {
+				segPanel.innerHTML += audioSegs[i].markup;
+			}
+			console.log("Loaded session "+sid);
 
-	  // TODO Figure out why this won't work in a loop of some kind
-	  buttons[0].addEventListener("click", function() {segSelect(audioSegs[0])});
-	  buttons[1].addEventListener("click", function() {segSelect(audioSegs[1])});
-	  buttons[2].addEventListener("click", function() {segSelect(audioSegs[2])});
-	  buttons[3].addEventListener("click", function() {segSelect(audioSegs[3])});
-	  buttons[4].addEventListener("click", function() {segSelect(audioSegs[4])});
-	  buttons[5].addEventListener("click", function() {segSelect(audioSegs[5])});
-	  buttons[6].addEventListener("click", function() {segSelect(audioSegs[6])});
-	  buttons[7].addEventListener("click", function() {segSelect(audioSegs[7])});
-	  buttons[8].addEventListener("click", function() {segSelect(audioSegs[8])});
-	  buttons[9].addEventListener("click", function() {segSelect(audioSegs[9])});
+		}).catch(function(db_error) { // catches DB error and shows retry button
+			console.log("Error loading segments from DB");
+			segPanel.innerHTML =
+			"<center><a onclick='location.reload()'><h3>Retry</h3></a></center>";
+		});
 
-	  console.log("Ready.");
-
-
-	}).catch(function(db_error) {
-		console.log("Error loading from DB");
-		// location.reload();
+	}).catch(function(db_error) { // catches DB error and triggers reload
+		console.log("Error loading wordlist from DB");
+		location.reload();
 	});
 
-
-}());
+}

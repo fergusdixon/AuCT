@@ -1,3 +1,4 @@
+<!-- This markup is for the landing page of the AuCT dashboard web app -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,64 +42,10 @@
                         <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
                     </li>
                     <li class="inactive">
-                        <a href="index.html"><span class="fa fa-archive"></span> <span class="xn-text">Library</span></a>
+                        <a href="downloads.html"><span class="fa fa-archive"></span> <span class="xn-text">Downloads</span></a>
                     </li>
-                    <li class="xn-title">Components</li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-cogs"></span> <span class="xn-text">UI Kits</span></a>
-                        <ul>
-                            <li><a href="ui-widgets.html"><span class="fa fa-heart"></span> Widgets</a></li>
-                            <li><a href="ui-elements.html"><span class="fa fa-cogs"></span> Elements</a></li>
-                            <li><a href="ui-buttons.html"><span class="fa fa-square-o"></span> Buttons</a></li>
-                            <li><a href="ui-panels.html"><span class="fa fa-pencil-square-o"></span> Panels</a></li>
-                            <li><a href="ui-icons.html"><span class="fa fa-magic"></span> Icons</a><div class="informer informer-warning">+679</div></li>
-                            <li><a href="ui-typography.html"><span class="fa fa-pencil"></span> Typography</a></li>
-                            <li><a href="ui-portlet.html"><span class="fa fa-th"></span> Portlet</a></li>
-                            <li><a href="ui-sliders.html"><span class="fa fa-arrows-h"></span> Sliders</a></li>
-                            <li><a href="ui-alerts-popups.html"><span class="fa fa-warning"></span> Alerts & Popups</a></li>
-                            <li><a href="ui-lists.html"><span class="fa fa-list-ul"></span> Lists</a></li>
-                            <li><a href="ui-tour.html"><span class="fa fa-random"></span> Tour</a></li>
-                        </ul>
-                    </li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Forms</span></a>
-                        <ul>
-                            <li>
-                                <a href="form-layouts-two-column.html"><span class="fa fa-tasks"></span> Form Layouts</a>
-                                <div class="informer informer-danger">New</div>
-                                <ul>
-                                    <li><a href="form-layouts-one-column.html"><span class="fa fa-align-justify"></span> One Column</a></li>
-                                    <li><a href="form-layouts-two-column.html"><span class="fa fa-th-large"></span> Two Column</a></li>
-                                    <li><a href="form-layouts-tabbed.html"><span class="fa fa-table"></span> Tabbed</a></li>
-                                    <li><a href="form-layouts-separated.html"><span class="fa fa-th-list"></span> Separated Rows</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="form-elements.html"><span class="fa fa-file-text-o"></span> Elements</a></li>
-                            <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
-                            <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
-                            <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
-                            <li><a href="form-file-handling.html"><span class="fa fa-floppy-o"></span> File Handling</a></li>
-                        </ul>
-                    </li>
-                    <li class="xn-openable">
-                        <a href="tables.html"><span class="fa fa-table"></span> <span class="xn-text">Tables</span></a>
-                        <ul>
-                            <li><a href="table-basic.html"><span class="fa fa-align-justify"></span> Basic</a></li>
-                            <li><a href="table-datatables.html"><span class="fa fa-sort-alpha-desc"></span> Data Tables</a></li>
-                            <li><a href="table-export.html"><span class="fa fa-download"></span> Export Tables</a></li>
-                        </ul>
-                    </li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-bar-chart-o"></span> <span class="xn-text">Charts</span></a>
-                        <ul>
-                            <li><a href="charts-morris.html"><span class="xn-text">Morris</span></a></li>
-                            <li><a href="charts-nvd3.html"><span class="xn-text">NVD3</span></a></li>
-                            <li><a href="charts-rickshaw.html"><span class="xn-text">Rickshaw</span></a></li>
-                            <li><a href="charts-other.html"><span class="xn-text">Other</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="maps.html"><span class="fa fa-map-marker"></span> <span class="xn-text">Maps</span></a>
+                    <li class="inactive">
+                        <a href="wordlist.html"><span class="fa fa-archive"></span> <span class="xn-text">Wordlist</span></a>
                     </li>
                 </ul>
                 <!-- END X-NAVIGATION -->
@@ -115,13 +62,6 @@
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
                     <!-- END TOGGLE NAVIGATION -->
-                    <!-- SEARCH -->
-                    <li class="xn-search">
-                        <form role="form">
-                            <input type="text" name="search" placeholder="Search..."/>
-                        </form>
-                    </li>
-                    <!-- END SEARCH -->
                 </ul>
                 <!-- END X-NAVIGATION VERTICAL -->
 
@@ -135,78 +75,48 @@
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
 
+                	<!-- START WIDGETS -->
+                	<div class="row">
+
+                	    <div class="col-md-6">
+                	    	<!-- START STATS BLOCK -->
+                	        <div class="panel panel-default panel-stats">
+                	            <div class="panel-heading">
+                	                <div class="panel-title-box">
+                	                    <h3>Stats</h3>
+                	                    <span>Stats activity</span>
+                	                </div>
+
+                	            </div>
+                	            <div class="panel-body stats-body">
+                	                <div class="row stacked">
+                	                    <div class="progress-list">
+                	                        <div class="pull-left"><strong>Segments validated</strong></div>
+                	                        <div class="pull-right labelled-perc">0%</div>
+                	                        <div class="progress progress-small progress-striped active">
+                	                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+                	                        </div>
+                	                    </div>
+                	                    <div class="progress-list">
+                	                        <div class="pull-left"><strong class="text-danger">Segments scrapped</strong></div>
+                	                        <div class="pull-right failed-num">0%</div>
+                	                        <div class="progress progress-small progress-striped active">
+                	                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+                	                        </div>
+                	                    </div>
+                	                </div>
+                	            </div>
+                	        </div>
+                	        <!-- END STATS BLOCK -->
+                	    </div>
+                	</div>
+                	<!-- END WIDGETS -->
+
                     <div class="row">
-						<div class="col-md-12">
+						<div class="col-md-12 session-holder">
 
-                            <!-- START SEGMENTS BLOCK -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title-box">
-                                        <h3>Audio Segments</h3>
-                                        <span>Unsorted Segments</span>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <div class="col-md-12 segment-holder">
-
-                                            </div>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            </div>
-                            <!-- END SEGMENTS BLOCK -->
-
-                        </div>
-                    </div>
-
-                    <!-- START WIDGETS -->
-                    <div class="row">
-
-                        <div class="col-md-6">
-                        	<!-- START STATS BLOCK -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title-box">
-                                        <h3>Stats</h3>
-                                        <span>Stats activity</span>
-                                    </div>
-
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row stacked">
-                                        <div class="progress-list">
-                                            <div class="pull-left"><strong>Labellel Segments</strong></div>
-                                            <div class="pull-right labelled-perc">75%</div>
-                                            <div class="progress progress-small progress-striped active">
-                                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">75%</div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-list">
-                                            <div class="pull-left"><strong>Words Mapped</strong></div>
-                                            <div class="pull-right words-num">450/500</div>
-                                            <div class="progress progress-small progress-striped active">
-                                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">90%</div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-list">
-                                            <div class="pull-left"><strong class="text-danger">Failed Submissions</strong></div>
-                                            <div class="pull-right failed-num">25/500</div>
-                                            <div class="progress progress-small progress-striped active">
-                                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">5%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END STATS BLOCK -->
-                        </div>
-                    </div>
-                    <!-- END WIDGETS -->
-
+               			</div>
+                	</div>
 
                 </div>
                 <!-- END PAGE CONTENT WRAPPER -->
@@ -219,18 +129,8 @@
 
     	<!-- FIREBASE -->
     	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-    	<script>
-    	  // Initialize Firebase
-    	  var config = {
-    	    apiKey: "AIzaSyBTVzzjeivxqE0HKZ8PNEZaVJj9YdyLl5A",
-    	    authDomain: "capstone-auct.firebaseapp.com",
-    	    databaseURL: "https://capstone-auct.firebaseio.com",
-    	    projectId: "capstone-auct",
-    	    storageBucket: "capstone-auct.appspot.com",
-    	    messagingSenderId: "37978340080"
-    	  };
-    	  firebase.initializeApp(config);
-    	</script>
+    	<script type="text/javascript" src="js/auct/firebase_config.js"></script>
+    	<!-- END FIREBASE -->
 
         <!-- START PLUGINS -->
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
@@ -239,34 +139,15 @@
         <!-- END PLUGINS -->
 
         <!-- START THIS PAGE PLUGINS-->
-        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
-        <script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>
-
-        <script type="text/javascript" src="js/plugins/rickshaw/d3.v3.js"></script>
-        <script type="text/javascript" src="js/plugins/rickshaw/rickshaw.min.js"></script>
-        <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
-        <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>
-        <script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>
-        <script type="text/javascript" src="js/plugins/owl/owl.carousel.min.js"></script>
-
-        <script type="text/javascript" src="js/plugins/moment.min.js"></script>
-        <script type="text/javascript" src="js/plugins/daterangepicker/daterangepicker.js"></script>
         <!-- END THIS PAGE PLUGINS-->
 
         <!-- START AUCT SCRIPTS -->
+        <script type="text/javascript" src="js/auct/session_generator.js"></script>
         <script type="text/javascript" src="js/auct/segment_generator.js"></script>
+        <script type="text/javascript" src="js/auct/labeller.js"></script>
+        <script type="text/javascript" src="js/auct/audio_embedder.js"></script>
         <script type="text/javascript" src="js/auct/stats_retriever.js"></script>
         <!-- END AUCT SCRIPTS -->
-
-        <!-- START TEMPLATE -->
-        <!-- <script type="text/javascript" src="js/settings.js"></script> -->
-
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/actions.js"></script>
-
-        <!-- <script type="text/javascript" src="js/demo_dashboard.js"></script> -->
-        <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->
     </body>
 </html>
