@@ -130,14 +130,51 @@ function populateWordListOnRecordAudio(){
 /**
 * Uploaded given audio file, typically in .wav format, to the firebase storgae bucket
 */
-function upload(AudioBLOB){
+function upload(AudioBLOB, filename, datestring){
  	// Create a storage reference from our storage service
     var storageRef = storage.ref();
     var inputRef = storageRef.child('Input/');
-    var uploadTask = storageRef.child('Input/' + tempFilepath).put(AudioBLOB);
-    console.log("File uploaded: Input/" + tempFilepath + ".wav");
-    alert("File submitted");
+    var uploadfilename = filename.concat(".wav");
+    var uploadTask = storageRef.child('Input/' + uploadfilename).put(AudioBLOB);
+    console.log("File uploaded: Input/" + uploadfilename);
+    
 
+    // Listen for state changes, errors, and completion of the upload.
+	uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+	  function(snapshot) {
+	    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+	    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+	    console.log('Upload is ' + progress + '% done');
+	    switch (snapshot.state) {
+	      case firebase.storage.TaskState.PAUSED: // or 'paused'
+	        console.log('Upload is paused');
+	        break;
+	      case firebase.storage.TaskState.RUNNING: // or 'running'
+	        console.log('Upload is running');
+	        break;
+	    }
+	  }, function(error) {
+
+	  // Common error codes
+	  switch (error.code) {
+	    case 'storage/unauthorized':
+	      // User doesn't have permission to access the object
+	      break;
+
+	    case 'storage/canceled':
+	      // User canceled the upload
+	      break;
+
+	    case 'storage/unknown':
+	      // Unknown error occurred, inspect error.serverResponse
+	      break;
+	  }
+	}, function() {
+	  // Upload completed successfully, now we can get the download URL
+	  var downloadURL = uploadTask.snapshot.downloadURL;
+	  createSession(datestring, filename);
+	});
+	alert("File submitted");
 }
 
 /**
@@ -211,18 +248,18 @@ function getNameFormat(date){
 function getHashValueListNo(){
 	var ahash = window.location.hash.substring(1);
 	var values = ahash.split("#");
-	console.log("ListNo: " + values[0] - 1);
+	//DEBUG: console.log("ListNo: " + values[0] - 1);
 	return values[0];
 }
 function getHashValueKey(){
 	var ahash = window.location.hash.substring(1);
 	var values = ahash.split("#");
-	console.log("Key: " + values[0] - 1);
+	// DEBUG: console.log("Key: " + values[0] - 1);
 	return values[0] - 1;
 }
 function getHashValueLanguage(){
 	var ahash = window.location.hash.substring(1);
 	var values = ahash.split("#");
-	console.log("Language: " + values[1]);
+	// DEBUG: console.log("Language: " + values[1]);
 	return values[1];
 }

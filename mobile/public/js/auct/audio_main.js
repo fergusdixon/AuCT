@@ -184,8 +184,8 @@ window.onload = function(){
 
             // Submit that specific audio file to the firebase storage
             submitbtn.onclick = function(){
-                upload(AudioBLOB, filedate, filename);
-                createSession(datestring, filename);
+                upload(AudioBLOB, filename, datestring);
+                // Moved to db_connector: createSession(datestring, filename);
 
             }
 
