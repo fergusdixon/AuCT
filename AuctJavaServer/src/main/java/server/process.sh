@@ -7,7 +7,7 @@ END=-1
 declare -i NUMBER=0
 FILE=$1
 DIREC=${FILE%.*}
-LABEL = ""
+LABEL= ""
 $(echo cwd)
 # script to split audio
 LIST=$(ffmpeg -i "../../../input/${FILE}" -af silencedetect=noise=-30dB:d=0.5 -f s16le /dev/null -y 2>&1 | grep silencedetect | cut -d ' ' -f4-5)

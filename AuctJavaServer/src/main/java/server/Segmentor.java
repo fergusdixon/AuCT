@@ -8,10 +8,16 @@ public class Segmentor {
         this.dir = scriptDir;
     }
 
+    /**
+     * Split the given local file with ffmpeg
+     * @param inputPath of audio
+     * @return success
+     */
     public boolean segment(String inputPath){
         try
         {
-            ProcessBuilder pb = new ProcessBuilder(dir + "process.sh", inputPath);
+            String scriptLocation = new File("src/main/java/server/process.sh").getAbsolutePath();
+            ProcessBuilder pb = new ProcessBuilder(scriptLocation, inputPath+".wav");
             pb.directory(new File(dir));
             Process process = pb.start();
             process.waitFor();

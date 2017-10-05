@@ -1,9 +1,5 @@
-AuctServer/.idea
-AuctServer/out
-AuctServer/input
 AuctServer/output
-AuctJavaServer/.idea
 AuctJavaServer/out
-AuctJavaServer/src/input/
-AuctJavaServer/src/output
+AuctJavaServer/build
+AuctJavaServer/simplelogger.log
 .idea
