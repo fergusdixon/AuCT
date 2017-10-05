@@ -11,17 +11,20 @@ function download(name, but) {
 
 	var downloadPaths = [];
 	var downloadURLs = [];
+	var downloadCues = [];
 
 	var database = firebase.database();
 	var storage = firebase.storage();
 	var storageRef = storage.ref('/');
 
+
 	// Firebase once-off DB query
 	firebase.database().ref('/sessions/').once('value').then(function(snapshot) {
-		var dbSessions = Object.values(snapshot.val());
+		var dbSessions = snapshot.val();
 
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
-			var dbSegs = snapshot.val();
+			var dbSegs = Object.values(snapshot.val());
+			console.log(dbSegs.length);
 			for (var i = 0; i < dbSegs.length; i++) {
 				if(dbSessions[dbSegs[i].session].name == name & dbSegs[i].verified == 1) {
 					console.log("Downloading : "+dbSegs[i].label);
@@ -29,9 +32,11 @@ function download(name, but) {
 					var audioRef = storageRef.child(dbSegs[i].filename);
 					audioRef.getDownloadURL().then(function(link) {
 						downloadURLs.push(link);
+
+						downloadCues.push(">"+dbSegs[i].label+"\t"+link);
+
 						but.className = successClass;
 
-						// window.open(link);
 
 						console.log("> "+link);
 					}).catch(function(error) {
@@ -40,6 +45,8 @@ function download(name, but) {
 
 				}
 			}
+			var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+			saveAs(blob, dbSessions[i].name+".txt");
 
 			but.className = primaryClass;
 		}).catch(function(db_error) {
