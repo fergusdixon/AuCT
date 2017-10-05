@@ -138,8 +138,7 @@ public class DbHelper {
                     SegmentModel segment = new SegmentModel(
                             "Output/"+file.toString().substring(
                                     file.toString().indexOf("auct")
-                            ) +
-                            file.toString().substring(file.toString().indexOf("seg")),
+                            ),
                             label,
                             0,
                             session.getId(),
