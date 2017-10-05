@@ -36,10 +36,13 @@ function Initialize() {
  * It only stops when the method stopRecording is triggered.
  */
 function startRecording() {
+    console.log("In recording");
     // Access the Microphone using the navigator.getUserMedia method to obtain a stream
     navigator.getUserMedia({ audio: true }, function (stream) {
         // Expose the stream to be accessible globally
         audio_stream = stream;
+        console.log("In getUserMedia. Stream: " + typeof stream + " audio_stream: " + typeof audio_stream);
+        visualize(stream);
         // Create the MediaStreamSource for the Recorder library
         var input = audio_context.createMediaStreamSource(stream);
         console.log('Media stream succesfully created');
@@ -111,13 +114,13 @@ window.onload = function(){
     mainSection = document.querySelector('.main-controls');
 
     // visualiser setup - create web audio api context and canvas
-    var canvasCtx = canvas.getContext("2d");
-    console.log("visualiser set up")
+    canvasCtx = canvas.getContext("2d");
+    console.log("Visualiser set up: canvasCtx: " + typeof canvasCtx);
 
     // Handle on start recording button
     document.getElementById("recordbtn").addEventListener("click", function(){
         startRecording();
-        //console.log("Audio_stream: " + typeof audio_stream);
+        console.log("Audio_stream: " + typeof audio_stream);
         //visualize(audio_stream);
     }, false);
 
@@ -203,7 +206,7 @@ window.onload = function(){
 * Produces a waveform of the audio
 */
 function visualize(stream) {
-    console.log(typeof stream);
+    console.log("In visualizer. Stream: " + typeof stream);
     var source = audio_context.createMediaStreamSource(stream);
 
     var analyser = audio_context.createAnalyser();
@@ -213,6 +216,8 @@ function visualize(stream) {
 
     source.connect(analyser);
     //analyser.connect(audioCtx.destination);
+
+    console.log("Got here without errors");
 
     draw()
 
@@ -257,10 +262,11 @@ function visualize(stream) {
     }
 }
 
-// // Changes size, specifically waveform box
-// window.onresize = function() {
-//   canvas.width = mainSection.offsetWidth;
-// }
+// Changes size, specifically waveform box
+window.onresize = function() {
+  canvas.width = mainSection.offsetWidth;
+  console.log("resize. offsetWidth: " + mainSection.offsetWidth);
+}
 
-// window.onresize();
+window.onresize();
     

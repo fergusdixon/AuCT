@@ -45,6 +45,7 @@ h3 {
 }
 .visualizer{
 	margin: 10px;
+	/*max-width: 100%;*/
 }
 .sound-clips {
   flex: 1;

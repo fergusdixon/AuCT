@@ -1,4 +1,4 @@
-console.log("Hello");
+sconsole.log("Hello");
 // set up basic variables for app
 
 var record = document.querySelector('#recordbtn');
@@ -24,7 +24,7 @@ stop.disabled = true;
 var audioCtx = new (window.AudioContext || webkitAudioContext)();
 var canvasCtx = canvas.getContext("2d");
 
-//main block for doing the audio recording
+// main block for doing the audio recording
 
 if (navigator.mediaDevices.getUserMedia) {
   console.log('getUserMedia supported.');
