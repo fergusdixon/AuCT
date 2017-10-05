@@ -136,6 +136,9 @@ public class DbHelper {
 
                     //Creating a new SegmentModel to update the DB with
                     SegmentModel segment = new SegmentModel(
+                            "Output/"+file.toString().substring(
+                                    file.toString().indexOf("auct")
+                            ) +
                             file.toString().substring(file.toString().indexOf("seg")),
                             label,
                             0,
