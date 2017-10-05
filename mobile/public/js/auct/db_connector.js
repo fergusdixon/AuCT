@@ -7,8 +7,8 @@ var listNo;
 
 // Get the file path of the current window
 var url=location.href;
-var urlFilename = url.substring(url.lastIndexOf('/')+1);
-// DEBUG: console.log(urlFilename);
+var urlFilename = url.substring(url.lastIndexOf('/')+1, url.indexOf("#"));
+console.log(urlFilename);
 
 
 // Get reference for firebase database
@@ -36,7 +36,9 @@ if (urlFilename == "wordListSelection.html"){
 */
 function getWordLists() {
 	// Goes into 'wordlists' node of database
-	firebase.database().ref('/wordlists/').once('value').then(function(snapshot) {
+	var chosenLanguage = window.location.hash.substring(1);
+	console.log("chosenLanguage:" + chosenLanguage);
+	firebase.database().ref('/wordlists/').orderByChild("language").equalTo(chosenLanguage).once('value').then(function(snapshot) {
 		wordlists = snapshot.val();
 		var divId = document.getElementById("wordlistRow");
 
@@ -71,6 +73,9 @@ function createButtonToSelectionPage(childData){
 	listButton.innerText = childData.name;
 	// DEBUG: console.log("button href: " + listButton.href)
 
+	var block = document.createElement('div');
+	block.className = ('col-xs-12 col-sm-4 col-md-2');
+	block.appendChild(listButton);
 	// Sets it so that user is transferred to recordAudio.html page
 	// Passes data about the wordlist chosen via the url hash
 	listButton.addEventListener("click", function(){
@@ -79,7 +84,7 @@ function createButtonToSelectionPage(childData){
 		window.location.href = ("recordAudio.html#" + childData.listnum + "#" + childData.language);
 		populateWordListOnRecordAudio();
 	});
-	return listButton;
+	return block;
 }
 
 /**

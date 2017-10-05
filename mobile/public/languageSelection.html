@@ -46,19 +46,19 @@ s<!DOCTYPE html>
 			<form class="form-inline">
 				<div class="form-group">
 					<select id="selected" class="form-control" name="language">
-						<option id="0" value="english">English</option>
-						<option id="1" value="southern-sotho">Southern Sotho</option>
-						<option id="2" value="tsonga">Tsonga</option>
-						<option id="3" value="afrikaans">Afrikaans</option>
-						<option id="4" value="tswana">Tswana</option>
-						<option id="5" value="swati">Swati</option>
-						<option id="6" value="zulu">Zulu</option>
-						<option id="7" value="northern-sotho">Northen Sotho</option>
-						<option id="8" value="ndebele">Ndebele</option>
-						<option id="9" value="xhosa">Xhosa</option>
-						<option id="10" value="venda">Venda</option>
+						<option id="0" value="English">English</option>
+						<option id="1" value="Southern-sotho">Southern Sotho</option>
+						<option id="2" value="Tsonga">Tsonga</option>
+						<option id="3" value="Afrikaans">Afrikaans</option>
+						<option id="4" value="Tswana">Tswana</option>
+						<option id="5" value="Swati">Swati</option>
+						<option id="6" value="Zulu">Zulu</option>
+						<option id="7" value="Northern-sotho">Northen Sotho</option>
+						<option id="8" value="Ndebele">Ndebele</option>
+						<option id="9" value="Xhosa">Xhosa</option>
+						<option id="10" value="Venda">Venda</option>
 					</select>
-					<a href="wordListSelection.html" class="btn btn-default" id="continueBtn">Continue</a>
+					<a class="btn btn-default" id="continueBtn">Continue</a>
 				</div>
 				
 			</form>
@@ -68,12 +68,15 @@ s<!DOCTYPE html>
 	</div>
 	<!-- END LANGUAGE SELECTION CONTAINER -->
 	<script type="text/javascript">
-		var continueBtn = document.getElementByID("continueBtn");
-		var selected = document.getElementByID("selected");
+		var continueBtn = document.getElementById("continueBtn");
 
-		for (int i=0, i<selected.size; i++){
-			if ()
-		}
+	            // Submit that specific audio file to the firebase storage
+            continueBtn.onclick = function(){
+            	console.log("continue button clicked")
+            	var selected = document.getElementById("selected");
+				var language = selected.options[selected.selectedIndex].value;
+				window.location.href = ("wordListSelection.html#" + language);
+            }
 	</script>
 	<!-- START PULGINS -->
 	<script
