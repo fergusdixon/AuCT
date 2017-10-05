@@ -44,7 +44,7 @@ public class FileProcessor {
         System.out.println("Beginning upload...");
         int counter = 1;
         File folder = new File(
-                "/home/fergus/AuCT/AuctJavaServer/src/output/" +
+                "src/output/" +
                         fileName
         );
         for (final File fileEntry : folder.listFiles()) {
@@ -61,7 +61,7 @@ public class FileProcessor {
      */
     public void deleteSegments(){
         //Delete local segments
-        Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+fileName);
+        Path directory = Paths.get("src/output/"+fileName);
         try {
             Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
                 @Override
@@ -100,7 +100,7 @@ public class FileProcessor {
      * @return boolean
      */
     private boolean split(){
-        Segmentor seg = new Segmentor("/home/fergus/AuCT/AuctJavaServer/src/main/java/server/");
+        Segmentor seg = new Segmentor("src/main/java/server/");
 
         return seg.segment(fileName.substring(fileName.indexOf('/')+1));
     }
@@ -132,7 +132,7 @@ public class FileProcessor {
 
         File f = null;
         try {
-            String path = "/home/fergus/AuCT/AuctJavaServer/src/input/" + fileName + ".wav";
+            String path = "src/input/" + fileName + ".wav";
             f = new File(path);
 
             f.getParentFile().mkdirs();

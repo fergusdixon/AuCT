@@ -90,7 +90,7 @@ public class DbHelper {
      * @param session to record
      */
     public void recordSegments(SessionModel session){
-        Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+session.getName());
+        Path directory = Paths.get("src/output/"+session.getName());
         System.out.println("Recording segments in DB...");
         try {
 
@@ -167,7 +167,7 @@ public class DbHelper {
     private void login() {
         try {
             System.out.println("Logging in...");
-            FileInputStream serviceAccount = new FileInputStream("/home/fergus/AuCT/AuctJavaServer/auct-capstone-firebase-adminsdk-57nym-694062f77b.json");
+            FileInputStream serviceAccount = new FileInputStream("auct-capstone-firebase-adminsdk-57nym-694062f77b.json");
 
             // Initialize the app with a service account, granting admin privileges
             FirebaseOptions options = new FirebaseOptions.Builder()
