@@ -1,3 +1,4 @@
+/*START COMPONENT EDITS*/
 html{
 	height: 100%;
 }
@@ -8,6 +9,19 @@ body {
 	background-position: center;
 	font-family: 'Dosis' 'Courier New'
 }
+h1 {
+	color:white;
+	font-size: 5em;
+}
+h3 {
+	color:white;
+}
+audio{
+	/*width: 100;*/
+	max-width: 100%;
+}
+/*END COMPONENT EDITS*/
+/*START CLASS EDITS*/
 .jumbotron{
 	color: white;
 	background: #2c3e50;
@@ -21,27 +35,11 @@ body {
 .navbar-inverse .navbar-brand{
 	color:white;
 }
-#content{
-	text-align: center;
-	text-shadow: 0px 4px 3px rgba(0,0,0,.4),
-				0px 4px 3px rgba(0,0,0,.1),
-				0px 4px 3px rgba(0,0,0,.1);
-}
-#splash{
-	margin-top: 15%;
-}
-h1 {
-	color:white;
-	font-size: 5em;
-}
-h3 {
-	color:white;
-}
 .btn-default{
 	margin-right: 10px;
 }
-#recordbtn{
-
+.col-xs-12 .col-sm-4 .col-md-2 {
+	padding-left: 0px;
 }
 .visualizer{
 	margin: 10px;
@@ -59,19 +57,46 @@ h3 {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
+.row{
+	margin-top:5px;
+	margin-left: 5px;
+	max-width: 100%;
+}
+.label {
+	font-family: 'Dosis' 'Courier New';
+	font-size: 15px;
+}
+.span {
+	padding-top: .3em;
+	padding-bottom: .3em;
+	padding-left: 0;
+	padding-right: .6em;
+}
+.container {
+	padding-top: 10px;
+}
+/*END CLASS EDITS*/
+/*START ID EDITS*/
+#content{
+	text-align: center;
+	text-shadow: 0px 4px 3px rgba(0,0,0,.4),
+				0px 4px 3px rgba(0,0,0,.1),
+				0px 4px 3px rgba(0,0,0,.1);
+}
+#splash{
+	margin-top: 15%;
+}
+
+
+#recordbtn{
+
+}
+
 #recordbtn, #stopbtn {
 	max-width: 100%;
 	margin: 0;
 	/*font-size: 2.5vw;*/
 }
-.container {
-	padding-top: 10px;
-}
-audio{
-	/*width: 100;*/
-	max-width: 100%;
-}
-.row{
-	margin-top:5px;
-	margin-left: 5px;
-}
+/*END ID EDITS*/
+
+

@@ -46,17 +46,17 @@ s<!DOCTYPE html>
 			<form class="form-inline">
 				<div class="form-group">
 					<select id="selected" class="form-control" name="language">
-						<option id="0" value="English">English</option>
-						<option id="1" value="Southern-sotho">Southern Sotho</option>
-						<option id="2" value="Tsonga">Tsonga</option>
-						<option id="3" value="Afrikaans">Afrikaans</option>
-						<option id="4" value="Tswana">Tswana</option>
-						<option id="5" value="Swati">Swati</option>
-						<option id="6" value="Zulu">Zulu</option>
-						<option id="7" value="Northern-sotho">Northen Sotho</option>
-						<option id="8" value="Ndebele">Ndebele</option>
-						<option id="9" value="Xhosa">Xhosa</option>
-						<option id="10" value="Venda">Venda</option>
+						<option value="English">English</option>
+						<option value="Southern-sotho">Southern Sotho</option>
+						<option value="Tsonga">Tsonga</option>
+						<option value="Afrikaans">Afrikaans</option>
+						<option value="Tswana">Tswana</option>
+						<option value="Swati">Swati</option>
+						<option value="Zulu">Zulu</option>
+						<option value="Northern-sotho">Northen Sotho</option>
+						<option value="Ndebele">Ndebele</option>
+						<option value="Xhosa">Xhosa</option>
+						<option value="Venda">Venda</option>
 					</select>
 					<a class="btn btn-default" id="continueBtn">Continue</a>
 				</div>
@@ -67,23 +67,27 @@ s<!DOCTYPE html>
 			
 	</div>
 	<!-- END LANGUAGE SELECTION CONTAINER -->
-	<script type="text/javascript">
-		var continueBtn = document.getElementById("continueBtn");
-
-	            // Submit that specific audio file to the firebase storage
-            continueBtn.onclick = function(){
-            	console.log("continue button clicked")
-            	var selected = document.getElementById("selected");
+	<!-- START SCRIPTS -->
+		<!-- START HASH SCRIPT -->
+		<!-- Small script to add the value of selected to the url -->
+		<script type="text/javascript">
+			var continueBtn = document.getElementById("continueBtn");
+		        // Submit that specific audio file to the firebase storage
+	            continueBtn.onclick = function(){
+	            console.log("continue button clicked")
+	            var selected = document.getElementById("selected");
 				var language = selected.options[selected.selectedIndex].value;
 				window.location.href = ("wordListSelection.html#" + language);
-            }
-	</script>
-	<!-- START PULGINS -->
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.js"
-	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-	  crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<!-- END PLUGINS -->
+	        }
+		</script>
+		<!-- END HASH SCRIPT -->
+		<!-- START PULGINS -->
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- END PLUGINS -->
+	<!-- END SCRIPTS -->
 </body>
 </html>

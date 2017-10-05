@@ -106,16 +106,17 @@ function stopRecording(callback, AudioFormat) {
 * Initializes everything once the window loads
 */
 window.onload = function(){
-    // Prepare and check if requirements are filled
-    Initialize();
-
     // Set up canvas for waveform
     canvas = document.querySelector('.visualizer');
     mainSection = document.querySelector('.main-controls');
+    console.log("On load here")
+    canvas.width = mainSection.offsetWidth - 25;
 
     // visualiser setup - create web audio api context and canvas
     canvasCtx = canvas.getContext("2d");
     console.log("Visualiser set up: canvasCtx: " + typeof canvasCtx);
+    // Prepare and check if requirements are filled
+    Initialize();
 
     // Handle on start recording button
     document.getElementById("recordbtn").addEventListener("click", function(){
@@ -139,6 +140,7 @@ window.onload = function(){
             var titlerow = document.createElement('div');
             var audiorow = document.createElement('div');
             var buttonrow = document.createElement('div');
+            var progressLabel = document.createElement('span');
 
             // Create buttons to submit or delete
             var submitbtn = document.createElement('button');
@@ -153,6 +155,7 @@ window.onload = function(){
             titlerow.className = 'row';
             audiorow.className = 'row';
             buttonrow.className = 'row';
+            progressLabel.className = 'label';
 
 
             // Set controls for audio player
@@ -184,9 +187,12 @@ window.onload = function(){
 
             // Submit that specific audio file to the firebase storage
             submitbtn.onclick = function(e){
-                upload(AudioBLOB, filename, datestring);
                 evtTgt = e.target;
+                evtTgt.parentNode.appendChild(progressLabel);
+                progressLabel.id = 'progressLabel' + filename;
+                upload(AudioBLOB, filename, datestring);
                 evtTgt.disabled = "disabled";
+                //sevtTgt.parentNode.removeChild(progressLabel);
                 // Moved to db_connector: createSession(datestring, filename);
 
             }
@@ -208,7 +214,6 @@ window.onload = function(){
 * Produces a waveform of the audio
 */
 function visualize(stream) {
-    console.log("In visualizer. Stream: " + typeof stream);
     var source = audio_context.createMediaStreamSource(stream);
 
     var analyser = audio_context.createAnalyser();
@@ -218,8 +223,6 @@ function visualize(stream) {
 
     source.connect(analyser);
     //analyser.connect(audioCtx.destination);
-
-    console.log("Got here without errors");
 
     draw()
 
@@ -266,9 +269,6 @@ function visualize(stream) {
 
 // Changes size, specifically waveform box
 window.onresize = function() {
-  canvas.width = mainSection.offsetWidth;
-  console.log("resize. offsetWidth: " + mainSection.offsetWidth);
+  canvas.width = mainSection.offsetWidth - 25;;
+  //console.log("resize. offsetWidth: " + mainSection.offsetWidth);
 }
-
-window.onresize();
-    
