@@ -24,19 +24,21 @@ function download(name, but) {
 
 		firebase.database().ref('/segments/').once('value').then(function(snapshot) {
 			var dbSegs = Object.values(snapshot.val());
-			console.log(dbSegs.length);
+			// console.log(dbSegs.length);
 			for (var i = 0; i < dbSegs.length; i++) {
 				if(dbSessions[dbSegs[i].session].name == name & dbSegs[i].verified == 1) {
 					console.log("Downloading : "+dbSegs[i].label);
-
 					var audioRef = storageRef.child(dbSegs[i].filename);
 					audioRef.getDownloadURL().then(function(link) {
-						downloadURLs.push(link);
 
-						downloadCues.push(">"+dbSegs[i].label+"\t"+link);
+						var cue = "<label>"+"\t"+link;
+						downloadURLs.push(link);
+						downloadCues.push(cue);
 
 						but.className = successClass;
 
+						var blob = new Blob(downloadCues, {type: "text/plain;charset=utf-8"});
+						saveAs(blob, name+".txt");
 
 						console.log("> "+link);
 					}).catch(function(error) {
@@ -45,13 +47,14 @@ function download(name, but) {
 
 				}
 			}
-			var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-			saveAs(blob, dbSessions[i].name+".txt");
+
 
 			but.className = primaryClass;
 		}).catch(function(db_error) {
 			console.log("Error loading from DB segments");
 		});
+
+
 	}).catch(function(db_error) {
 		console.log("Error loading from DB sessions");
 	});
