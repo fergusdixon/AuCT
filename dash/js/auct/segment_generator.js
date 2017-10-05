@@ -13,7 +13,7 @@ function loadSeg(sid, wlref, but) {
 	console.log("Generating segments...");
 
 	segPanel.innerHTML = "<center><img width='30px' height='auto' src='img/loaders/default.gif'></center>";
-	//embedAudio(sid);
+	embedAudio(sid);
 
 	// Firebase once-off DB query
 	firebase.database().ref('/wordlists/').once('value').then(function(snapshot) {
