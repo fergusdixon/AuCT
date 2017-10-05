@@ -1,8 +1,13 @@
 package server;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.database.*;
 import models.SegmentModel;
 import models.SessionModel;
+
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -12,12 +17,10 @@ import java.util.Map;
 
 public class DbHelper {
 
-    public DbHelper(){}
+    public DbHelper(){
+        login();
+    }
 
-    /**
-     * Fetch any sessions in the DB that have not yet been recorded
-     * @return ArrayList of SessionModels
-     */
     protected synchronized ArrayList<SessionModel> newSessions(){
         final ArrayList models= new ArrayList<SessionModel>();
 
@@ -32,11 +35,9 @@ public class DbHelper {
                 Iterable<DataSnapshot> children = snapshot.getChildren();
                 models.clear();
 
-                //Loop through all sessions
                 for (DataSnapshot child : children){
                     SessionModel model = child.getValue(SessionModel.class);
                     if(model.getSpliced()==0) {
-                        //Add to returning array if not yet spliced
                         model.setId(Integer.parseInt(child.getKey()));
                         models.add(model);
                     }
@@ -51,7 +52,6 @@ public class DbHelper {
         System.out.println("Success");
         System.out.println("Waiting for response, if this takes too long it may mean there are no new sessions to segment.");
 
-        //Waiting for DB response
         do{
             System.out.println("...");
             try {
@@ -65,10 +65,6 @@ public class DbHelper {
 
     }
 
-    /**
-     * Mark the given session as successfully spliced
-     * @param id of the session
-     */
     public void markSpliced(int id){
         DatabaseReference ref = FirebaseDatabase
                 .getInstance()
@@ -79,10 +75,6 @@ public class DbHelper {
         ref.child("sessions/"+id).updateChildren(splice);
     }
 
-    /**
-     * Make a record of the given session's corresponding segments in the DB
-     * @param session to record
-     */
     public void recordSegments(SessionModel session){
         Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+session.getName());
         System.out.println("Recording segments in DB...");
@@ -92,38 +84,30 @@ public class DbHelper {
                     .getInstance()
                     .getReference();
 
-            //Hashmap is needed to ensure integer numbering in the DB
             HashMap<String, Object> segs = new HashMap<>();
             Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
-                // Extract wordlist number from filename, to predict a label from
                 int listNum = Integer.parseInt(
                         session.getName().substring(
                                 session.getName().indexOf("list")+4,
                                 session.getName().indexOf("_2"))
                 )-1;
 
-                // Getting all labels for the session
                 ArrayList<String> list = getLabels(listNum);
-
-                // Get the next available ID for segment
                 long startingIndex = getSegmentIndex();
                 @Override
                 public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
                     String label;
-                    // Extract segment number from name
                     int segNum = Integer.parseInt(
                             file.toString().substring(
                                     file.toString().indexOf("seg_")+4,
                                     file.toString().indexOf("_a"))
                     )-1;
                     if(segNum>=list.size()-1){
-                        //If there are too many segments, we suggest the last word in in the list
                         label = list.get(list.size()-1);
                     }
                     else {
                         label = list.get(segNum);
                     }
-                    //Creating a new SegmentModel to update the DB with
                     SegmentModel segment = new SegmentModel(
                             file.toString().substring(file.toString().indexOf("seg")),
                             label,
@@ -137,21 +121,38 @@ public class DbHelper {
 
                 @Override
                 public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+//                    Files.delete(dir);
                     return FileVisitResult.CONTINUE;
                 }
             });
-            ref.child("segments").updateChildren(segs); // Making the update call to the DB
+            ref.child("segments").updateChildren(segs);
         } catch (IOException e) {
             e.printStackTrace();
         }
         System.out.println("Segment recorded in DB");
     }
 
+    private void login() {
+        try {
+            System.out.println("Logging in...");
+            FileInputStream serviceAccount = new FileInputStream("/home/fergus/AuCT/AuctJavaServer/auct-capstone-firebase-adminsdk-57nym-694062f77b.json");
 
-    /**
-     * Get the next available segment ID
-     * @return ID
-     */
+            // Initialize the app with a service account, granting admin privileges
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                    .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
+                    .setDatabaseUrl("https://auct-capstone.firebaseio.com/")
+                    .setStorageBucket("auct-capstone.appspot.com")
+                    .build();
+            FirebaseApp.initializeApp(options);
+
+            System.out.println("Success");
+
+        }
+        catch (Exception e){
+            System.out.println("Firebase error: " + e);
+        }
+    }
+
     private synchronized long getSegmentIndex(){
         final ArrayList<Long> index = new ArrayList<>();
         index.add(0, Long.parseLong("-1"));
@@ -170,7 +171,6 @@ public class DbHelper {
             }
         });
 
-        //Waiting for DB response
         do{
             System.out.println("...");
             try {
@@ -182,11 +182,6 @@ public class DbHelper {
         return index.get(0);
     }
 
-    /**
-     * Get the words from a wordlist in the DB as an ArrayList
-     * @param listNm The wordlist to load
-     * @return ArrayList of labels
-     */
     private synchronized ArrayList<String> getLabels(int listNm){
         final ArrayList<String> words = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase
@@ -195,8 +190,8 @@ public class DbHelper {
         ref.child("wordlists/"+listNm + "/words").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                ArrayList<String> list = (ArrayList)snapshot.getValue(); //Getting the words
-                words.addAll(list); //Add them to our final variable
+                ArrayList<String> list = (ArrayList)snapshot.getValue();
+                words.addAll(list);
             }
 
             @Override
@@ -205,7 +200,6 @@ public class DbHelper {
             }
         });
 
-        //Waiting for DB response
         do{
             System.out.println("...");
             try {

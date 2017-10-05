@@ -2,6 +2,9 @@ package server;
 
 import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.Bucket;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.cloud.StorageClient;
 
 import java.io.*;
@@ -10,11 +13,12 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileProcessor {
 
-    private Bucket bucket = null; //cloud storage object
-    private String fileName; //file to segment
+    private Bucket bucket = null;
+    private String fileName;
 
     public boolean processFile(String fileName) {
         System.out.println("Retrieving cloud storage...");
+//        login();
         bucket = StorageClient.getInstance().bucket();
         System.out.println("Success");
 
@@ -22,15 +26,16 @@ public class FileProcessor {
         this.fileName = fileName;
         System.out.println("Downloading: " + fileName + "...");
         getAudio(fileName);
-        if (fileName.equals("null")) {
+        if(fileName.equals("null")){
             return false;
         }
 
         //Split file
         System.out.println("Success, analysing and segmenting the audio file...");
-        if (split()) {
+        if(split()){
             System.out.println("Splitting of \"" + fileName + "\" successful.");
-        } else {
+        }
+        else {
             System.out.println("Splitting failed");
         }
 
@@ -50,9 +55,9 @@ public class FileProcessor {
         return true;
     }
 
-    public void deleteSegments() {
+    public void deleteSegments(){
         //Delete local segments
-        Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/" + fileName);
+        Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+fileName);
         try {
             Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
                 @Override
@@ -74,41 +79,39 @@ public class FileProcessor {
 
     /**
      * This takes a given file and uploads it to the appropriate place in Firebase.
-     *
      * @param file
      */
-    private void upload(File file) {
+    private void upload(File file){
         InputStream blob = null;
         try {
             blob = new FileInputStream(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        bucket.create("Output/" + fileName + "/" + file.getName(), blob, "audio/x-wav");
+        bucket.create("Output/"+fileName+"/"+file.getName(), blob, "audio/x-wav");
     }
 
     /**
      * This splits the current file
-     *
      * @return boolean
      */
-    private boolean split() {
+    private boolean split(){
         Segmentor seg = new Segmentor("/home/fergus/AuCT/AuctJavaServer/src/main/java/server/");
-        return seg.segment(fileName.substring(fileName.indexOf('/') + 1));
+
+        return seg.segment(fileName.substring(fileName.indexOf('/')+1));
     }
 
     /**
      * Download the requested audio file from Firebase
-     *
-     * @param name: Name of audio to download
+     * @param name
      */
-    private void getAudio(String name) {
+    private void getAudio(String name){
         //getting file
-        if (bucket == null) {
+        if(bucket == null){
 
         }
         Blob blob = bucket.get("Input/" + name + ".wav");
-        if (blob == null) {
+        if(blob == null){
             System.out.println("File not found!");
             fileName = "null";
             return;
@@ -118,7 +121,7 @@ public class FileProcessor {
         String uncutName = blob.getName();
 
         fileName = blob.getName().substring(
-                uncutName.indexOf('/') + 1,
+                uncutName.indexOf('/')+1,
                 uncutName.indexOf('.')
         );
 
@@ -126,15 +129,38 @@ public class FileProcessor {
         try {
             String path = "/home/fergus/AuCT/AuctJavaServer/src/input/" + fileName + ".wav";
             f = new File(path);
-            //making new file for downloaded blob
+
             f.getParentFile().mkdirs();
             f.createNewFile();
             FileOutputStream out = new FileOutputStream(f);
-            out.write(array);
+            out.write( array );
             out.close();
-            f.deleteOnExit(); //this ensures no files are kept locally after closing
+            f.deleteOnExit();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * Login to the cloud storage server, currently not in use because DbHelper logs in first
+     */
+    private void login() {
+        //getting the storage folder from firebase
+
+        try {
+            FileInputStream serviceAccount = new FileInputStream("/home/fergus/AuCT/AuctJavaServer/auct-capstone-firebase-adminsdk-57nym-694062f77b.json");
+
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                    .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
+                    .setDatabaseUrl("https://auct-capstone.firebaseio.com/")
+                    .setStorageBucket("auct-capstone.appspot.com")
+                    .build();
+
+            FirebaseApp.initializeApp(options);
+            bucket = StorageClient.getInstance().bucket();
+            serviceAccount.close();
+        } catch (Exception e) {
+            System.out.println("Firebase error:\n" + e);
         }
     }
 }
