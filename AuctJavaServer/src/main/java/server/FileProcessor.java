@@ -2,9 +2,6 @@ package server;
 
 import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.Bucket;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.cloud.StorageClient;
 
 import java.io.*;
@@ -116,7 +113,7 @@ public class FileProcessor {
     private boolean getAudio(String name){
         //getting file
         if(bucket == null){
-
+            return false;
         }
         Blob blob = bucket.get("Input/" + name + ".wav");
         if(blob == null){
