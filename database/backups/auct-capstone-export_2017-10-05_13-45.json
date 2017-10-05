@@ -1,0 +1,1862 @@
+{
+  "segments" : [ {
+    "filename" : "placeholder.txt",
+    "session" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_11_auct_list01_20170928123800.wav",
+    "label" : "Nectarine",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_14_auct_list01_20170928123800.wav",
+    "label" : "Peach",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_06_auct_list01_20170928123800.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_09_auct_list01_20170928123800.wav",
+    "label" : "Lime",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_18_auct_list01_20170928123800.wav",
+    "label" : "Strawberry",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_20_auct_list01_20170928123800.wav",
+    "label" : "Watermelon",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_01_auct_list01_20170928123800.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 1
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_02_auct_list01_20170928123800.wav",
+    "label" : "Banana",
+    "scrapped" : 1,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_12_auct_list01_20170928123800.wav",
+    "label" : "Orange",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_19_auct_list01_20170928123800.wav",
+    "label" : "Tangerine",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_08_auct_list01_20170928123800.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_10_auct_list01_20170928123800.wav",
+    "label" : "Mango",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_17_auct_list01_20170928123800.wav",
+    "label" : "Prune",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_16_auct_list01_20170928123800.wav",
+    "label" : "Pineapple",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_03_auct_list01_20170928123800.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_07_auct_list01_20170928123800.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_05_auct_list01_20170928123800.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_15_auct_list01_20170928123800.wav",
+    "label" : "Pear",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_13_auct_list01_20170928123800.wav",
+    "label" : "Papaya",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20170928123800/seg_04_auct_list01_20170928123800.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 0,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_07_auct_list02_20170928123423.wav",
+    "label" : "Wolf",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 1
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_09_auct_list02_20170928123423.wav",
+    "label" : "Goat",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_08_auct_list02_20170928123423.wav",
+    "label" : "Giraffe",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_04_auct_list02_20170928123423.wav",
+    "label" : "Cat",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_03_auct_list02_20170928123423.wav",
+    "label" : "Bird",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_17_auct_list02_20170928123423.wav",
+    "label" : "Squirrel",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_06_auct_list02_20170928123423.wav",
+    "label" : "Dog",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_12_auct_list02_20170928123423.wav",
+    "label" : "Lion",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_18_auct_list02_20170928123423.wav",
+    "label" : "Tiger",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_11_auct_list02_20170928123423.wav",
+    "label" : "Leopard",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_02_auct_list02_20170928123423.wav",
+    "label" : "Bear",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_01_auct_list02_20170928123423.wav",
+    "label" : "Bat",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_13_auct_list02_20170928123423.wav",
+    "label" : "Lizard",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_10_auct_list02_20170928123423.wav",
+    "label" : "Horse",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_15_auct_list02_20170928123423.wav",
+    "label" : "Rhinoceros",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_14_auct_list02_20170928123423.wav",
+    "label" : "Pig",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_16_auct_list02_20170928123423.wav",
+    "label" : "Snake",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_05_auct_list02_20170928123423.wav",
+    "label" : "Crocodile",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20170928123423/seg_19_auct_list02_20170928123423.wav",
+    "label" : "Turtle",
+    "scrapped" : 0,
+    "session" : 1,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_10_auct_list03_20170928123855.wav",
+    "label" : "Pan",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_13_auct_list03_20170928123855.wav",
+    "label" : "Pot",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_19_auct_list03_20170928123855.wav",
+    "label" : "Tongs",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_14_auct_list03_20170928123855.wav",
+    "label" : "Scale",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_01_auct_list03_20170928123855.wav",
+    "label" : "Blender",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_12_auct_list03_20170928123855.wav",
+    "label" : "Plate",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_16_auct_list03_20170928123855.wav",
+    "label" : "Spoon",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_03_auct_list03_20170928123855.wav",
+    "label" : "Bowl",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_04_auct_list03_20170928123855.wav",
+    "label" : "Colander",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_11_auct_list03_20170928123855.wav",
+    "label" : "Peeler",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_15_auct_list03_20170928123855.wav",
+    "label" : "Spatula",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_02_auct_list03_20170928123855.wav",
+    "label" : "Board",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_07_auct_list03_20170928123855.wav",
+    "label" : "Knife",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_20_auct_list03_20170928123855.wav",
+    "label" : "Whisk",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_17_auct_list03_20170928123855.wav",
+    "label" : "Thermometer",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_06_auct_list03_20170928123855.wav",
+    "label" : "Glass",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_09_auct_list03_20170928123855.wav",
+    "label" : "Oven",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_08_auct_list03_20170928123855.wav",
+    "label" : "Mug",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_05_auct_list03_20170928123855.wav",
+    "label" : "Fork",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20170928123855/seg_18_auct_list03_20170928123855.wav",
+    "label" : "Timer",
+    "scrapped" : 0,
+    "session" : 2,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_16_auct_list01_20171004212513.wav",
+    "label" : "Pineapple",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_09_auct_list01_20171004212513.wav",
+    "label" : "Lime",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_07_auct_list01_20171004212513.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_04_auct_list01_20171004212513.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_01_auct_list01_20171004212513.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_13_auct_list01_20171004212513.wav",
+    "label" : "Papaya",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_11_auct_list01_20171004212513.wav",
+    "label" : "Nectarine",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_15_auct_list01_20171004212513.wav",
+    "label" : "Pear",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_18_auct_list01_20171004212513.wav",
+    "label" : "Strawberry",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_19_auct_list01_20171004212513.wav",
+    "label" : "Tangerine",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_17_auct_list01_20171004212513.wav",
+    "label" : "Prune",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_06_auct_list01_20171004212513.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_14_auct_list01_20171004212513.wav",
+    "label" : "Peach",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_05_auct_list01_20171004212513.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_03_auct_list01_20171004212513.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_10_auct_list01_20171004212513.wav",
+    "label" : "Mango",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_12_auct_list01_20171004212513.wav",
+    "label" : "Orange",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_08_auct_list01_20171004212513.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004212513/seg_02_auct_list01_20171004212513.wav",
+    "label" : "Banana",
+    "scrapped" : 0,
+    "session" : 3,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_06_auct_list03_20171004072740.wav",
+    "label" : "Glass",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_01_auct_list03_20171004072740.wav",
+    "label" : "Blender",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_02_auct_list03_20171004072740.wav",
+    "label" : "Board",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_04_auct_list03_20171004072740.wav",
+    "label" : "Colander",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_09_auct_list03_20171004072740.wav",
+    "label" : "Oven",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_13_auct_list03_20171004072740.wav",
+    "label" : "Pot",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_05_auct_list03_20171004072740.wav",
+    "label" : "Fork",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_07_auct_list03_20171004072740.wav",
+    "label" : "Knife",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_10_auct_list03_20171004072740.wav",
+    "label" : "Pan",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_12_auct_list03_20171004072740.wav",
+    "label" : "Plate",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_08_auct_list03_20171004072740.wav",
+    "label" : "Mug",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_03_auct_list03_20171004072740.wav",
+    "label" : "Bowl",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171004072740/seg_11_auct_list03_20171004072740.wav",
+    "label" : "Peeler",
+    "scrapped" : 0,
+    "session" : 4,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_13_auct_list02_20171004073037.wav",
+    "label" : "Lizard",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_08_auct_list02_20171004073037.wav",
+    "label" : "Giraffe",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_15_auct_list02_20171004073037.wav",
+    "label" : "Rhinoceros",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_04_auct_list02_20171004073037.wav",
+    "label" : "Cat",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_12_auct_list02_20171004073037.wav",
+    "label" : "Lion",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_01_auct_list02_20171004073037.wav",
+    "label" : "Bat",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_03_auct_list02_20171004073037.wav",
+    "label" : "Bird",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_07_auct_list02_20171004073037.wav",
+    "label" : "Frog",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_10_auct_list02_20171004073037.wav",
+    "label" : "Horse",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_14_auct_list02_20171004073037.wav",
+    "label" : "Pig",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_06_auct_list02_20171004073037.wav",
+    "label" : "Dog",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_05_auct_list02_20171004073037.wav",
+    "label" : "Crocodile",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_02_auct_list02_20171004073037.wav",
+    "label" : "Bear",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_09_auct_list02_20171004073037.wav",
+    "label" : "Goat",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171004073037/seg_11_auct_list02_20171004073037.wav",
+    "label" : "Leopard",
+    "scrapped" : 0,
+    "session" : 5,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_03_auct_list01_20171004073358.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_09_auct_list01_20171004073358.wav",
+    "label" : "Lime",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_06_auct_list01_20171004073358.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_05_auct_list01_20171004073358.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_04_auct_list01_20171004073358.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_07_auct_list01_20171004073358.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_01_auct_list01_20171004073358.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_02_auct_list01_20171004073358.wav",
+    "label" : "Banana",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171004073358/seg_08_auct_list01_20171004073358.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 6,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_09_auct_list01_20171005112306.wav",
+    "label" : "Lime",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_05_auct_list01_20171005112306.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_10_auct_list01_20171005112306.wav",
+    "label" : "Mango",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_07_auct_list01_20171005112306.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_04_auct_list01_20171005112306.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_11_auct_list01_20171005112306.wav",
+    "label" : "Nectarine",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_02_auct_list01_20171005112306.wav",
+    "label" : "Banana",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_01_auct_list01_20171005112306.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_14_auct_list01_20171005112306.wav",
+    "label" : "Peach",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_06_auct_list01_20171005112306.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_13_auct_list01_20171005112306.wav",
+    "label" : "Papaya",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_12_auct_list01_20171005112306.wav",
+    "label" : "Orange",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_08_auct_list01_20171005112306.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005112306/seg_03_auct_list01_20171005112306.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 7,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_04_auct_list02_20171005112530.wav",
+    "label" : "Cat",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_10_auct_list02_20171005112530.wav",
+    "label" : "Horse",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_06_auct_list02_20171005112530.wav",
+    "label" : "Dog",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_05_auct_list02_20171005112530.wav",
+    "label" : "Crocodile",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_01_auct_list02_20171005112530.wav",
+    "label" : "Bat",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_16_auct_list02_20171005112530.wav",
+    "label" : "Snake",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_02_auct_list02_20171005112530.wav",
+    "label" : "Bear",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_07_auct_list02_20171005112530.wav",
+    "label" : "Frog",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_14_auct_list02_20171005112530.wav",
+    "label" : "Pig",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_18_auct_list02_20171005112530.wav",
+    "label" : "Tiger",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_03_auct_list02_20171005112530.wav",
+    "label" : "Bird",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_09_auct_list02_20171005112530.wav",
+    "label" : "Goat",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_15_auct_list02_20171005112530.wav",
+    "label" : "Rhinoceros",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_08_auct_list02_20171005112530.wav",
+    "label" : "Giraffe",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_13_auct_list02_20171005112530.wav",
+    "label" : "Lizard",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_11_auct_list02_20171005112530.wav",
+    "label" : "Leopard",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_12_auct_list02_20171005112530.wav",
+    "label" : "Lion",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_17_auct_list02_20171005112530.wav",
+    "label" : "Squirrel",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005112530/seg_19_auct_list02_20171005112530.wav",
+    "label" : "Turtle",
+    "scrapped" : 0,
+    "session" : 8,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_17_auct_list03_20171005112725.wav",
+    "label" : "Thermometer",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_15_auct_list03_20171005112725.wav",
+    "label" : "Spatula",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_10_auct_list03_20171005112725.wav",
+    "label" : "Pan",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_11_auct_list03_20171005112725.wav",
+    "label" : "Peeler",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_16_auct_list03_20171005112725.wav",
+    "label" : "Spoon",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_06_auct_list03_20171005112725.wav",
+    "label" : "Glass",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_09_auct_list03_20171005112725.wav",
+    "label" : "Oven",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_08_auct_list03_20171005112725.wav",
+    "label" : "Mug",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_04_auct_list03_20171005112725.wav",
+    "label" : "Colander",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_14_auct_list03_20171005112725.wav",
+    "label" : "Scale",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_05_auct_list03_20171005112725.wav",
+    "label" : "Fork",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_13_auct_list03_20171005112725.wav",
+    "label" : "Pot",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_03_auct_list03_20171005112725.wav",
+    "label" : "Bowl",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_07_auct_list03_20171005112725.wav",
+    "label" : "Knife",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_02_auct_list03_20171005112725.wav",
+    "label" : "Board",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_01_auct_list03_20171005112725.wav",
+    "label" : "Blender",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005112725/seg_12_auct_list03_20171005112725.wav",
+    "label" : "Plate",
+    "scrapped" : 0,
+    "session" : 9,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_05_auct_list01_20171005113847.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_13_auct_list01_20171005113847.wav",
+    "label" : "Papaya",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_01_auct_list01_20171005113847.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_06_auct_list01_20171005113847.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_04_auct_list01_20171005113847.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_08_auct_list01_20171005113847.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_14_auct_list01_20171005113847.wav",
+    "label" : "Peach",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_12_auct_list01_20171005113847.wav",
+    "label" : "Orange",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_09_auct_list01_20171005113847.wav",
+    "label" : "Lime",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_15_auct_list01_20171005113847.wav",
+    "label" : "Pear",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_10_auct_list01_20171005113847.wav",
+    "label" : "Mango",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_03_auct_list01_20171005113847.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_11_auct_list01_20171005113847.wav",
+    "label" : "Nectarine",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_02_auct_list01_20171005113847.wav",
+    "label" : "Banana",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005113847/seg_07_auct_list01_20171005113847.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 10,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_04_auct_list02_20171005114112.wav",
+    "label" : "Cat",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_07_auct_list02_20171005114112.wav",
+    "label" : "Frog",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_15_auct_list02_20171005114112.wav",
+    "label" : "Rhinoceros",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_06_auct_list02_20171005114112.wav",
+    "label" : "Dog",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_01_auct_list02_20171005114112.wav",
+    "label" : "Bat",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_03_auct_list02_20171005114112.wav",
+    "label" : "Bird",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_05_auct_list02_20171005114112.wav",
+    "label" : "Crocodile",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_12_auct_list02_20171005114112.wav",
+    "label" : "Lion",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_16_auct_list02_20171005114112.wav",
+    "label" : "Snake",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_09_auct_list02_20171005114112.wav",
+    "label" : "Goat",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_10_auct_list02_20171005114112.wav",
+    "label" : "Horse",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_08_auct_list02_20171005114112.wav",
+    "label" : "Giraffe",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_18_auct_list02_20171005114112.wav",
+    "label" : "Tiger",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_17_auct_list02_20171005114112.wav",
+    "label" : "Squirrel",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_13_auct_list02_20171005114112.wav",
+    "label" : "Lizard",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_14_auct_list02_20171005114112.wav",
+    "label" : "Pig",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_02_auct_list02_20171005114112.wav",
+    "label" : "Bear",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005114112/seg_11_auct_list02_20171005114112.wav",
+    "label" : "Leopard",
+    "scrapped" : 0,
+    "session" : 11,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_14_auct_list03_20171005114425.wav",
+    "label" : "Scale",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_17_auct_list03_20171005114425.wav",
+    "label" : "Thermometer",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_05_auct_list03_20171005114425.wav",
+    "label" : "Fork",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_03_auct_list03_20171005114425.wav",
+    "label" : "Bowl",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_13_auct_list03_20171005114425.wav",
+    "label" : "Pot",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_01_auct_list03_20171005114425.wav",
+    "label" : "Blender",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_06_auct_list03_20171005114425.wav",
+    "label" : "Glass",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_11_auct_list03_20171005114425.wav",
+    "label" : "Peeler",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_12_auct_list03_20171005114425.wav",
+    "label" : "Plate",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_07_auct_list03_20171005114425.wav",
+    "label" : "Knife",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_09_auct_list03_20171005114425.wav",
+    "label" : "Oven",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_08_auct_list03_20171005114425.wav",
+    "label" : "Mug",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_16_auct_list03_20171005114425.wav",
+    "label" : "Spoon",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_02_auct_list03_20171005114425.wav",
+    "label" : "Board",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_04_auct_list03_20171005114425.wav",
+    "label" : "Colander",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_15_auct_list03_20171005114425.wav",
+    "label" : "Spatula",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005114425/seg_10_auct_list03_20171005114425.wav",
+    "label" : "Pan",
+    "scrapped" : 0,
+    "session" : 12,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_14_auct_list01_20171005120325.wav",
+    "label" : "Peach",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_03_auct_list01_20171005120325.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_07_auct_list01_20171005120325.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_11_auct_list01_20171005120325.wav",
+    "label" : "Nectarine",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_05_auct_list01_20171005120325.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_01_auct_list01_20171005120325.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_10_auct_list01_20171005120325.wav",
+    "label" : "Mango",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_12_auct_list01_20171005120325.wav",
+    "label" : "Orange",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_02_auct_list01_20171005120325.wav",
+    "label" : "Banana",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_08_auct_list01_20171005120325.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_06_auct_list01_20171005120325.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_04_auct_list01_20171005120325.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_09_auct_list01_20171005120325.wav",
+    "label" : "Lime",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005120325/seg_13_auct_list01_20171005120325.wav",
+    "label" : "Papaya",
+    "scrapped" : 0,
+    "session" : 13,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_10_auct_list02_20171005122009.wav",
+    "label" : "Horse",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_13_auct_list02_20171005122009.wav",
+    "label" : "Lizard",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_11_auct_list02_20171005122009.wav",
+    "label" : "Leopard",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_03_auct_list02_20171005122009.wav",
+    "label" : "Bird",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_17_auct_list02_20171005122009.wav",
+    "label" : "Squirrel",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_12_auct_list02_20171005122009.wav",
+    "label" : "Lion",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_09_auct_list02_20171005122009.wav",
+    "label" : "Goat",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_08_auct_list02_20171005122009.wav",
+    "label" : "Giraffe",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_05_auct_list02_20171005122009.wav",
+    "label" : "Crocodile",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_18_auct_list02_20171005122009.wav",
+    "label" : "Tiger",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_14_auct_list02_20171005122009.wav",
+    "label" : "Pig",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_04_auct_list02_20171005122009.wav",
+    "label" : "Cat",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_15_auct_list02_20171005122009.wav",
+    "label" : "Rhinoceros",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_19_auct_list02_20171005122009.wav",
+    "label" : "Turtle",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_06_auct_list02_20171005122009.wav",
+    "label" : "Dog",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_01_auct_list02_20171005122009.wav",
+    "label" : "Bat",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_16_auct_list02_20171005122009.wav",
+    "label" : "Snake",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_02_auct_list02_20171005122009.wav",
+    "label" : "Bear",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list02_20171005122009/seg_07_auct_list02_20171005122009.wav",
+    "label" : "Frog",
+    "scrapped" : 0,
+    "session" : 14,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_05_auct_list03_20171005123123.wav",
+    "label" : "Fork",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_07_auct_list03_20171005123123.wav",
+    "label" : "Knife",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_03_auct_list03_20171005123123.wav",
+    "label" : "Bowl",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_11_auct_list03_20171005123123.wav",
+    "label" : "Peeler",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_17_auct_list03_20171005123123.wav",
+    "label" : "Thermometer",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_02_auct_list03_20171005123123.wav",
+    "label" : "Board",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_09_auct_list03_20171005123123.wav",
+    "label" : "Oven",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_04_auct_list03_20171005123123.wav",
+    "label" : "Colander",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_20_auct_list03_20171005123123.wav",
+    "label" : "Whisk",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_15_auct_list03_20171005123123.wav",
+    "label" : "Spatula",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_18_auct_list03_20171005123123.wav",
+    "label" : "Timer",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_06_auct_list03_20171005123123.wav",
+    "label" : "Glass",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_14_auct_list03_20171005123123.wav",
+    "label" : "Scale",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_16_auct_list03_20171005123123.wav",
+    "label" : "Spoon",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_13_auct_list03_20171005123123.wav",
+    "label" : "Pot",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_01_auct_list03_20171005123123.wav",
+    "label" : "Blender",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_12_auct_list03_20171005123123.wav",
+    "label" : "Plate",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_08_auct_list03_20171005123123.wav",
+    "label" : "Mug",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_10_auct_list03_20171005123123.wav",
+    "label" : "Pan",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list03_20171005123123/seg_19_auct_list03_20171005123123.wav",
+    "label" : "Tongs",
+    "scrapped" : 0,
+    "session" : 15,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_12_auct_list01_20171005124258.wav",
+    "label" : "Orange",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_02_auct_list01_20171005124258.wav",
+    "label" : "Banana",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_08_auct_list01_20171005124258.wav",
+    "label" : "Grapefruit",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_10_auct_list01_20171005124258.wav",
+    "label" : "Mango",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_07_auct_list01_20171005124258.wav",
+    "label" : "Grape",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_05_auct_list01_20171005124258.wav",
+    "label" : "Cranberry",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_06_auct_list01_20171005124258.wav",
+    "label" : "Gooseberry",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_03_auct_list01_20171005124258.wav",
+    "label" : "Blackberry",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_09_auct_list01_20171005124258.wav",
+    "label" : "Lime",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_11_auct_list01_20171005124258.wav",
+    "label" : "Nectarine",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_04_auct_list01_20171005124258.wav",
+    "label" : "Cherry",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_01_auct_list01_20171005124258.wav",
+    "label" : "Apple",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  }, {
+    "filename" : "Output/auct_list01_20171005124258/seg_13_auct_list01_20171005124258.wav",
+    "label" : "Papaya",
+    "scrapped" : 0,
+    "session" : 16,
+    "verified" : 0
+  } ],
+  "sessions" : [ {
+    "date" : "2017-09-28_12:38:00",
+    "filename" : "auct_list01_20170928123800.wav",
+    "language" : "English",
+    "name" : "auct_list01_20170928123800",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  }, {
+    "date" : "2017-09-28_12:34:23",
+    "filepath" : "Input/auct_list02_20170928123423.wav",
+    "language" : "English",
+    "name" : "auct_list02_20170928123423",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 1
+  }, {
+    "date" : "2017-09-28_12:38:55",
+    "filepath" : "Input/auct_list03_20170928123855.wav",
+    "language" : "English",
+    "name" : "auct_list03_20170928123855",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 2
+  }, {
+    "date" : "2017-10-04_19:25:13",
+    "filepath" : "Input/auct_list01_20171004212513.wav",
+    "language" : "English",
+    "name" : "auct_list01_20171004212513",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  }, {
+    "date" : "2017-10-04_05:27:40",
+    "filepath" : "Input/auct_list03_20171004072740.wav",
+    "language" : "English",
+    "name" : "auct_list03_20171004072740",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 2
+  }, {
+    "date" : "2017-10-04_05:30:37",
+    "filepath" : "Input/auct_list02_20171004073037.wav",
+    "language" : "English",
+    "name" : "auct_list02_20171004073037",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 1
+  }, {
+    "date" : "2017-10-04_05:33:58",
+    "filepath" : "Input/auct_list01_20171004073358.wav",
+    "language" : "English",
+    "name" : "auct_list01_20171004073358",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  }, {
+    "date" : "2017-10-05_11:23:06",
+    "filepath" : "Input/auct_list01_20171005112306.wav",
+    "language" : "English",
+    "name" : "auct_list01_20171005112306",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  }, {
+    "date" : "2017-10-05_11:25:30",
+    "filepath" : "Input/auct_list02_20171005112530.wav",
+    "language" : "English",
+    "name" : "auct_list02_20171005112530",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 1
+  }, {
+    "date" : "2017-10-05_11:27:25",
+    "filepath" : "Input/auct_list03_20171005112725.wav",
+    "language" : "English",
+    "name" : "auct_list03_20171005112725",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 2
+  }, {
+    "date" : "2017-10-05_11:38:47",
+    "filepath" : "Input/auct_list01_20171005113847.wav",
+    "language" : "English",
+    "name" : "auct_list01_20171005113847",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  }, {
+    "date" : "2017-10-05_11:41:12",
+    "filepath" : "Input/auct_list02_20171005114112.wav",
+    "language" : "English",
+    "name" : "auct_list02_20171005114112",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 1
+  }, {
+    "date" : "2017-10-05_11:44:25",
+    "filepath" : "Input/auct_list03_20171005114425.wav",
+    "language" : "English",
+    "name" : "auct_list03_20171005114425",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 2
+  }, {
+    "date" : "2017-10-05_12:03:25",
+    "filepath" : "Input/auct_list01_20171005120325.wav",
+    "language" : "English",
+    "name" : "auct_list01_20171005120325",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  }, {
+    "date" : "2017-10-05_12:20:09",
+    "filepath" : "Input/auct_list02_20171005122009.wav",
+    "language" : "English",
+    "name" : "auct_list02_20171005122009",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 1
+  }, {
+    "date" : "2017-10-05_12:31:23",
+    "filepath" : "Input/auct_list03_20171005123123.wav",
+    "language" : "English",
+    "name" : "auct_list03_20171005123123",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 2
+  }, {
+    "date" : "2017-10-05_12:42:58",
+    "filepath" : "Input/auct_list01_20171005124258.wav",
+    "language" : "English",
+    "name" : "auct_list01_20171005124258",
+    "scrapped" : 0,
+    "spliced" : 1,
+    "verified" : 0,
+    "wordlist" : 0
+  } ],
+  "wordlists" : [ {
+    "language" : "English",
+    "listnum" : "01",
+    "name" : "english-fruits",
+    "words" : [ "Apple", "Banana", "Blackberry", "Cherry", "Cranberry", "Gooseberry", "Grape", "Grapefruit", "Lime", "Mango", "Nectarine", "Orange", "Papaya", "Peach", "Pear", "Pineapple", "Prune", "Strawberry", "Tangerine", "Watermelon" ]
+  }, {
+    "language" : "English",
+    "listnum" : "02",
+    "name" : "english-animals",
+    "words" : [ "Bat", "Bear", "Bird", "Cat", "Crocodile", "Dog", "Frog", "Giraffe", "Goat", "Horse", "Leopard", "Lion", "Lizard", "Pig", "Rhinoceros", "Snake", "Squirrel", "Tiger", "Turtle", "Wolf" ]
+  }, {
+    "language" : "English",
+    "listnum" : "03",
+    "name" : "english-kitchen",
+    "words" : [ "Blender", "Board", "Bowl", "Colander", "Fork", "Glass", "Knife", "Mug", "Oven", "Pan", "Peeler", "Plate", "Pot", "Scale", "Spatula", "Spoon", "Thermometer", "Timer", "Tongs", "Whisk" ]
+  } ]
+}
