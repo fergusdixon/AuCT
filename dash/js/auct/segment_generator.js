@@ -3,6 +3,13 @@ function loadSeg(sid, wlref, but) {
 
 	console.log("loading session "+sid+"...");
 
+	// var otherSessions = document.getElementsByClassName("segment-holder");
+	// for (var i = 0; i < otherSessions.length; i++) {
+	// 	if(otherSessions[i] != but.parentElement){
+	// 		otherSessions[i].innerHTML = "";
+	// 	}
+	// }
+
 	// Get a reference to the Firebase database service
 	var database = firebase.database();
 
