@@ -16,17 +16,21 @@ public class FileProcessor {
     private Bucket bucket = null;
     private String fileName;
 
+    /**
+     * Download given file, splice, reupload and update the DB
+     * @param fileName
+     * @return
+     */
     public boolean processFile(String fileName) {
         System.out.println("Retrieving cloud storage...");
-//        login();
         bucket = StorageClient.getInstance().bucket();
         System.out.println("Success");
 
         //Download file
         this.fileName = fileName;
         System.out.println("Downloading: " + fileName + "...");
-        getAudio(fileName);
-        if(fileName.equals("null")){
+        boolean fileFound = getAudio(fileName);
+        if(!fileFound || fileName.equals("null")){
             return false;
         }
 
@@ -55,6 +59,9 @@ public class FileProcessor {
         return true;
     }
 
+    /**
+     * Cleaning up local files, as no files are stored after completion of task
+     */
     public void deleteSegments(){
         //Delete local segments
         Path directory = Paths.get("/home/fergus/AuCT/AuctJavaServer/src/output/"+fileName);
@@ -104,8 +111,9 @@ public class FileProcessor {
     /**
      * Download the requested audio file from Firebase
      * @param name
+     * @return if file was found
      */
-    private void getAudio(String name){
+    private boolean getAudio(String name){
         //getting file
         if(bucket == null){
 
@@ -114,7 +122,7 @@ public class FileProcessor {
         if(blob == null){
             System.out.println("File not found!");
             fileName = "null";
-            return;
+            return false;
         }
         byte[] array = blob.getContent();
 
@@ -139,28 +147,6 @@ public class FileProcessor {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * Login to the cloud storage server, currently not in use because DbHelper logs in first
-     */
-    private void login() {
-        //getting the storage folder from firebase
-
-        try {
-            FileInputStream serviceAccount = new FileInputStream("/home/fergus/AuCT/AuctJavaServer/auct-capstone-firebase-adminsdk-57nym-694062f77b.json");
-
-            FirebaseOptions options = new FirebaseOptions.Builder()
-                    .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
-                    .setDatabaseUrl("https://auct-capstone.firebaseio.com/")
-                    .setStorageBucket("auct-capstone.appspot.com")
-                    .build();
-
-            FirebaseApp.initializeApp(options);
-            bucket = StorageClient.getInstance().bucket();
-            serviceAccount.close();
-        } catch (Exception e) {
-            System.out.println("Firebase error:\n" + e);
-        }
+        return true;
     }
 }

@@ -8,6 +8,11 @@ public class Segmentor {
         this.dir = scriptDir;
     }
 
+    /**
+     * Split the given local file with ffmpeg
+     * @param inputPath of audio
+     * @return success
+     */
     public boolean segment(String inputPath){
         try
         {

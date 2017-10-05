@@ -10,7 +10,7 @@ public class Driver {
         DbHelper db = new DbHelper();
         sessions = db.newSessions();
         for (SessionModel sesh : sessions){
-            System.out.println("<<< Processing: " + sesh.getName() + " >>>");
+            System.out.println("\n<<< Processing: " + sesh.getName() + " >>>");
             if(!splitter.processFile(sesh.getName())){
                 System.out.println("Please ensure 'name' value is valid, with no extension");
                 break;
@@ -20,6 +20,6 @@ public class Driver {
             splitter.deleteSegments();
 
         }
-        System.out.println("Complete! Please use Ctrl+C to quit the process.");
+        System.out.println("\nComplete! Please use Ctrl+C to quit the process.");
     }
 }
