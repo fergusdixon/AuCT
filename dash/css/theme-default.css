@@ -90,6 +90,12 @@ body {
   /* RTL CONTENT MODE */
   /* END RTL CONTENT MODE */
 }
+
+.wl-input {
+	width: 90%;
+	margin-top: 3px;
+}
+
 .page-container .page-sidebar {
   width: 220px;
   float: left;
@@ -1965,6 +1971,10 @@ ul.panel-controls > li > .dropdown-menu:before {
 	margin: 2px;
 	color: #E04B4A;
 	font-weight: 600;
+}
+
+.btn-submit-wordlist {
+	margin-top: 5px;
 }
 
 .btn-group {

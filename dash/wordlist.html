@@ -1,4 +1,4 @@
-<!-- This markup is for the downloads page of the AuCT dashboard web app -->
+<!-- This markup is for the landing page of the AuCT dashboard web app -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -41,10 +41,10 @@
 					<li class="inactive">
 						<a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
 					</li>
-					<li class="active">
+					<li class="inactive">
 						<a href="downlods.html"><span class="fa fa-archive"></span> <span class="xn-text">Downloads</span></a>
 					</li>
-					<li class="inactive">
+					<li class="active">
 					    <a href="wordlist.html"><span class="fa fa-archive"></span> <span class="xn-text">Wordlist</span></a>
 					</li>
 				</ul>
@@ -68,7 +68,7 @@
 				<!-- START BREADCRUMB -->
 				<ul class="breadcrumb">
 					<li><a href="#">Home</a></li>
-					<li class="active">Downloads</li>
+					<li class="active">Wordlist</li>
 				</ul>
 				<!-- END BREADCRUMB -->
 
@@ -79,11 +79,27 @@
 							<div class="panel panel-default">
 							    <div class="panel-heading">
 							        <div class="panel-title-box">
-							            <h3>Downloads</h3>
-							            <span>Download all verified segments by session</span>
+							            <h3>Uploader</h3>
+							            <span>Add a new wordlists</span>
 							        </div>
 							    </div>
-							    <div class="panel-body downloads-holder">
+							    <div class="panel-body new-wordlist-panel">
+							    	<form class="wordlist-form">
+						          Language: <input type='text' class='wl-upload-lang' name='wl-upload-lang' value='English'</input>
+						          Wordlist name: <input type='text' class='wl-upload-name' name='wl-upload-name' value='english-new'</input>
+						          <input type='text' class='wl-input wl-upload-text' name='wl-upload-text' value='one,two,three'</input><br>
+					          </form>
+					          <button class='btn btn-primary btn-submit-wordlist' disabled onclick='upload(this)'>Submit</button>
+						      </div>
+						    </div>
+							<div class="panel panel-default">
+							    <div class="panel-heading">
+							        <div class="panel-title-box">
+							            <h3>Library</h3>
+							            <span>Existing wordlists</span>
+							        </div>
+							    </div>
+							    <div class="panel-body wordlist-panel">
 
 						        </div>
 						    </div>
@@ -96,41 +112,39 @@
 		</div>
 		<!-- END PAGE CONTAINER -->
 
-	<!-- START SCRIPTS -->
+		<!-- START SCRIPTS -->
 
-		<!-- FIREBASE -->
-		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-		  var config = {
-			  apiKey: "AIzaSyD6S977TAzMc809mhI-rO_J_EK_vAmTYhA",
-			  authDomain: "auct-capstone.firebaseapp.com",
-			  databaseURL: "https://auct-capstone.firebaseio.com",
-			  projectId: "auct-capstone",
-			  storageBucket: "auct-capstone.appspot.com",
-			  messagingSenderId: "166934669737"
-			};
+			<!-- FIREBASE -->
+			<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+			<script>
+				// Initialize Firebase
+				var config = {
+						apiKey: "AIzaSyD6S977TAzMc809mhI-rO_J_EK_vAmTYhA",
+						authDomain: "auct-capstone.firebaseapp.com",
+						databaseURL: "https://auct-capstone.firebaseio.com",
+						projectId: "auct-capstone",
+						storageBucket: "auct-capstone.appspot.com",
+						messagingSenderId: "166934669737"
+					};
+				firebase.initializeApp(config);
+			</script>
 
-		  firebase.initializeApp(config);
-		</script>
+				<!-- START PLUGINS -->
+				<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+				<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+				<script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+				<!-- END PLUGINS -->
 
-		<!-- START PLUGINS -->
-		<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/plugins/file-saver/FileSaver.min.js"></script>
-		<!-- END PLUGINS -->
+				<!-- START THIS PAGE PLUGINS-->
+				<!-- END THIS PAGE PLUGINS-->
 
-		<!-- START THIS PAGE PLUGINS-->
-		<!-- END THIS PAGE PLUGINS-->
+				<!-- START AUCT SCRIPTS -->
+				<script type="text/javascript" src="js/auct/wordlist_editor.js"></script>
+				<script type="text/javascript" src="js/auct/wordlist_uploader.js"></script>
 
-		<!-- START AUCT SCRIPTS -->
-		<script type="text/javascript" src="js/auct/downloader.js"></script>
-		<script type="text/javascript" src="js/auct/download.js"></script>
-		<!-- END AUCT SCRIPTS -->
-
-	<!-- END SCRIPTS -->
-	</body>
+				<!-- END AUCT SCRIPTS -->
+		<!-- END SCRIPTS -->
+		</body>
 </html>
 
 
