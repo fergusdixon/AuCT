@@ -100,7 +100,7 @@ function populateWordListOnRecordAudio(){
 		
 		snapshot.forEach(function(childSnapshot){
 			console.log("key: " + childSnapshot.key + ", listNo: " + getHashValueListNo());
-			listNo = parseInt(getHashValueListNo());
+			listNo = parseInt(getHashValueListNo() - 1);
 			if (childSnapshot.key == listNo) {
 				currentChild = childSnapshot;
 
